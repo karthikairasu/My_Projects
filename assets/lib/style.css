@@ -1,0 +1,337 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Merienda", cursive;
+}
+
+a {
+  color: #3fbbc0;
+}
+
+a:hover {
+  color: #65c9cd;
+  text-decoration: none;
+}
+.ff_roboto{
+  font-family: 'Roboto', sans-serif;
+}
+.ff_ubuntu{
+  font-family: 'Ubuntu', sans-serif;
+}
+.ff_abel{
+  font-family: 'Abel', sans-serif;
+}
+.ff_ibarra{
+  font-family: 'Ibarra Real Nova', serif;
+}
+.ff_cinzel{
+  font-family: 'Cinzel', serif;
+}
+.ff_jose{
+  font-family: "Josefin Sans", sans-serif;
+}
+.sd{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+.sd2{
+  box-shadow: 0px 1.5px 3px 0px rgba(0, 0, 0, 0.16);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+}
+.blue{
+  color: #007bff;
+}
+.fs-12{font-size: 12px!important;}
+.fs-13{font-size: 13px!important;}
+.fs-14{font-size: 14px!important;}
+.fs-16{font-size: 16px!important;}
+.fs-18{font-size: 18px!important;}
+.fs-20{font-size: 20px!important;}
+.fs-30{font-size: 30px!important;}
+.fs-33{font-size: 33px!important;}
+.fw-400{font-weight: 400;}
+.fw-600{font-weight: 600;}
+.fw-800{font-weight: 800;}
+.fw-bold{font-weight: bold;}
+.fs-italic{font-style: italic;}
+.ws_nowrap{
+  white-space: nowrap;
+}
+.d_ac_jc{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.d_ae_jc{
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+}
+/*--------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------*/
+.gallery {
+  overflow: hidden;
+}
+
+.gallery .owl-nav,
+.gallery .owl-dots {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.gallery .owl-item {
+  border-left: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.gallery .owl-dot {
+  display: inline-block;
+  margin: 0 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #e0f4f5 !important;
+}
+
+.gallery .owl-dot.active {
+  background-color: #3fbbc0 !important;
+}
+
+.gallery .gallery-carousel .owl-stage-outer {
+  overflow: visible;
+}
+
+.gallery .gallery-carousel .center {
+  border: 6px solid #3fbbc0;
+  margin: -10px;
+  box-sizing: content-box;
+  padding: 4px;
+  background: #fff;
+  z-index: 1;
+}
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #3fbbc0;
+  border-top-color: #ecf8f9;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*--------------------------------------------------------------
+# navbar
+--------------------------------------------------------------*/
+/* CSS used here will be applied after bootstrap.css */
+body {
+  padding-top:50px;
+}
+.bg-darkgray {
+  background-color: #607d8b !important;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffeb3b;
+  background-color: rgba(255,255,255,0.1);
+}
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+  color: #ffeb3b;
+  background-color: rgba(255,255,255,0.1);
+
+  outline-color: rgba(255, 255, 255, 0);
+}
+@media (min-width: 768px){
+.navbar-expand-md .navbar-nav .nav-link {
+  padding-right: 2rem;
+  padding-left: 2rem;
+ }
+}
+@media (max-width: 768.98px) {
+  .navbar-brand {
+    margin: -4px 0px -5px 0px;
+  }
+  .navbar {
+    height: auto !important;
+  }
+}
+/*==============================================
+# button effects
+=================================================*/
+.btnfos {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  max-width: 160px;
+  margin: 0 auto 2em;
+  position: relative;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+}
+@media (min-width: 400px) {
+  .btnfos {
+    display: inline-block;
+    margin-right: 2.5em;
+  }
+  .btnfos:nth-of-type(even) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 600px) {
+  .btnfos:nth-of-type(even) {
+    margin-right: 2.5em;
+  }
+  .btnfos:nth-of-type(5) {
+    margin-right: 0;
+  }
+}
+
+.btnfos-1 {
+  background: #3498db;
+  font-weight: 100;
+}
+.btnfos-1 svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 45px;
+}
+.btnfos-1 rect {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1;
+  stroke-dasharray: 422, 0;
+}
+
+.btnfos-1:hover {
+  background: rgba(225, 51, 45, 0);
+  letter-spacing: 1px;
+  font-weight: 900;
+}
+.btnfos-1:hover rect {
+  stroke-width: 5;
+  stroke-dasharray: 15, 310;
+  stroke-dashoffset: 48;
+  -webkit-transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+          transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btnfos-5 {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 0px;
+  text-shadow: none;
+  -webkit-transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+          transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+  outline-color: rgba(255, 255, 255, 0.5);
+  outline-offset: 0px;
+}
+
+.btnfos-5:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+  outline-offset: 15px;
+  outline-color: rgba(255, 255, 255, 0);
+  text-shadow: 1px 1px 2px #427388;
+}
+.parallax_bg {
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.77)!important;
+}
+/*==============Projects===========*/
+#projects{
+ background: aliceblue;
+}
+.cr-shadow{
+  box-shadow:0 0.125rem 0.1875rem 0 rgba(0,0,0,.11);
+  background-color: white;
+}
+.card_main_col .image {
+    position: relative;
+    display: block;
+    padding-top: 62.5%;
+    margin-bottom: 20px;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+.card_main_col .image:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.10);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+}
+.card_main_col:hover .image img {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.card_main_col .image img {
+    -webkit-transition: all 3s;
+    -o-transition: all 3s;
+    transition: all 3s;
+    -moz-transition: all 3s;
+    -ms-transition: all 3s;
+}
+.card_main_col .image img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}

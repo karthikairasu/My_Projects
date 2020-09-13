@@ -1,32 +1,39 @@
 {
-  "name": "CarsRental",
-  "short_name": "CarsRental",
-  "icons": [{
-    "src": "../images/icon.png",
+  "name": "My Projects",
+  "short_name": "My Projects",
+  "icons": [
+    {
+      "src": "../images/kk.png",
       "sizes": "128x128",
       "type": "image/png"
-    }, {
-      "src": "../images/icon.png",
+    },
+    {
+      "src": "../images/kk.png",
       "sizes": "144x144",
       "type": "image/png"
-    }, {
-      "src": "../images/icon.png",
+    },
+    {
+      "src": "../images/kk.png",
       "sizes": "152x152",
       "type": "image/png"
-    }, {
-      "src": "../images/icon.png",
+    },
+    {
+      "src": "../images/kk.png",
       "sizes": "192x192",
       "type": "image/png"
-    }, {
-      "src": "../images/icon.png",
+    },
+    {
+      "src": "../images/kk.png",
       "sizes": "256x256",
       "type": "image/png"
-    }, {
-      "src": "../images/icon.png",
+    },
+    {
+      "src": "../images/kk.png",
       "sizes": "512x512",
       "type": "image/png"
-    }],
-  "start_url": "C:/xampp/htdocs/chating_app/home.php",
+    }
+  ],
+  "start_url": "C:/Gihub/My_Projects/index.html",
   "display": "standalone",
   "background_color": "#0B5E97",
   "theme_color": "#0B5E97"
