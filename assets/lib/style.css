@@ -67,6 +67,9 @@ a:hover {
    align-items: flex-end;
    justify-content: center;
 }
+.bg_skyblue{
+  background: aliceblue;
+}
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
@@ -334,4 +337,189 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
+}
+/*================star rating============= */
+.star-rating {
+    direction: rtl;
+    display: inline-block;
+    padding: 0px
+}
+
+.star-rating input[type=radio] {
+    display: none
+}
+
+.star-rating label {
+    color: #bbb;
+    font-size: 18px;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+.star-rating label:nth-child(1n) {
+    color: #f2b600;
+    font-size: 18px;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input[type=radio]:checked ~ label {
+    color: #f2b600
+}
+/* owl carousel fully responsive */
+.owl-nav button {
+  position: absolute;
+  top: 50%;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+.owl-nav button.owl-prev {
+  left: 0;
+}
+.owl-nav button.owl-next {
+  right: 0;
+}
+
+.owl-dots {
+  display: none;
+  text-align: center;
+  padding-top: 15px;
+}
+.owl-dots button.owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #ccc;
+  margin: 0 3px;
+}
+.owl-dots button.owl-dot.active {
+  background-color: #28324b;
+}
+.owl-dots button.owl-dot:focus {
+  outline: none;
+}
+.owl-nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7) !important;
+  border-radius: 0 4px 4px 0;
+  border: 1px solid #ccc!important;
+  box-shadow: 1px 2px 10px -1px rgba(0,0,0,.3);
+}
+.owl-nav button span {
+  font-size: 10vh;    
+  position: relative;
+  top: -5px;
+}
+.owl-nav button span:hover {
+  color: #28324b;
+  cursor: pointer; 
+}
+.owl-nav button:focus {
+  outline: none;
+}
+.owl-carousel .owl-item img {
+  display: inline;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot {
+  padding: 0 6px!important;
+}
+
+.owl-slider .owl-carousel .item .cat_card{
+  text-align: center;
+  border: 2px dashed rgba(0, 0, 0, 0.15);
+  background: #fff!important;
+  margin: 3px;
+  box-shadow: 0px 0px 3px 0 rgba(0, 0, 0, 0.2), 0px 0px 6px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+.owl-slider .owl-carousel .item .cat_card:hover{
+  border: 2px dashed rgba(0,0,0,0.35);
+}
+.projects .heading b{
+  border-bottom: 2px solid #fede3f;
+  font-family: 'Montserrat';
+  color: rgba(35, 56, 81, 1);
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.projects .product_main{
+  background: #dedede;
+  font-family: 'Montserrat';
+}
+.projects .product_main figcaption label{
+  font-weight: bold;
+  color: rgba(35, 56, 81, 1);
+}
+.projects .product_main{
+  background: #dedede;
+  border: none;
+  border-radius: 0px;
+}
+.projects .product_main:hover{
+    box-shadow: 0 0 30px rgba(0,0,0,.15);
+}
+.projects .product_main .img_head {
+    position: relative;
+    display: block;
+    padding-top: 80%;
+    margin-bottom: 20px;
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+    margin: 10px;
+    background: rgba(255, 255, 255);
+}
+.projects .product_main .img_head:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    /*background: rgba(0, 0, 0, .10);*/
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    overflow: hidden;
+}
+.projects .product_main:hover .img_head img{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.projects .product_main .img_head img {
+    -webkit-transition: all 3s;
+    -o-transition: all 3s;
+    transition: all 3s;
+    -moz-transition: all 3s;
+    -ms-transition: all 3s;
+}
+.projects .product_main .img_head img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.projects .product_main{
+  background: #dedede;
+  font-family: 'Montserrat';
+  padding-top: 1px;
+}
+.projects .product_main figcaption label{
+  font-weight: bold;
+  color: rgba(35, 56, 81, 1);
 }
