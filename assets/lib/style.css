@@ -35,11 +35,14 @@ a:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  }
 .sd2{
-  box-shadow: 0px 1.5px 3px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: inset 0px 0px 10px 2px rgb(13 79 131 / 26%);
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
 .blue{
   color: #007bff;
+}
+.red{
+  color: #ff9400;
 }
 .fs-12{font-size: 12px!important;}
 .fs-13{font-size: 13px!important;}
@@ -467,12 +470,12 @@ body {
   border-radius: 0px;
 }
 .projects .product_main:hover{
-    box-shadow: 0 0 30px rgba(0,0,0,.15);
+  box-shadow: 0px 0px 4px 2px gray, inset 0px 0px 10px 2px rgb(13 79 131 / 26%);
 }
 .projects .product_main .img_head {
     position: relative;
     display: block;
-    padding-top: 80%;
+    padding-top: 120%;
     margin-bottom: 20px;
     border-radius: 3px 3px 0 0;
     overflow: hidden;
@@ -518,6 +521,7 @@ body {
   background: #dedede;
   font-family: 'Montserrat';
   padding-top: 1px;
+  transform: scale(0.96);
 }
 .projects .product_main figcaption label{
   font-weight: bold;
