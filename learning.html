@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 shrink-to-fit=no, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>DOM</title>
+    <meta content="" name="descriptison" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <meta name="theme-color" content="#0B5E97"/>
+    <link rel="icon" type="image/png" href="assets/images/kk.png" sizes="194x194"/>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Play|Merienda|Titillium+Web|Cinzel|Roboto|Ibarra+Real+Nova|Abel|Kufam|Ubuntu&display=swap" rel="stylesheet">
+
+    <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Style files -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- owl carousel Style files -->
+    <link href="assets/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Aos Style files -->
+    <link href="assets/aos/aos.css" rel="stylesheet">
+    <link href="assets/animate.css/animate.min.css" rel="stylesheet">
+    <!-- venobox Style files -->
+    <link href="assets/venobox/venobox.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="assets/lib/style.css">
+    <link rel="manifest" href="assets/lib/manifest.json">
+    <style type="text/css">
+
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="100">
+    <header>
+      <nav
+        class="navbar navbar-expand-md fixed-top navbar-dark sd"
+        style="background: #0d4f83;"
+      >
+        <a class="navbar-brand animated zoomIn mr-0 ml-3 p-0" href="#"
+          ><img
+            class=""
+            src="assets/images/kk.png"
+            style="height: 66px; width: auto;"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto mt-3 mt-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+
+
+      <section id="projects" class="projects">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <h2 class="py-5 text-center blue">DOM => Document Object Model</h2>
+          <p class="text-center">This is a Paragraph that explains DOM</p>
+          <div class=" mx-0">
+            <ul class="">
+                <li><a href="">window.document - document object model(DOM)</a></li>
+            </ul>
+            <ul class="">
+                <li><a href="">window.navigator - browser object model(BOM)</a> Brower details</li>
+            </ul> 
+          </div>
+
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+
+
+      <section id=""></section>
+      <!-- ====================== close ======================== -->
+    </main>
+
+    <div id="preloader"></div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="assets/MDB-free/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- aos script files -->
+    <script src="assets/aos/aos.js"></script>
+    <!-- venobox script files -->
+    <script src="assets/venobox/venobox.min.js"></script>
+    <!-- owl carousel script files -->
+    <script src="assets/owl.carousel/owl.carousel.min.js"></script>
+
+    <script type="text/javascript">
+      // Preloader
+      $(window).on("load", function () {
+        if ($("#preloader").length) {
+          $("#preloader")
+            .delay(100)
+            .fadeOut("slow", function () {
+              $(this).remove();
+            });
+        }
+      });
+      // Gallery carousel (uses the Owl Carousel library)
+      $(".gallery-carousel").owlCarousel({
+        autoplay: true,
+        dots: true,
+        loop: true,
+        center: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 3,
+          },
+          992: {
+            items: 4,
+          },
+          1200: {
+            items: 5,
+          },
+        },
+      });
+      //owl carousel
+    jQuery(".owl-carousel ").owlCarousel({
+      autoplay: false,
+      lazyLoad: true,
+      loop: true,
+      margin: 20,
+       /*
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      */
+      responsiveClass: true,
+      autoHeight: true,
+      autoplayTimeout: 7000,
+      smartSpeed: 800,
+      nav: true,
+      responsive: {
+        0: {
+          items: 3
+        },
+
+        600: {
+          items: 3
+        },
+
+        1024: {
+          items: 5
+        },
+
+        1366: {
+          items: 4
+        }
+      }
+    });
+      //Init AOS
+      function aos_init() {
+        AOS.init({
+          duration: 1000,
+          once: true,
+        });
+      }
+      $(window).on("load", function () {
+        aos_init();
+      });
+      // Initiate venobox lightbox
+      $(document).ready(function () {
+        $(".venobox").venobox();
+      });
+    </script>
+    <style type="text/css">
+      
+    </style>
+  </body>
+</html>
