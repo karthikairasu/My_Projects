@@ -188,6 +188,7 @@ body {
 .navbar-expand-md .navbar-nav .nav-link {
   padding-right: 2rem;
   padding-left: 2rem;
+  margin: 0px 2px;
  }
 }
 @media (max-width: 768.98px) {
@@ -295,6 +296,12 @@ body {
 #projects{
  background: aliceblue;
 }
+.card_main_col{
+  font-size: 14px;
+}
+.card_main_col  h6{
+  font-size: 14px;
+}
 .cr-shadow{
   box-shadow:0 0.125rem 0.1875rem 0 rgba(0,0,0,.11);
   background-color: white;
@@ -340,6 +347,12 @@ body {
     position: absolute;
     top: 0;
     width: 100%;
+}
+.card_main_col .btn-primary {
+    color: #fff;
+    background-color: #5f8eb3;
+    border-color: #5f8eb3;
+    font-size: 14px;
 }
 /*================star rating============= */
 .star-rating {
