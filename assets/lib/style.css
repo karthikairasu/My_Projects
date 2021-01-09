@@ -540,3 +540,6 @@ body {
   font-weight: bold;
   color: rgba(35, 56, 81, 1);
 }
+.owl-carousel .owl-nav.disabled {
+    display: block!important;
+}
