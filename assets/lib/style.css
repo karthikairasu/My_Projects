@@ -570,3 +570,25 @@ body {
   width: 15%;
   border-radius: 15px;
 }
+/*==============================================
+# about
+=================================================*/
+.about{
+  padding-bottom: 50px;
+  background: linear-gradient(270deg, #5B86AB, transparent, #5B86AB);
+}
+.about .about_row{
+  background: #F0F8FF;
+}
+.social_icons span a{
+  color:#6c757d!important;
+}
+.social_icons span:nth-child(1) :hover{
+  color:#2366C2;
+}
+.social_icons span:nth-child(2) :hover{
+  color:#0D2534;
+}
+.social_icons span:nth-child(3) :hover{
+  color:#379DED;
+}
