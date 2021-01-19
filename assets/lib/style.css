@@ -376,7 +376,7 @@ body {
 }
 .star-rating label:nth-child(1n) {
     color: #f2b600;
-    font-size: 18px;
+    font-size: 13px;
     padding: 0;
     cursor: pointer;
     -webkit-transition: all .3s ease-in-out;
@@ -592,4 +592,123 @@ body {
 }
 .social_icons span:nth-child(3) :hover{
   color:#379DED;
+}
+/*==============================================
+# technical skill
+=================================================*/
+.wrapper{
+  width: 400px;
+  font-family: 'Roboto', sans-serif;
+margin:0 auto;
+}
+.skill {
+  margin-bottom: 35px;
+  position: relative;
+overflow-x:hidden;
+
+}
+.skill > p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1716;
+  margin: 0;
+}
+.skill:before{
+  width: 100%;
+  height: 5px;
+  content: "";
+  display: block;
+  position: absolute;
+  background: #959595;
+  bottom: 0;
+}
+.skill-bar {
+  width: 100%;
+  height: 5px;
+  background:#f4392f;
+  display: block;
+  position: relative;
+}
+
+/* SKILL 1 */
+.skill1{
+  width: 95%;
+
+}
+.skill-bar span{
+  position: absolute;
+  /* border-top: 5px solid #f4392f; */
+  top: -30px;
+  padding: 0;
+  font-size: 18px;
+  padding: 3px 0;
+  font-weight: 500;
+}
+.skill-bar {
+  position: relative;
+
+}
+
+.skill1 .skill-count1 {
+  right: 0;
+}
+/* SKILL 2 */
+.skill2{
+  width: 85%;
+}
+
+.skill2 .skill-count2 {
+  right: 0;
+}
+/* SKILL 3 */
+.skill3{
+  width: 80%;
+}
+.skill3 .skill-count3 {
+  right: 0;
+}
+
+/* SKILL 4 */
+.skill4{
+  width: 50%
+}
+
+.skill4 .skill-count4 {
+  right: 0;
+}
+
+/* SKILL 5 */
+.skill5{
+  width: 65%;
+}
+
+.skill5 .skill-count5 {
+  right: 0;
+}
+
+/* SKILL 6 */
+.skill6{
+  width: 90%
+}
+
+.skill6 .skill-count6 {
+  right: 0;
+}
+.skill1{
+  background:#2D79FF;
+}
+.skill2{
+  background:#40C753;
+}
+.skill3{
+  background:#F9C106;
+}
+.skill4{
+  background:#42C0ED;
+}
+.skill5{
+  background:#F43153;
+}
+.skill6{
+  background:#B23CFD;
 }

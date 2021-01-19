@@ -27,6 +27,7 @@
     <!-- Aos Style files -->
     <link href="assets/aos/aos.css" rel="stylesheet">
     <link href="assets/animate.css/animate.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='assets/animate.css/animate3.2.min.css'>
     <!-- venobox Style files -->
     <link href="assets/venobox/venobox.css" rel="stylesheet">
 
@@ -190,6 +191,65 @@
                   </tr>
                 </tbody>
               </table>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+
+      <section id="tech_skill" class="tech_skill">
+        <div class="container pt-5">
+          <div class="row mx-0 pt-3 pb-2">
+            <div class="col-lg-5 col-md-6 col-sm-12">
+              <h4 class="py-5 text-center blue">Technical Skills</h4>
+              <div class="wrapper sd p-4">
+                <div class="skill">
+                    <p>HTML5</p>
+                    <div class="skill-bar skill1 wow slideInLeft animated">
+                        <span class="skill-count1">95%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>CSS3</p>
+                    <div class="skill-bar skill2 wow slideInLeft animated">
+                         <span class="skill-count2">85%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                  <p>BOOTSTRAP</p>
+                  <div class="skill-bar skill3 wow slideInLeft animated">
+                      <span class="skill-count3">80%</span>
+                  </div>
+                </div>
+                <div class="skill">
+                    <p>JQUERY</p>
+                    <div class="skill-bar skill4 wow slideInLeft animated">
+                        <span class="skill-count4">50%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>JAVASCRIPT</p>
+                    <div class="skill-bar skill5 wow slideInLeft animated">
+                        <span class="skill-count5">65%</span>
+                    </div>
+                </div>
+                <!-- <div class="skill">
+                    <p>PHP</p>
+                    <div class="skill-bar skill5 wow slideInLeft animated">
+                        <span class="skill-count5">80%</span>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>WORDPRESS</p>
+                    <div class="skill-bar skill6 wow slideInLeft animated">
+                        <span class="skill-count6">90%</span>
+                    </div>
+                </div> -->
+            </div><!-- end of /.coloumn -->
+            </div>
+            <div class="col-lg-7 col-md-6 col-sm-12">
+              <h4 class="py-5 text-center blue">Tools</h4>
             </div>
             </div>
           </div>
@@ -1510,11 +1570,11 @@
     <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
     <!-- aos script files -->
     <script src="assets/aos/aos.js"></script>
+    <script src='assets/aos/wow.min.js'></script>
     <!-- venobox script files -->
     <script src="assets/venobox/venobox.min.js"></script>
     <!-- owl carousel script files -->
     <script src="assets/owl.carousel/owl.carousel.min.js"></script>
-
     <script type="text/javascript">
       // Preloader
       $(window).on("load", function () {
@@ -1573,6 +1633,10 @@
       $(document).ready(function () {
         $(".venobox").venobox();
       });
+      //Init wow
+      (function($){
+          new WOW().init();
+      })(jQuery);
     </script>
     <style type="text/css">
       
