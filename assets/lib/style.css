@@ -1013,26 +1013,26 @@ overflow-x:hidden;
 }
 
 @media screen and (max-width: 1600px) {
-   h1 {
+  .experience h1 {
       font-size: 64px;
    }
-   h2 {
+  .experience h2 {
       font-size: 50px;
    }
-   h3 {
+  .experience h3 {
       font-size: 40px;
    }
-   h4 {
+  .experience h4 {
       font-size: 34px;
    }
-   h5 {
+  .experience h5 {
       font-size: 30px;
    }
-   h6 {
+ .experience h6 {
       font-size: 24px;
    }
-   p,
-   li {
+  .experience p,
+  .experience li {
       font-size: 20px;
    }
    .timeline-box p {
@@ -1053,26 +1053,26 @@ overflow-x:hidden;
 }
 
 @media screen and (max-width: 1400px) {
-   h1 {
+  .experience h1 {
       font-size: 56px;
    }
-   h2 {
+  .experience h2 {
       font-size: 46px;
    }
-   h3 {
+  .experience h3 {
       font-size: 36px;
    }
-   h4 {
+  .experience h4 {
       font-size: 30px;
    }
-   h5 {
+  .experience h5 {
       font-size: 26px;
    }
-   h6 {
+ .experience h6 {
       font-size: 21px;
    }
-   p,
-   li {
+   .experience p,
+   .experience li {
       font-size: 18px;
    }
    .timeline-box h6 {
@@ -1118,22 +1118,22 @@ overflow-x:hidden;
 }
 
 @media screen and (max-width: 1199px) {
-   h1 {
+  .experience h1 {
       font-size: 50px;
    }
-   h2 {
+  .experience h2 {
       font-size: 40px;
    }
-   h3 {
+  .experience h3 {
       font-size: 31px;
    }
-   h4 {
+  .experience h4 {
       font-size: 28px;
    }
-   h5 {
+  .experience h5 {
       font-size: 24px;
    }
-   h6 {
+ .experience h6 {
       font-size: 20px;
    }
    .timeline-sec {
@@ -1174,26 +1174,26 @@ overflow-x:hidden;
 }
 
 @media screen and (max-width: 1024px) {
-   h1 {
+  .experience h1 {
       font-size: 44px;
    }
-   h2 {
+  .experience h2 {
       font-size: 36px;
    }
-   h3 {
+  .experience h3 {
       font-size: 28px;
    }
-   h4 {
+  .experience h4 {
       font-size: 26px;
    }
-   h5 {
+  .experience h5 {
       font-size: 22px;
    }
-   h6 {
+ .experience h6 {
       font-size: 18px;
    }
-   p,
-   li {
+   .experience p,
+   .experience li {
       font-size: 16px;
    }
    .timeline-sec {
@@ -1322,26 +1322,26 @@ overflow-x:hidden;
 }
 
 @media screen and (max-width: 767px) {
-   h1 {
+  .experience h1 {
       font-size: 40px;
    }
-   h2 {
+  .experience h2 {
       font-size: 31px;
    }
-   h3 {
+  .experience h3 {
       font-size: 26px;
    }
-   h4 {
+  .experience h4 {
       font-size: 24px;
    }
-   h5 {
+  .experience h5 {
       font-size: 20px;
    }
-   h6 {
+ .experience h6 {
       font-size: 16px;
    }
-   p,
-   li {
+   .experience p,
+   .experience li {
       font-size: 15px;
    }
    .timeline-sec {
@@ -1370,26 +1370,26 @@ overflow-x:hidden;
 }
 
 @media screen and (max-width: 640px) {
-   h1 {
+  .experience h1 {
       font-size: 36px;
    }
-   h2 {
+  .experience h2 {
       font-size: 28px;
    }
-   h3 {
+  .experience h3 {
       font-size: 24px;
    }
-   h4 {
+  .experience h4 {
       font-size: 22px;
    }
-   h5 {
+  .experience h5 {
       font-size: 18px;
    }
-   h6 {
+ .experience h6 {
       font-size: 16px;
    }
-   p,
-   li {
+   .experience p,
+   .experience li {
       font-size: 14px;
    }
    .timeline-sec {
@@ -1452,22 +1452,22 @@ overflow-x:hidden;
 }
 
 @media screen and (max-width: 480px) {
-   h1 {
+  .experience h1 {
       font-size: 33px;
    }
-   h2 {
+  .experience h2 {
       font-size: 26px;
    }
-   h3 {
+  .experience h3 {
       font-size: 22px;
    }
-   h4 {
+  .experience h4 {
       font-size: 20px;
    }
-   h5 {
+  .experience h5 {
       font-size: 16px;
    }
-   h6 {
+ .experience h6 {
       font-size: 15px;
    }
    .timeline-box p,
