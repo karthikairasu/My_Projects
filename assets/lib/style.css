@@ -1699,11 +1699,11 @@ body {
 }
 
 .exp_timeline .timeline .direction-l .time-wrapper {
-  float: left;
+  float: none;
 }
 
 .exp_timeline .timeline .direction-r .time-wrapper {
-  float: right;
+  float: none;
 }
 
 .exp_timeline .timeline .time {
