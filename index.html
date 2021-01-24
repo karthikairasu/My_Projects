@@ -283,7 +283,7 @@
       </section>
       <!-- ====================== close ======================== -->
       <section id="exp_timeline" class="exp_timeline">
-        <div class="container-fluid pt-5">
+        <div class="container-fluid bg-white pt-5">
           <h2 class="pt-5 pb-3 text-center blue">Experience</h2>
           <div class="row mx-0 pt-3 pb-5">
             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -1682,7 +1682,7 @@
       <!-- ====================== close ======================== -->
       
       <section id="contact" class="contact">
-        <div class="container pt-5">
+        <div class="container py-5">
           <h2 class="pt-5 text-center blue">Contact</h2>
           <div class="row mx-0">
             <div class="container d-flex justify-content-center align-items-center">
@@ -1994,7 +1994,7 @@
               -------------------------------------------------------------
               ------------------------------------------------------------>
               
-              <form>
+              <form action="mailto:karthikairasuk@gmail.com" method="post" enctype="text/plain">
                 <h4 class="title text-center mb-4">Talk to Us</h4>
             
                   <!-- Name -->
@@ -2002,7 +2002,7 @@
                     <label for="formName" class="d-block">
                       <i class="icon" data-feather="user"></i>
                     </label>
-                    <input type="text" id="formName" class="form-control form-control-lg thick" placeholder="Name">
+                    <input type="text" id="formName" name="name" class="form-control form-control-lg thick" placeholder="Name">
                   </div>
             
                   <!-- E-mail -->
@@ -2010,12 +2010,12 @@
                     <label for="formEmail" class="d-block">
                       <i class="icon" data-feather="mail"></i>
                     </label>
-                    <input type="email" id="formEmail" class="form-control form-control-lg thick" placeholder="E-mail">
+                    <input type="email" id="formEmail" name="email" class="form-control form-control-lg thick" placeholder="E-mail">
                   </div>
             
                   <!-- Message -->
                   <div class="form-group message">
-                    <textarea id="formMessage" class="form-control form-control-lg" rows="7" placeholder="Message"></textarea>
+                    <textarea id="formMessage" name="msg" class="form-control form-control-lg" rows="7" placeholder="Message"></textarea>
                   </div>
                 
                   <!-- Submit btn -->
@@ -2029,6 +2029,118 @@
         </div>
       </section>
       <!-- ====================== close ======================== -->
+    <section id="footer" class="footer mt-3">
+      <footer class="footer-section">
+        <div class="container">
+            <!-- <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>1010 Avenue, sw 54321, chandigarh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>9876543210 0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>mail@info.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="assets/images/kk.png" class="img-fluid" height="100px" width="100px" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p></p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="https://twitter.com/karthikairasu" target="_blank"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="https://github.com/karthikairasu" target="_blank"><i class="fab fa-github github-bg"></i></a>
+                                <a href="https://www.linkedin.com/in/karthikairasu-k-35a962126" target="_blank"><i class="fab fa-linkedin linkedin-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Skills</a></li>
+                                <li><a href="#">Experience</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p></p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 text-center">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2021, All Right Reserved <a href="https://karthikairasu.github.io/My_Projects/">Karthick</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <!-- <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </section>
+    <!-- ====================== close ======================== -->
     </main>
 
     <div id="preloader"></div>
