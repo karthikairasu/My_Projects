@@ -1112,6 +1112,9 @@ body {
   background-repeat: repeat;
   clear: both;
 }
+.education .container-fluid h3 span{
+  background: lightgoldenrodyellow;
+}
 .education .main-timeline6 {
   overflow: hidden;
   position: relative;
