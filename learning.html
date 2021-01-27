@@ -33,7 +33,40 @@
     <link rel="stylesheet" type="text/css" href="assets/lib/style.css">
     <link rel="manifest" href="assets/lib/manifest.json">
     <style type="text/css">
+    .dom .style_head {
+      margin: 2em 0;
+    }
 
+    .dom .style_head li {
+      margin: 1em;
+      margin-left: 3em;
+    }
+
+    .dom .style_head li:before {
+      content: '\f00b';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      float: left;
+      margin-left: -1.5em;
+      color: #0074D9;
+    }
+    .dom .style_content {
+      margin: 2em 0;
+    }
+
+    .dom .style_content li {
+      margin: 1em;
+      margin-left: 3em;
+    }
+
+    .dom .style_content li:before {
+      content: '\f0a4';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      float: left;
+      margin-left: -1.5em;
+      color: #0074D9;
+    }
     </style>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -72,18 +105,22 @@
     <main>
 
 
-      <section id="projects" class="projects">
+      <section id="dom_main" class="dom_main">
         <div class="container-fluid pt-5 px-lg-5 px-2">
-          <h2 class="py-5 text-center blue">DOM => Document Object Model</h2>
-          <p class="text-center">This is a Paragraph that explains DOM</p>
-          <div class=" mx-0">
-            <ul class="">
-                <li><a href="">window.<span class="text-danger">document</span> - document object model(DOM)</a></li>
+          <div class="dom">
+          <h2 class="py-5 text-center blue jumbotron">DOM => Document Object Model</h2>
+          <ul class="list-unstyled style_head">
+            <li><a href=""><span class="text-muted">This is a Paragraph that explains DOM</span></li>
+            <li><a href=""><span class="text-muted">dom to be join in ECMA script implemented feature in the web browsers</span></li>
+              <li><a href=""><span class="text-muted">ECMA script is implemented on browser Define JavaScript</span></li>
+          </ul> 
+          <div class="mx-0">
+            <ul class="list-unstyled style_content">
+              <li><a href="">window.<span class="text-danger">document</span> - document object model(DOM)</a></li>
+              <li><a href="">window.<span class="text-danger">navigator</span> - browser object model(BOM)</a> Brower details</li>
             </ul>
-            <ul class="">
-                <li><a href="">window.<span class="text-danger">navigator</span> - browser object model(BOM)</a> Brower details</li>
-            </ul> 
           </div>
+        </div>
 
         </div>
       </section>
