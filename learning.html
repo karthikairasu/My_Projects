@@ -54,12 +54,12 @@
       margin: 2em 0;
     }
 
-    .dom .style_content li {
+    .dom .style_content>li {
       margin: 1em;
       margin-left: 3em;
     }
 
-    .dom .style_content li:before {
+    .dom .style_content>li:before {
       content: '\f0a4';
       font-family: 'Font Awesome 5 Free';
       font-weight: 900;
@@ -117,7 +117,14 @@
           <div class="mx-0">
             <ul class="list-unstyled style_content">
               <li><a href="">window.<span class="text-danger">document</span> - document object model(DOM)</a></li>
-              <li><a href="">window.<span class="text-danger">navigator</span> - browser object model(BOM)</a> Brower details</li>
+              <li><a href="">window.<span class="text-danger">navigator</span> - browser object model(BOM)</a> Brower details
+                <ol class="">
+                  <li><a href="">window.<span class="text-danger">screen</span> - system screen details</li>
+                    <li><a href="">window.<span class="text-danger">location</span> - location for the current project</li>
+                    <li><a href="">window.<span class="text-danger">frames</span> - </li>
+                    <li><a href="">window.<span class="text-danger">history</span> - browser history details</li>
+                </ol>
+              </li>
             </ul>
           </div>
         </div>
