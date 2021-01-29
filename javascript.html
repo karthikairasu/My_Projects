@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0 shrink-to-fit=no, user-scalable=0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>JS</title>
+    <meta content="" name="descriptison" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <meta name="theme-color" content="#0B5E97"/>
+    <link rel="icon" type="image/png" href="assets/images/kk.png" sizes="194x194"/>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Play|Merienda|Titillium+Web|Cinzel|Roboto|Ibarra+Real+Nova|Abel|Kufam|Ubuntu&display=swap" rel="stylesheet">
+
+    <link href="assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Style files -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- owl carousel Style files -->
+    <link href="assets/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Aos Style files -->
+    <link href="assets/aos/aos.css" rel="stylesheet">
+    <link href="assets/animate.css/animate.min.css" rel="stylesheet">
+    <!-- venobox Style files -->
+    <link href="assets/venobox/venobox.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="assets/lib/style.css">
+    <link rel="manifest" href="assets/lib/manifest.json">
+    <style type="text/css">
+    .javascript .style_head {
+      margin: 2em 0;
+    }
+
+    .javascript .style_head li {
+      margin: 1em;
+      margin-left: 3em;
+    }
+
+    .javascript .style_head li:before {
+      content: '\f00b';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      float: left;
+      margin-left: -1.5em;
+      color: #0074D9;
+    }
+    .javascript .style_content {
+      margin: 2em 0;
+    }
+
+    .javascript .style_content>li {
+      margin: 1em;
+      margin-left: 3em;
+    }
+
+    .javascript .style_content>li:before {
+      content: '\f0a4';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      float: left;
+      margin-left: -1.5em;
+      color: #0074D9;
+    }
+    </style>
+    <script>
+        
+        //Identifiers
+          // myCollege
+        //valid Identifiers
+         // myCollege
+         // javaScript
+         // $alary
+         //_privateVariable
+
+        //invalid Identifiers
+         // 1Programming
+         // #Tag
+         // UnConventionalButValid
+
+        //javascript syntax
+        //cat, Cat and CAT are different things. NOT SAME
+        //myCollege and MyCollege are different
+        var message;
+        message = 'Hello, Javascript!';
+        console.log(message);
+
+        //comments
+        //this is single line comment
+        /*
+         *This is
+         *Multiline
+         *Comment
+         */
+        console.log('Normal Program');
+
+        //datatypes
+        //number
+        var age = 21;
+        var gpa = 8.7;
+        console.log(age);
+        console.log(gpa);
+        //octal and hexa number
+        var octNum = 0255;
+        var hexNum = 0XFF;
+        console.log(octNum);
+        console.log(hexNum);
+        //exponential
+        var amount = 1.1e6;
+        console.log(amount);
+        //min and max number storage
+        var maxNum = (Number.MAX_VALUE);
+        var minNum = (Number.MIN_VALUE);
+        console.log(maxNum);
+        console.log(minNum);
+        //infinity and nagative infinity number
+        var maybeinfinity = Number.MAX_VALUE + Number.MAX_VALUE;
+        var maybenagativeinfinity = -10/0;
+        console.log(maybeinfinity);
+        console.log(maybenagativeinfinity);
+
+        //string
+        var name = 'ganesh';
+        var profession = "software engineer";
+        console.log(name);
+        console.log(profession);
+        //this is invalid
+        var something = 'Not Okey';
+        
+        //boolean
+        var yes = true;
+        var no = false;
+        console.log(yes);
+        console.log(no);
+
+        //null
+        var emptyValue = null;
+        console.log(emptyValue);
+
+        //undefined
+        var weired;
+        console.log(weired);
+
+        var age = 40;
+        console.log(typeof age);
+        age = "I am neigher young nor old";
+        console.log(typeof age);
+
+        console.log(typeof maybeinfinity);
+
+        //opertors
+        var result = 10 + 20;
+        console.log(result);
+         
+         result = result - 5;
+         console.log(result);
+
+         result = result * 2;
+         console.log(result);
+
+         result = result / 5;
+         console.log(result);
+
+         result = result % 3;
+         console.log(result);
+
+         result = result + 1;
+         console.log(result);
+
+         result++;
+         console.log(result);
+
+         result--;
+         console.log(result);
+
+         ++result; 
+         console.log(result); // 3
+
+         --result; 
+         console.log(result); // 2
+         
+         var otherVar = ++result + 5;
+         console.log(otherVar); // 8
+
+         var anotherVar = result++ + 2;
+         console.log(anotherVar); // 5
+         console.log(result); // 4
+
+         var lang = "Javascript";
+         console.log("Hello, " + lang + "!");
+
+         console.log(lang + 101);
+         console.log(2019 - "sometext");
+    </script>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="100">
+    <header>
+      <nav
+        class="navbar navbar-expand-md fixed-top navbar-dark sd"
+        style="background: #0d4f83;"
+      >
+        <a class="navbar-brand animated zoomIn mr-0 ml-3 p-0" href="#"
+          ><img
+            class=""
+            src="assets/images/kk.png"
+            style="height: 66px; width: auto;"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto mt-3 mt-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+
+      <noscript>
+          <h1>This web page needs JavaScript enabled Browser to Work Properly</h1>
+      </noscript>
+
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">Identifiers and Keywords</h2>
+            <h3 class="py-2">Identifier Naming Rules</h3>
+            <ul class="px-4">
+                <li>First character should be an alphabet, underscore _ symbol or dollar $ symbol</li>
+                <li>Other characters may be alphanumerical, underscore or dollar symbols</li>
+                <li>Should not use keywords and reserved words as Identifier</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+    
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">JavaScript Syntax</h2>
+            <ul class="px-4">
+                <li>Case sensitive language</li>
+                <li>Using semicolons to terminate statements is good practice</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+      
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">JavaScript Data types</h2>
+            <h3 class="py-2">There are six data types in JavaScript</h3>
+            <h3 class="py-1">Primitive Data Types</h3>
+            <ul class="px-4">
+                <li>Number</li>
+                <li>String</li>
+                <li>Boolean</li>
+                <li>Null</li>
+                <li>Undefined</li>
+            </ul>
+            <h3 class="py-2">Reference Data Type</h3>
+            <h5 class="py-1">Object</h5>
+          </div>
+
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">Arithmatic Operators</h2>
+            <ul class="px-4">
+                <li>Addition</li>
+                <li>Subtraction</li>
+                <li>Multiplication</li>
+                <li>Division</li>
+                <li>Modulus (Remainder)</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+    </main>
+
+    <div id="preloader"></div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="assets/MDB-free/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- aos script files -->
+    <script src="assets/aos/aos.js"></script>
+    <!-- venobox script files -->
+    <script src="assets/venobox/venobox.min.js"></script>
+    <!-- owl carousel script files -->
+    <script src="assets/owl.carousel/owl.carousel.min.js"></script>
+
+    <script type="text/javascript">
+      // Preloader
+      $(window).on("load", function () {
+        if ($("#preloader").length) {
+          $("#preloader")
+            .delay(100)
+            .fadeOut("slow", function () {
+              $(this).remove();
+            });
+        }
+      });
+      //Init AOS
+      function aos_init() {
+        AOS.init({
+          duration: 1000,
+          once: true,
+        });
+      }
+      $(window).on("load", function () {
+        aos_init();
+      });
+    </script>
+  </body>
+</html>
