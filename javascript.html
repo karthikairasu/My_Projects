@@ -69,133 +69,255 @@
     }
     </style>
     <script>
+      //Identifiers
+        // myCollege
+      //valid Identifiers
+        // myCollege
+        // javaScript
+        // $alary
+        //_privateVariable
+
+      //invalid Identifiers
+        // 1Programming
+        // #Tag
+        // UnConventionalButValid
+
+      //javascript syntax
+      //cat, Cat and CAT are different things. NOT SAME
+      //myCollege and MyCollege are different
+      var message;
+      message = 'Hello, Javascript!';
+      console.log(message);
+
+      //comments
+      //this is single line comment
+      /*
+        *This is
+        *Multiline
+        *Comment
+        */
+      console.log('Normal Program');
+
+      //datatypes
+      //number
+      var age = 21;
+      var gpa = 8.7;
+      console.log(age);
+      console.log(gpa);
+      //octal and hexa number
+      var octNum = 0255;
+      var hexNum = 0XFF;
+      console.log(octNum);
+      console.log(hexNum);
+      //exponential
+      var amount = 1.1e6;
+      console.log(amount);
+      //min and max number storage
+      var maxNum = (Number.MAX_VALUE);
+      var minNum = (Number.MIN_VALUE);
+      console.log(maxNum);
+      console.log(minNum);
+      //infinity and nagative infinity number
+      var maybeinfinity = Number.MAX_VALUE + Number.MAX_VALUE;
+      var maybenagativeinfinity = -10/0;
+      console.log(maybeinfinity);
+      console.log(maybenagativeinfinity);
+
+      //string
+      var name = 'ganesh';
+      var profession = "software engineer";
+      console.log(name);
+      console.log(profession);
+      //this is invalid
+      var something = 'Not Okey';
+      
+      //boolean
+      var yes = true;
+      var no = false;
+      console.log(yes);
+      console.log(no);
+
+      //null
+      var emptyValue = null;
+      console.log(emptyValue);
+
+      //undefined
+      var weired;
+      console.log(weired);
+
+      var age = 40;
+      console.log(typeof age);
+      age = "I am neigher young nor old";
+      console.log(typeof age);
+
+      console.log(typeof maybeinfinity);
+
+      //opertors
+      //arithmatic operator
+      var result = 10 + 20;
+      console.log(result);
         
-        //Identifiers
-          // myCollege
-        //valid Identifiers
-         // myCollege
-         // javaScript
-         // $alary
-         //_privateVariable
+      result = result - 5;
+      console.log(result);
 
-        //invalid Identifiers
-         // 1Programming
-         // #Tag
-         // UnConventionalButValid
+      result = result * 2;
+      console.log(result);
 
-        //javascript syntax
-        //cat, Cat and CAT are different things. NOT SAME
-        //myCollege and MyCollege are different
-        var message;
-        message = 'Hello, Javascript!';
-        console.log(message);
+      result = result / 5;
+      console.log(result);
 
-        //comments
-        //this is single line comment
-        /*
-         *This is
-         *Multiline
-         *Comment
-         */
-        console.log('Normal Program');
+      result = result % 3;
+      console.log(result);
 
-        //datatypes
-        //number
-        var age = 21;
-        var gpa = 8.7;
-        console.log(age);
-        console.log(gpa);
-        //octal and hexa number
-        var octNum = 0255;
-        var hexNum = 0XFF;
-        console.log(octNum);
-        console.log(hexNum);
-        //exponential
-        var amount = 1.1e6;
-        console.log(amount);
-        //min and max number storage
-        var maxNum = (Number.MAX_VALUE);
-        var minNum = (Number.MIN_VALUE);
-        console.log(maxNum);
-        console.log(minNum);
-        //infinity and nagative infinity number
-        var maybeinfinity = Number.MAX_VALUE + Number.MAX_VALUE;
-        var maybenagativeinfinity = -10/0;
-        console.log(maybeinfinity);
-        console.log(maybenagativeinfinity);
+      result = result + 1;
+      console.log(result);
 
-        //string
-        var name = 'ganesh';
-        var profession = "software engineer";
-        console.log(name);
-        console.log(profession);
-        //this is invalid
-        var something = 'Not Okey';
-        
-        //boolean
-        var yes = true;
-        var no = false;
-        console.log(yes);
-        console.log(no);
+      result++;
+      console.log(result);
 
-        //null
-        var emptyValue = null;
-        console.log(emptyValue);
+      result--;
+      console.log(result);
 
-        //undefined
-        var weired;
-        console.log(weired);
+      ++result; 
+      console.log(result); // 3
 
-        var age = 40;
-        console.log(typeof age);
-        age = "I am neigher young nor old";
-        console.log(typeof age);
+      --result; 
+      console.log(result); // 2
+      
+      var otherVar = ++result + 5;
+      console.log(otherVar); // 8
 
-        console.log(typeof maybeinfinity);
+      var anotherVar = result++ + 2;
+      console.log(anotherVar); // 5
+      console.log(result); // 4
 
-        //opertors
-        var result = 10 + 20;
-        console.log(result);
-         
-         result = result - 5;
-         console.log(result);
+      var lang = "Javascript";
+      console.log("Hello, " + lang + "!");
 
-         result = result * 2;
-         console.log(result);
+      console.log(lang + 101);
+      console.log(2019 - "sometext");
+      
+      //relational operators
+      console.log('10 > 5 = ', 10 > 5); //true
+      console.log('15 < 8 = ', 15 < 8); //false
 
-         result = result / 5;
-         console.log(result);
+      console.log('16 >= 15 = ', 16 >= 15); //true
+      console.log('21 <= 18 = ', 21 <= 18); //false
+      
+      console.log('15 == 15 = ', 15 == 15); //true
+      console.log('15 != 15 = ', 15 != 15); //false
 
-         result = result % 3;
-         console.log(result);
+      console.log('15 == "15" = ', 15 == "15"); //true
+      console.log('15 != "15" = ', 15 != "15"); //false
 
-         result = result + 1;
-         console.log(result);
+      console.log('15 === "15" = ', 15 === "15"); //false
+      console.log('15 !== "15" = ', 15 !== "15"); //true
 
-         result++;
-         console.log(result);
+      //logical or boolean operators
+      console.log('!true =', !true); // false
+      console.log('!10 =', !10); // false
 
-         result--;
-         console.log(result);
+      console.log('10 || "ok" =', 10 || 'ok');
+      console.log('"yes" || null =', "yes" || null);
+      console.log('"" || 25 =', "" || 25);
+      console.log('undefined || false =', undefined || false);
 
-         ++result; 
-         console.log(result); // 3
+      var someUserInput;
+      // pseudo code get user input
+      var num = someUserInput || 0;
+      console.log(num);
 
-         --result; 
-         console.log(result); // 2
-         
-         var otherVar = ++result + 5;
-         console.log(otherVar); // 8
+      console.log('10 && "ok" =', 10 && 'ok');
+      console.log('"yes" && null =', "yes" && null);
+      console.log('"" && 25 =', "10" && 25);
+      console.log('undefined && false =', undefined && false);
+      
+      // conditional operator
+      // syntax
+      // variableName = booleanExpress ? trueValue : falseValue;
+      var age = 16, isMinor;
+      isMinor = age >= 18 ? 'No' : 'yes';
+      console.log('isMinor', isMinor);
 
-         var anotherVar = result++ + 2;
-         console.log(anotherVar); // 5
-         console.log(result); // 4
+      // compound operators
+      var balance = 5000, credit = 2000;
+      // balance = balance + credit;
+      balance += credit;
+      console.log('balance =', balance); // 7000
 
-         var lang = "Javascript";
-         console.log("Hello, " + lang + "!");
+      var num = 5;
+      num -= 2;
+      console.log('Num', num); // 3
+      
+      num *= 5;
+      console.log('Num: ', num); // 15
 
-         console.log(lang + 101);
-         console.log(2019 - "sometext");
+      num %= 2;
+      console.log('Num: ', num); // 1
+
+      num /= 2;
+      console.log('Num: ', num); // 0.5
+
+      //if and if-else
+      var personOneAge = 45;
+      var personTwoAge = 54;
+      if (personOneAge > personTwoAge){
+        console.log('Person one is older than person two');
+      }
+
+      if (personTwoAge > personOneAge){
+        console.log('Person two is older than person one');
+      }
+      
+      // Rewritten with if-else
+      if (personOneAge > personTwoAge){
+        console.log('Person one is older than person two');
+      }else{
+        console.log('Person two is older than person one');
+      }
+      
+      var personThreeAge = 75;
+      if (personOneAge > personTwoAge && personOneAge > personThreeAge){
+        console.log('Person one is older than person two and three');
+      }
+
+      if (personTwoAge > personOneAge && personTwoAge > personThreeAge){
+        console.log('Person two is older than person one and three');
+      }
+
+      if (personThreeAge > personOneAge && personThreeAge > personTwoAge){
+        console.log('Person three is older than person one and two');
+      }
+
+      // Rewritten with if-else-if
+      if (personOneAge > personTwoAge && personOneAge > personThreeAge){
+        console.log('Person one is older than person two and three');
+      }else if (personTwoAge > personThreeAge){
+        console.log('Person two is older than person one and three');
+      }else{
+        console.log('Person three is older than person one and two');
+      }
+       
+      // Find whether a person can be allowed
+      // to take a roller coaster ride
+
+      var age = 16;
+      var parentsPermission = true;
+
+      if (age >= 18 || parentsPermission){
+        console.log('You are allowed for this roller coaster ride');
+      }else{
+        console.log('You are NOT allowed for this roller coaster ride');
+      }
+
+      age = 52;
+      parentsPermission = false;
+
+      if ((age <= 16 && parentsPermission === false) || age >= 60){
+        console.log('You are NOT allowed for this roller coaster ride');
+      }else{
+        console.log('You are allowed for this roller coaster ride');
+      }
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -274,11 +396,11 @@
             <h3 class="py-2">There are six data types in JavaScript</h3>
             <h3 class="py-1">Primitive Data Types</h3>
             <ul class="px-4">
-                <li>Number</li>
-                <li>String</li>
-                <li>Boolean</li>
-                <li>Null</li>
-                <li>Undefined</li>
+              <li>Number</li>
+              <li>String</li>
+              <li>Boolean</li>
+              <li>Null</li>
+              <li>Undefined</li>
             </ul>
             <h3 class="py-2">Reference Data Type</h3>
             <h5 class="py-1">Object</h5>
@@ -293,14 +415,46 @@
           <div class="javascript">
             <h2 class="py-2 text-center blue">Arithmatic Operators</h2>
             <ul class="px-4">
-                <li>Addition</li>
-                <li>Subtraction</li>
-                <li>Multiplication</li>
-                <li>Division</li>
-                <li>Modulus (Remainder)</li>
+              <li>Addition</li>
+              <li>Subtraction</li>
+              <li>Multiplication</li>
+              <li>Division</li>
+              <li>Modulus (Remainder)</li>
             </ul>
           </div>
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+      
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">Relational &amp; Logical Operators</h2>
+            <ul class="px-4">
+              <li>&gt;, &lt;, &gt;=, &lt;=, ==, ===, !==</li>
+              <li>! (NOT), || (OR), && (AND)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
 
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">Conditional &amp; Assignment Operators</h2>
+            <ul class="px-4">
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+      
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">If and If Else Statements</h2>
+          </div>
         </div>
       </section>
       <!-- ====================== close ======================== -->
