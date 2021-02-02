@@ -383,6 +383,71 @@
        console.log('Count: ', count--);
      }
 
+     // Switch Statement
+     var day = 5;
+     if(day == 1){
+      console.log('What Monday? Week end already over, oh no!?');
+     } else if (day == 2){
+      console.log('Tuesday, slowly getting started to work/study');
+     }else if (day == 3){
+      console.log('Wednesday, Getting used to work / study. Two more days');
+     }else if (day == 4){
+      console.log('Thursday, Did I say half the week is gone already?!');
+     }else if (day == 5){
+      console.log('Finally, Its Friday'); 
+     }else if (day == 6){
+      console.log('Starting Saturday!'); 
+     }else if (day == 7){
+      console.log('Surprising Sunday!'); 
+     }
+
+     switch (day) {
+       case 1:
+        console.log('What Monday? Week end already over, oh no!?');
+        break;
+       case 2:
+        console.log('Tuesday, slowly getting started to work/study');
+        break;
+       case 3:
+        console.log('Wednesday, Getting used to work / study. Two more days');
+        break; 
+       case 4:
+        console.log('Thursday, Did I say half the week is gone already?!'); 
+        break;
+       case 5:
+        console.log('Finally, Its Friday'); 
+        break; 
+       case 6:
+        console.log('Starting Saturday!');
+        break;
+       case 7:
+        console.log('Surprising Sunday!');
+        break;
+       default:
+        console.log('There is no such day in week');
+     }
+
+     switch ('Hello Javascript') {
+       case 'Hello' + ' Javascript':
+         console.log('My man!');
+         break;
+       default:
+         console.log('Go away Javascript Haters!');
+     }
+
+     day = 6;
+
+     switch (true) {
+      case day > 0 && day < 6: 
+       console.log('Working Days! :(');
+       break;
+      case day === 6 || day === 7: 
+       console.log('Holidays! :)');
+       break;
+      default: 
+       console.log('Which day are you talking about?!');
+     }
+    
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
