@@ -463,6 +463,54 @@
     greet1();
     greet1();
     greet1();
+
+    // example 2
+    function greet2(message, name) {
+      return "Hello, "+ name + "! " + message;
+    }
+    
+    var greetMessage = greet2('How are you?', 'Venkat');
+    console.log(greetMessage);
+
+    // example 3
+    function greet3(message, name) {
+      if (name) {
+        return "Hello, " + name + "!" + message;
+      }else{
+        return "Hello, Anonymous! " + message;
+      }
+    }
+
+    var greetMessage = greet3('How are you?'); //if not give assign name value, that param is undefined value
+    console.log(greetMessage);
+
+    // example 4
+    function greet4(message, name){
+      if(name){
+         return 'Hello ', + name + "! " + message; // if given name value, return keyword go to function and printed 
+      }
+      console.log("I won't be visibile to you, if you give name");
+      return 'Hello, Anonymous! ' + message;
+    }
+
+    var greetMessage = greet4('How are you?');
+    console.log(greetMessage);
+
+    // example 5
+    function willBeDuplicated(){
+      console.log('I will be duplicated');
+    }
+
+    function willBeDuplicated(message){
+      console.log(message);
+      console.log('I am Original');
+    }
+
+    willBeDuplicated('Original or Duplicated?');
+
+    var returnedDuplicate = willBeDuplicated('What will you return?');
+    console.log(returnedDuplicate);
+
     
     </script>
   </head>
@@ -634,6 +682,35 @@
         <div class="container-fluid pt-5 px-lg-5 px-2">
           <div class="javascript">
             <h2 class="py-2 text-center blue">Function Basics</h2>
+          </div>
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+      
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">Reference Data Type</h2>
+            <table class="table table-borderless w-50 mx-auto">
+              <thead>
+                <th>Data Types</th>
+                <th>Values</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Number</td>
+                  <td>10,20</td>
+                </tr>
+                <tr>
+                  <td>String</td>
+                  <td>'Hi', 'Hello'</td>
+                </tr>
+                <tr>
+                  <td>Boolean</td>
+                  <td>true, false</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
