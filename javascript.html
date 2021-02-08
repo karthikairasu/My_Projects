@@ -511,16 +511,22 @@
     var returnedDuplicate = willBeDuplicated('What will you return?');
     console.log(returnedDuplicate);
     
-    // reference types
+    // Reference types
     // object
-    var person = new object();
-    console.log(person instanceof object)
+    var person = new Object();
+    console.log(person instanceof Object);
 
     person.name = 'Venkat';
     person.profession = 'Software Developer';
 
     console.log(person.name);
     console.log(person.profession);
+
+    person.sayHi = function(){
+      console.log('Hi ' + person.name);
+    }
+
+    person.sayHi();
 
     </script>
   </head>
