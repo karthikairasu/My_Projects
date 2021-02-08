@@ -528,6 +528,20 @@
 
     person.sayHi();
 
+    var num1 = 10;
+    var num2 = num1;
+
+    var obj1 = new Object();
+    var obj2 = obj1;
+    
+    num2 = 20;
+    console.log('Num1 :', num1);
+    console.log('Num2 :', num2);
+    
+    obj2.newProp = "By Reference";
+    console.log('Obj1 :', obj1);
+    console.log('Obj2 :', obj2);
+
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -815,13 +829,23 @@
               </tbody>
             </table>
             <ul>
-              <li><span class="text-success">Reference type</span> => reference type is data and up on implementing operations to grouping way</li>
-              <li><span class="text-success">Object</span> => object is reference type instances</li>
-              <li><span class="text-success">constructor</span> => constructor is reference type instances creating way</li>
               <li>Object Definition</li>
               <li>|</li>
               <li>Objects</li>
+              <li></li>
+              <li><span class="text-success">Reference type</span> => reference type is data and up on implementing operations to grouping way</li>
+              <li><span class="text-success">Object</span> => object is reference type instances</li>
+              <li><span class="text-success">constructor</span> => constructor is reference type instances creating way</li>
             </ul>
+            <div class="pt-4 text-danger">
+              <p>primitive number data type memory - 8 bytes</p>
+              <p>primitive boolean data type memory - 1 bit</p>
+              <p>referance object type memory - any time adding property and method, that's why not storing fixid memory in values</p>
+            </div>
+            <figure class="text-center">
+              <img src="assets/images/data_store.PNG" height="200px" width="auto" alt="">
+              <figcaption>Difference Between Primitive values & Object values</figcaption>
+            </figure>
           </div>
         </div>
       </section>
