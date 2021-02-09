@@ -542,6 +542,52 @@
     console.log('Obj1 :', obj1);
     console.log('Obj2 :', obj2);
 
+    // understanding object
+    
+    var obj3 = new Object(); // Object constructor syntax
+    var obj4 = {}; // Object literal syntax
+
+    var user1 = new Object();
+    user1.name = 'Venkat';
+    user1.profession = 'Software Developer';
+
+    user1.sayHi = function(){
+      console.log('Hello ,' + user1.name);
+    }
+
+    user1.sayHi();
+
+    var user2 = {
+      name: 'Hari',
+      profession: 'Entrepreneur',
+      sayHi: function(){
+        console.log('Hello, ' + this.name);
+      }
+    }
+
+    user2.sayHi();
+
+    var user3 = user2;
+    user3.sayHi();
+    user2 = null;
+    user3.sayHi();
+
+    console.log(user3);
+
+    // frist name 
+    // syntax
+    // user1.frist name = 'some name';
+    
+    user1['first name'] = 'some name';
+    console.log(user1);
+
+    var propName = 'first name';
+    console.log(user1[propName]);
+
+    for (prop in user3){
+      console.log(user3[prop]);
+    }
+
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -846,6 +892,19 @@
               <img src="assets/images/data_store.PNG" height="200px" width="auto" alt="">
               <figcaption>Difference Between Primitive values & Object values</figcaption>
             </figure>
+          </div>
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">Understanding Objects Part 1</h2>
+            <ul>
+              <li>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
