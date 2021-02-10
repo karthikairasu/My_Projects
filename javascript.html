@@ -615,7 +615,23 @@
 
     var employee2 = {
       name: 'Kumar'
-    };
+    }; 
+
+    employee2.name = 'Gautam';
+    console.log(employee2.name);
+
+    // change to unwritable
+    var employee3 = {};
+
+    Object.defineProperty(employee3, 'name',{
+      configurable: true,
+      writable: false,
+      enumerable: true,
+      value: 'Krishna'
+    });
+
+    employee3.name = 'Mugunda';
+    console.log(employee3.name);
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -930,6 +946,35 @@
           <div class="javascript">
             <h2 class="py-2 text-center blue">Understanding Objects Part 1</h2>
             <ul class="text-success">
+              <li>Object constructor syntax
+                 <pre>
+                  var obj3 = new Object();
+                 </pre>
+              </li>
+              <li>Object literal syntax
+                <pre>
+                  var obj4 = {};
+                </pre>
+              </li>
+              <li>
+                <pre>
+                  // for in loop use to print object properties
+                  for (prop in user3){
+                    console.log(user3[prop]);
+                  }
+                </pre>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+      
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">Understanding Objects Part 2</h2>
+            <ul class="text-success">
               <li><h5>Data Property Attribute</h5></li>
               <li>1.Configurable - Three Attribute are Configurable or not decided Configurable Attribute</li>
               <li>2.Enumerable - Foreign loop using that time one property display or not decided Enumerable Attribute  </li>
@@ -940,6 +985,7 @@
         </div>
       </section>
       <!-- ====================== close ======================== -->
+    
     </main>
 
     <div id="preloader"></div>
