@@ -569,8 +569,8 @@
 
     var user3 = user2;
     user3.sayHi();
-    user2 = null;
-    user3.sayHi();
+    user2 = null; // user2 object reference value null
+    user3.sayHi(); // this keyword use to access user3 value
 
     console.log(user3);
 
@@ -584,10 +584,23 @@
     var propName = 'first name';
     console.log(user1[propName]);
 
+    // for in loop use to print object properties
     for (prop in user3){
       console.log(user3[prop]);
     }
 
+    var user = new Object();
+    console.log(user);
+
+    user.name = 'Javascript learner';
+    user.sayHi = function() {
+      console.log('Hi');
+    }
+    console.log(user.hasOwnProperty('name'));
+    console.log(user.hasOwnProperty('sayHi'));
+    console.log(user.hasOwnProperty('profession'));
+    console.log(user.hasOwnProperty('toString'));
+    console.log(user.hasOwnProperty('valueOf'));
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
