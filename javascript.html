@@ -632,6 +632,19 @@
 
     employee3.name = 'Mugunda';
     console.log(employee3.name);
+
+    employee3.designation = 'Developer';
+    employee3.salary = 45000;
+
+    for (prop in employee3){
+      console.log(prop, employee3[prop]);
+    }
+
+    Object.defineProperty(employee3, 'salary',{
+      configurable: true,
+      writable: false,
+      enumerable:false
+    })
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
