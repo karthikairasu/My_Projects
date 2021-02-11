@@ -645,6 +645,14 @@
       writable: false,
       enumerable:false
     })
+
+    console.log('Results after enumerable change');
+
+    for (prop in employee3){
+      console.log(prop, employee3[prop]);
+    }
+
+    employee3.bonus = 10000;
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
