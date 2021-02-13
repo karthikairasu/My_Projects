@@ -669,6 +669,25 @@
       yoj: 2019
     };
 
+    employee4.bonus = 10;
+
+    var employee = {
+      name: 'Annadurai',
+      _bonus: 0,
+      yoj: 2019
+    };
+
+    Object.defineProperty(employee5, 'bonus', {
+      get: function(){
+        return this._bonus;
+      },
+      set: function(newBonus) {
+        if(newBonus <= 20 && this.yoj < 2015) {
+          this._bonus = newBonus;
+        }
+      }
+    });
+
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
