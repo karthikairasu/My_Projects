@@ -691,7 +691,34 @@
     employee5.bonus = 10;
     console.log(employee5);
 
+    var employee6 = {};
 
+    Object.defineProperties(employee6, {
+      name: {
+        value: 'Thambidurai'
+      },
+      yoj: {
+        value: 2010,
+        writable: true
+      },
+      _bonus: {
+        value: 0,
+        writable: true
+      },
+      bonus: {
+        get: function() {
+          return this._bonus;
+        },
+        set: function(newBonus) {
+          if(newBonus <= 20 && this.yoj < 2015) {
+            this._bonus = newBonus;
+          }
+        }
+      }
+    });
+
+    employee6.bonus = 10;
+    console.log(employee6);
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
