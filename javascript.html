@@ -740,6 +740,34 @@
     };
 
     console.log(socialMedia1 instanceof Object); // true
+
+    function employee() {
+      //
+    }
+
+    console.log(employee());
+    console.log(new employee());
+
+    function employee() {
+      // var this - {} // implicitly created
+      // Other statements
+      // return this; // implicitly returned
+    }
+    
+    // this method reduce the repeated code
+    function Employee(name, designation, salary) {
+      this.name = name;
+      this.designation = designation;
+      this.salary = salary;
+    }
+    var employee1 = new Employee('Ramesh', 'Project Manager', 75000);
+    console.log(employee1);
+    var employee2 = new Employee('Raghav', 'Developer Trainee', 15000);
+    console.log(employee2);
+
+    // employee1 object is a Employee object definition instance
+    console.log(employee1 instanceof Employee);
+    console.log(employee1 instanceof Object);
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -824,6 +852,7 @@
               <li>Null</li>
               <li>Undefined</li>
               <li>typeof ➥➦ keyword used for identify data which type of datatype</li>
+              <li>typeof is a JavaScript keyword that will return the type of a variable when you call it</li>
             </ul>
             <h3 class="py-2">Reference Data Type</h3>
             <h5 class="py-1">Object</h5>
@@ -1099,7 +1128,7 @@
           <div class="javascript">
             <h2 class="py-2 text-center blue">Creating Objects</h2>
             <ul class="text-success">
-            
+              <li>instanceof ➥ The instanceof operator in JavaScript is used to check the type of an object at run time.</li>
             </ul>
           </div>
         </div>
