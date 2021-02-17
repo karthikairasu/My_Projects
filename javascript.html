@@ -808,6 +808,23 @@
     
     console.log(frontEndFrameworks instanceof Array);
     console.log(Array.isArray(frontEndFrameworks)); // multiple frams
+    
+    // array conversion methods
+    var user = {
+      name: 'Javascript learner',
+      sayHi: function() {
+        return 'Hi';
+      },
+      toString: function() {
+        return this.name + ' says ' + this.sayHi();
+      },
+      valueOf: function() {
+        return true;
+      }
+    };
+
+    console.log(user.toString());
+    console.log(user.valueOf());
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -1181,12 +1198,36 @@
           <div class="javascript">
             <h2 class="py-2 text-center blue">Arrays Introduction</h2>
             <ul class="">
-
+              <li>Array constructor syntax
+                <pre class="text-success">
+                  var language = new Array();
+                  var frontEndFrameworks = new Array('Angular JS', 'React Js', 'Vue Js');
+                </pre>
+              </li>
+              <li>// Literal syntax
+                <pre class="text-success">
+                   var language = [];
+                   var frontEndFrameworks = ['Angular JS', 'React Js', 'Vue Js'];
+                </pre>
+              </li>
             </ul>
           </div>
         </div>
       </section>
       <!-- ====================== close ======================== -->
+      
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">Arrays: Conversion Methods</h2>
+            <ul class="">
+              
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+    
     </main>
 
     <div id="preloader"></div>
