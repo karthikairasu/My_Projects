@@ -768,7 +768,8 @@
     // employee1 object is a Employee object definition instance
     console.log(employee1 instanceof Employee);
     console.log(employee1 instanceof Object);
-
+    
+    // Array
     var employee1 = {
       name: 'Ramesh',
       designation: 'Project Manager',
@@ -781,13 +782,32 @@
       2: true,
       3: null
     };
-
+    
+    // Array constructor syntax
     var language = new Array();
     var students = new Array(10);
     console.log(students);
 
     var frontEndFrameworks = new Array('Angular JS', 'React Js', 'Vue Js');
     console.log(frontEndFrameworks);
+
+    // Literal syntax
+    var language = [];
+    var students = [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
+    console.log(students);
+
+    var frontEndFrameworks = ['Angular JS', 'React Js', 'Vue Js'];
+    console.log(frontEndFrameworks);
+
+    console.log(frontEndFrameworks[1]);
+    console.log(frontEndFrameworks.length);
+
+    frontEndFrameworks[3] = 'Ember JS';
+    frontEndFrameworks[99] = 'Backbone Js';
+    console.log(frontEndFrameworks.length);
+    
+    console.log(frontEndFrameworks instanceof Array);
+    console.log(Array.isArray(frontEndFrameworks)); // multiple frams
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -1079,7 +1099,7 @@
             <ul>
               <li>Object Definition</li>
               <li>|</li>
-              <li>Objects</li>
+              <li>Objects ➥ object is unordered data collection</li>
               <li></li>
               <li><span class="text-success">Reference type</span> => reference type is data and up on implementing operations to grouping way</li>
               <li><span class="text-success">Object</span> => object is reference type instances</li>
