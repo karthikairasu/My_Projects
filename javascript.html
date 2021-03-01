@@ -851,12 +851,19 @@
     console.log(books);
     
     // Array Queue data
-    var LetMeEat = ['Breakfast'];
-    var count = LetMeEat.push('Lunch', 'Dinner');
+    var letMeEat = ['Breakfast'];
+    var count = letMeEat.push('Lunch', 'Dinner');
     console.log(count);
 
-    var firstMealOfTheDay = LetMeEat.shift();
+    var firstMealOfTheDay = letMeEat.shift();
     console.log(firstMealOfTheDay);
+
+    letMeEat.unshift(firstMealOfTheDay);
+    console.log(letMeEat);
+
+    var lastMealOfTheDay = letMeEat.pop();
+    console.log(lastMealOfTheDay);
+    console.log(letMeEat);
 
     </script>
   </head>
@@ -1290,7 +1297,8 @@
           <div class="javascript">
             <h2 class="py-2 text-center blue">Array Queue Data Structure Methods</h2>
             <ul>
-              <li></li>
+              <li>shift() method</li>
+              <li>unshift() method</li>
             </ul>
           </div>
         </div>
