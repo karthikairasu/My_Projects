@@ -883,7 +883,20 @@
     averageMarkList.push(100);
     averageMarkList.sort();
     console.log(averageMarkList);
-
+    
+    function compare(value1, value2) {
+      console.log('Value1:', value1);
+      console.log('Value2:', value2);
+      if (value1 > value2) {
+        return 1;
+      } else if (value1 < value2) {
+        return -1;
+      } else {
+        return 0;
+      }
+    }
+    averageMarkList.sort(compare);
+    console.log(averageMarkList);
     </script>
   </head>
   <body data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -1328,7 +1341,8 @@
           <div class="javascript">
             <h2 class="py-2 text-center blue">Array Reordering Methods</h2>
             <ul>
-              <li></li>
+              <li>reverse() method</li>
+              <li>sort() method</li>
             </ul>
           </div>
         </div>
