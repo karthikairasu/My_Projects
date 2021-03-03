@@ -888,10 +888,13 @@
       console.log('Value1: ', value1);
       console.log('Value2: ', value2);
       if (value1 > value2) {
+        console.log('+',value1);
         return 1;
       } else if (value1 < value2) {
+        console.log('-',value2);
         return -1;
       } else {
+        console.log('0',value2);
         return 0;
       }
     }
@@ -911,6 +914,13 @@
     }
 
     averageMarkList.sort(descendingOrder);
+    console.log(averageMarkList);
+
+    function ascendingOrder(value1, value2) {
+      return value1 - value2;
+    }
+
+    averageMarkList.sort(ascendingOrder);
     console.log(averageMarkList);
     </script>
   </head>
@@ -1332,6 +1342,7 @@
           <div class="javascript">
             <h2 class="py-2 text-center blue">Array Stack Data Structure Methods</h2>
             <ul>
+              <li class="text-success">Add Last and Remove Last</li>
               <li>push() method</li>
               <li>pop() method</li>
             </ul>
@@ -1344,6 +1355,7 @@
           <div class="javascript">
             <h2 class="py-2 text-center blue">Array Queue Data Structure Methods</h2>
             <ul>
+              <li class="text-success">Add First and Remove First</li>
               <li>shift() method</li>
               <li>unshift() method</li>
             </ul>
@@ -1356,8 +1368,10 @@
           <div class="javascript">
             <h2 class="py-2 text-center blue">Array Reordering Methods</h2>
             <ul>
+              <li class="text-success">Ordering ascending and Descending</li>
               <li>reverse() method</li>
               <li>sort() method</li>
+              <li>compare() method</li>
             </ul>
           </div>
         </div>
