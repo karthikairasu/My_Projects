@@ -1,0 +1,20 @@
+console.log()
+     ->basic output 
+     ->variables & data type in javascript 
+     ->type of function in js 
+     ->control structure 
+        a. conditions 
+              if else 
+              if else if 
+              nested if 
+              switch case 
+        b. loop 
+            ->for loop 
+            ->while loop 
+            ->do while loop 
+    Array 
+       -> single dimensional 
+       -> multi dimensional 
+       -> multi level array (array inside array)
+       
+    JSON Prasing         
