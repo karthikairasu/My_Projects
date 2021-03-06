@@ -14,7 +14,7 @@ one(100);
 
 function two(a=null , b=null){
     var c = a+b;
-    console.log("The function one say : "+ c);
+    console.log("The function two say : "+ c);
 }
 
 two(100 , 200);
