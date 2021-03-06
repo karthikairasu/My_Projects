@@ -1,7 +1,7 @@
-var a = 100;
+var a = 500;
 var b = 102;
 if(a>b){
-    console.log("The 100 is bigger than 102");
+    console.log("The "+ a +" is bigger than "+ b );
 }else{
-    console.log("The 102 is bigger than 100");
+    console.log("The "+ b +" is bigger than "+ a);
 }
