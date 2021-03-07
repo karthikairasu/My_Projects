@@ -1,4 +1,4 @@
-var a = "1234A";
+var a = "12A34 ABC";
 if(isNaN(a)){ //isNaN is enter value string (not a number)
     console.log( a + " is string and no of char are : "+ a.length);
 }else{
