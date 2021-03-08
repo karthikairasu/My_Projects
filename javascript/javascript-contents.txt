@@ -17,4 +17,44 @@ console.log()
        -> multi dimensional 
        -> multi level array (array inside array)
        
-    JSON Prasing         
+    JSON Prasing  
+    AJAX - Asynchronous javascript and xml (to read contents
+           from other file without page reload)
+    OOPS - 
+          CLASS
+          Object
+          Inheritance
+  ECMA 5 & 6
+          Arrow function
+          Type of arrow function
+  
+  Javascript form validation
+  
+  Data binding in javascript
+         - one way binding input & output elements
+         - two way binding input & output elements
+         - one way + two way with events
+
+==========================================================
+   html 
+       ->list of tag
+       ->in javascript html tags are called element
+
+       <h1>   =  Tag in html
+       <h1>   =  selector in css
+       <h1>   =  element in javascript
+       <h1>   =  JSX (javascript & xml) - Element in reactjs
+
+      All the html tags are called element in javascript
+          ->input element (those html tags, that use to ask
+          input from user)
+               As : text, number, select, checkbox, radio button, file, textarea
+         
+           ->output element (those html tags , that ust to
+           display output in web browser are called output
+           element)
+             As : div, p, h1, to h6 , , label, th, td, tr, span ,
+             img
+----------------------------------------------------------------------------
+      Data binding : the communication between html and javascript
+                     is called data binding
