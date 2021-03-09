@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+            one = () =>{
+                alert("This is Working...");
+            }
+            two = () =>{
+                alert()
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Javascript Mouse Events Syntax Example</h2>
+        <button onclick="one()"> 1 Click </button>
+        <button ondblclick="one()"> 2 Click </button>
+        <button onmousedown="one()"> Left , Right Click </button>
+        <button onmousemove="one()"> Touch and move here </button>
+        <button onmouseout="one()"> Touch and move out </button>
+        On Change : <select onchange="one()">
+                        <option>Choose</option>
+                        <option>Bangalore</option>
+                        <option>Chennai </option>
+                    </select>
+        <h2> Keyboard events Syntax example </h2>
+        <p>
+            onkeypress : <input type="text" onkeypress="one()">
+        </p>
+        <p>
+            onkeydown : <input type="text" onkeydown="one()">
+        </p>
+        <p>
+            onkeyup : <input type="text" onkeyup="one()">
+        </p>
+
+    </body>
+</html>

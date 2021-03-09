@@ -63,5 +63,26 @@ console.log()
                 1. alert()   - it use to give confirmation to user
                 2. confirm() - it use to ask confirmation from user
                 3. prompt()  - it use to ask non boolean input from user
--------------------------------------------------------------------------
+            
+            ->Events in Javascript : The Type of user intraction to user 
+            interface inevents in javascript
+
+                Mouse
+                    ->onclick
+                    ->ondblclick
+                    ->onmousedown
+                    ->onmousemove
+                    ->onmouseout
+                    ->onchange
+                Keyboard
+                    ->onkeypress / onkeydown
+                    ->onkeyup
+                    ->onfocus
+                    ->onblur
+                Body 
+                    ->onload 
+                    
+                From
+                    ->onsubmit
+
     

@@ -1,0 +1,33 @@
+<htm>
+    <head>
+        <script>
+            one = () =>{
+                alert("Your message Sent Successfully !");
+            }
+
+            two = () =>{
+                var a = confirm("Are you Sure ?");
+                alert(a);
+                // ok->true
+                // cancel->false
+            }
+
+            three = () =>{
+                var a = prompt("Enter Your Mobile No");
+                alert("You have enter : "+ a);
+            }
+
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Javascript & html Popup Window</h1>
+            <button onclick="one()">Click - Alert</button>
+            <button onclick="two()">Delete Record - Confirm</button>
+            <button onclick="three()">Download - Prompt</button>
+<p> Alert : it use to give confirmation message to user</p>
+<p> Confirm : it use to ask confirmation form user</p>
+<p> Propmt : it use to ask non boolean value from user</p>
+        </center>
+    </body>
+</htm>
