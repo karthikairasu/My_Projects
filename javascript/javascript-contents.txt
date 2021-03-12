@@ -84,5 +84,44 @@ console.log()
                     
                 From
                     ->onsubmit
+                   ----------------------------------
+                    <h1>     : html ->tag
+                    <h1>     : css ->selector (all the tags are selector in css)
+                    <h1>     : javascript ->Element
+                    <h1>     : ReactJs ->JSX Element
+                   -----------------------------------
+            Note : html has 2 type of tag 
+                    1. input element(tag)
+                            text 
+                            number 
+                            email 
+                            password 
+                            textarea
+                            select 
+                            checkbox 
+                            radio button 
+                        <input type="text"
+                               class=""
+                               id="abc"
+                               name=""
+                               value=""
+                               placeholder=""
+                               size="10"
+                               maxlength=""
+                               tabindex=""
+                               readonly="readonly"
+                               disabled="disabled">
+                    2. output element(tag)
+                            p , div , h1-h6 , span , label , section , aside , nav 
+                            th , td , tr , table , img
+                    
+                    Note : Javascript can communicate to input element using 
+                            .value
+                             others
+                           Javascript can communicate to output element using 
+                            .innerText 
+                            .innerHtml
+                             others
+
 
     

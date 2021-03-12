@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        var a = "<b> sdf sd sd sdf </b> <i> Italic </i> ";
+        one = () =>{
+            document.getElementById("msg").innerText = a;
+        }
+        two = () =>{
+            document.getElementById("msg").innerHTML = a;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1> Simple Data binding Example </h1>
+        <button onclick="one()"> innerText </button>
+        <button onclick="two()"> innerHTML </button>
+
+        <h2 id="msg">..............</h2>
+    </center>
+</body>
+</html>
