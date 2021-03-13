@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+          one = () =>{
+              var pname = document.getElementById("product").value;
+              var p = document.getElementById("price").value;
+              var q = document.getElementById("qty").value;
+             
+              // Value Assignment
+              document.getElementById("myproduct").innerText = pname;
+              document.getElementById("myprice").innerText = p;
+              document.getElementById("myqty").innerText = q;
+              document.getElementById("mytotal").innerText = p*q;
+          }
+    </script>
+</head>
+<body>
+    <center>
+        <h1> Data Binding Example </h1>
+        <p>Item Name <input type="text" id="product"/> </p>
+        <p>Price <input type="number" id="price"/> </p>
+        <p>Quantity <input type="number" id="qty"/> </p>
+        <p> <button onclick="one()"> Canculate </button> </p>
+
+        <h3 id="myproduct">.....</h3>
+        <h3 id="myprice">.....</h3>
+        <h3 id="myqty">....</h3>
+        <h3 id="mytotal">....</h3>
+    </center>
+</body>
+</html>

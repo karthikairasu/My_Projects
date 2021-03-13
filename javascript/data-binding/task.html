@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+           one = () =>{
+                var name = document.getElementById("fname").value;
+                document.getElementById("myname").innerText = name;
+
+                var email = document.getElementById("email").value;
+                document.getElementById("myemail").innerText = email;
+
+                var mobile = document.getElementById("mobile").value;
+                document.getElementById("mymobile").innerText = mobile;
+
+                var msg = document.getElementById("msg").value;
+                document.getElementById("mymsg").innerText = msg;
+           }
+    </script>
+</head>
+<body>
+    <center>
+        <h1> Data Binding Task</h1>
+    </center>
+    <table width="50%" style="float: left;">
+        <tr>
+            <th>Name :</th>
+            <td> <input type="text" id="fname"> </td>
+        </tr>
+        <tr>
+            <th>Email :</th>
+            <td> <input type="email" id="email"> </td>
+        </tr>
+        <tr>
+            <th>Mobile :</th>
+            <td> <input type="number" id="mobile"> </td>
+        </tr>
+        <tr>
+            <th>Message :</th>
+            <td> <textarea type="text" id="msg" cols="22" rows="3"></textarea> </td>
+        </tr>
+        <tr>
+            <td colspan="2"><center><button onclick="one()">Submit</button></center></td>
+        </tr>
+    </table>
+    <table width="50%">
+        <tr>
+            <td><p id="myname">.......</p></td>
+        </tr>
+        <tr>
+            <td><p id="myemail">.......</p></td>
+        </tr>
+        <tr>
+            <td><p id="mymobile">.......</p></td>
+        </tr>
+        <tr>
+            <td><p id="mymsg">.......</p></td>
+        </tr>
+    </table>
+</body>
+</html>

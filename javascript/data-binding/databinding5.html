@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+          one = () =>{
+              var n1 = document.getElementById("n1").value;
+              var n2 = document.getElementById("n2").value;
+              var total = parseInt(n1)  + parseInt(n2); // addition only parseInt use
+              document.getElementById("result").innerText = total;
+          }
+          two = () =>{
+              var n1 = document.getElementById("n1").value;
+              var n2 = document.getElementById("n2").value;
+              var total = n1  * n2;
+              document.getElementById("result").innerText = total;
+          }
+          three = () =>{
+              var n1 = document.getElementById("n1").value;
+              var n2 = document.getElementById("n2").value;
+              var total = n1  / n2;
+              document.getElementById("result").innerText = total;
+          }
+          four = () =>{
+              var n1 = document.getElementById("n1").value;
+              var n2 = document.getElementById("n2").value;
+              var total = n1  - n2;
+              document.getElementById("result").innerText = total;
+          }
+    </script>
+</head>
+<body>
+    <center>
+        <h1> Data Binding Example </h1> 
+        <p>
+            No 1 :<input type="number" id="n1">
+            No 2 :<input type="number" id="n2">
+        </p>
+        <p>
+            <button onclick="one()">N 1 + N 2</button>
+            <button onclick="two()">N 1 * N 2</button>
+            <button onclick="three()">N 1 / N 2</button>
+            <button onclick="four()">N 1 - N 2</button>
+        </p>
+        <h1 id="result"></h1>
+    </center>
+</body>
+</html>

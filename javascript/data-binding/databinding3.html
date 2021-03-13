@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+         abc = () =>{
+             var data = document.getElementById("xyz").value;
+             document.getElementById("msg").innerText = data;
+         }
+    </script>
+</head>
+<body>
+    <center>
+     <h1> Data binding on key up event </h1>
+     <textarea name="" id="xyz" cols="40" rows="5" onkeyup="abc()"></textarea>
+
+     <br/><br/>
+
+     <p id="msg"> Please type in textarea </p>
+    </center>
+</body>
+</html>
