@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        one = () =>{
+            var name = document.getElementById("fname").value;
+            document.getElementById("msg").innerText = name;
+        }
+    </script>
+</head>
+<body>
+    <h1> Input element data binding simple example </h1>
+    <p>
+        Full Name : <input type="text" id="fname"/>
+        <button onclick="one()"> Pick My Name </button>
+    </p>
+    <h1 id="msg">................</h1>
+</body>
+</html>
