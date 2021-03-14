@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+           two = () =>{
+               document.getElementById("abc").type="password";
+           }
+           one = () =>{
+               document.getElementById("abc").type="text";
+           }
+           three = () =>{
+               document.getElementById("abc").size=100;
+           }
+           four = () =>{
+               document.getElementById("abc").maxLength=10;
+           }
+           five = () =>{
+               document.getElementById("abc").readOnly=true;
+           }
+           six = () =>{
+               document.getElementById("abc").disabled=true;
+           }
+           seven = () =>{
+               document.getElementById("abc").style.border="10px solid red";
+           }
+    </script>
+</head>
+<body>
+     <center>
+         <h1>Text Fields Property Binding Example</h1>
+         <p>
+             <input 
+             type="text" 
+             id="abc"/>
+         </p>
+         <button onclick="one()"> Show Text </button>
+         <button onclick="two()"> Hide Text </button>
+         <button onclick="three()"> Resize </button>
+         <button onclick="four()"> Set Limit to 10 Char </button>
+         <button onclick="five()"> Readable </button>
+         <button onclick="six()"> Disabled </button>
+         <button onclick="seven()"> Apply Border </button>
+     </center> 
+</body>
+</html>
