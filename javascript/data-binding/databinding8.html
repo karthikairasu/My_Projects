@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+          one = () =>{
+              document.getElementById("mypic").height=100;
+              document.getElementById("mypic").width=200;
+          }
+          two = () =>{
+              document.getElementById("mypic").height=200;
+              document.getElementById("mypic").width=400;
+          }
+          three = () =>{
+              document.getElementById("mypic").height=400;
+              document.getElementById("mypic").width=600;
+          }
+          four = () =>{
+              document.getElementById("mypic").style.borderRadius="50%";
+          }
+          pone = () =>{
+              document.getElementById("mypic").src="../../assets/images/1.png";
+          }
+          ptwo = () =>{
+              document.getElementById("mypic").src="../../assets/images/2.png";
+          }
+          pthree = () =>{
+              document.getElementById("mypic").src="../../assets/images/3.png";
+          }
+    </script>
+</head>
+<body>
+    <center>
+        <h1> Javascript & Html Image Property Binding </h1>
+        <p>
+           <button onclick="one()">Small</button>
+           <button onclick="two()">Medium</button>
+           <button onclick="three()">Large</button>
+           <button onclick="four()">Apply Radius</button>
+        </p>
+        <img src="../../assets/images/1.png" id="mypic" height="300" width="auto" alt="img"/>
+        <p>
+            <img src="../../assets/images/1.png" height="60" width="auto" alt="img" onmousemove="pone()"/>
+            <img src="../../assets/images/2.png" height="60" width="auto" alt="img" onmousemove="ptwo()"/>
+            <img src="../../assets/images/3.png" height="60" width="auto" alt="img" onmousemove="pthree()"/>
+        </p>
+    </center>
+</body>
+</html>

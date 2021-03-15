@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+         one =() =>{
+             document.getElementById("abc").style.float="left";
+         }
+         two =() =>{
+             document.getElementById("abc").style.float="right";
+         }
+    </script>
+    <style>
+        #abc{
+            height: 200px;
+            width:300px;
+            background: red;
+            font: 30px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <button onclick="one()"> Move Left </button>
+        <button onclick="two()"> Move Right </button>
+
+        <div id="abc"> Click on button For Action </div>
+    </center>
+</body>
+</html>
