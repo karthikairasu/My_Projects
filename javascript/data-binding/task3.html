@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+           var fruits = ["Apple", "Pommagranate", "Guava", "Orange", "Avocado"];
+
+           one = () =>{
+               var newfruit = document.getElementById("newitem").value;
+               fruits.unshift(newfruit);
+               var newfruit = document.getElementById("newitem").value = "";
+               three();
+           }
+           two = () =>{
+               var newfruit = document.getElementById("newitem").value;
+               fruits.push(newfruit);
+               var newfruit = document.getElementById("newitem").value = "";
+               three();
+           }
+           three = () =>{
+              var fruitlist = "<h3> All Fruits List </h3>";
+              for(var i=0; i<fruits.length; i++){
+                  fruitlist = fruitlist + "<p>" + fruits[i] + "</p>";
+              } 
+              document.getElementById("abc").innerHTML = fruitlist;
+           }
+    </script>
+</head>
+<body>
+     <center>
+         <h2>Array Read Write Task</h1>
+         <p>
+            New Item : <input type="text" id="newitem">
+            <button onclick="one()"> Add 1st</button>
+            <button onclick="two()"> Add Last</button>
+            <button onclick="three()"> Show All List</button>
+         </p>
+         
+         <br/>
+         <div id="abc">......</div>
+     </center>
+</body>
+</html>

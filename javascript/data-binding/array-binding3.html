@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        var book = ["Java", "php", "Node", "Html", "CSS", "Angular", "React"];
+
+        one = () =>{
+            var booklist = "<h3> Books in odd no position </h3>";
+            for(var i=0; i<book.length; i++){
+                if(i%2 != 0 ){
+                    booklist = booklist + "<p>" + book[i] + "</p>";
+                }
+            }
+            document.getElementById("abc").innerHTML = booklist;
+        }
+        two = () =>{
+            var booklist = "<h3> Books in even no position </h3>";
+            for(var i=0; i<book.length; i++){
+                if(i%2 == 0 ){
+                    booklist = booklist + "<p>" + book[i] + "</p>";
+                }
+            }
+            document.getElementById("abc").innerHTML = booklist;
+        }
+        three = () =>{
+            var booklist = "<h3> Books in no position </h3>";
+            for(var i=0; i<book.length; i++){
+                booklist = booklist + "<p>" + book[i] + "</p>";
+            }
+            document.getElementById("abc").innerHTML = booklist;
+        }
+    </script>
+</head>
+<body>
+     <center>
+         <h2> Read odd / even elements from single dimensional Array</h2>
+         <p>
+         <button onclick="one()">Get Odd Position Elements</button>
+         <button onclick="two()">Get Even Position Elements</button>
+         <button onclick="three()">Print All Elements</button>
+        </p>
+
+        <br/>
+        <div id="abc"> Click on button for action..... </div>
+     </center>
+</body>
+</html>

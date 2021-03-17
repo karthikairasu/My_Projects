@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        var book = ["Java", "php", "Node", "Html", "CSS", "Angular", "React"];
+
+        one = () =>{
+             var itemname = document.getElementById("newitem").value;
+             book.unshift(itemname); // to add in begning of array
+             document.getElementById("newitem").value = ""; // clear textbox
+             three(); // to reload the list- as call back function
+        }
+        three = () =>{
+            var booklist = "<h3> All Books </h3>";
+            for(var i=0; i<book.length; i++){
+                booklist = booklist + "<p>" + book[i] + "</p>";
+            }
+            document.getElementById("abc").innerHTML = booklist;
+        }
+    </script>
+</head>
+<body>
+     <center>
+         <h2> Array Read Write Example</h2>
+         <p>
+           New Item : <input type="text" id="newitem"/>
+           <button onclick="one()">Save</button>
+           <button onclick="three()">Show Item</button>
+        </p>
+
+        <br/>
+        <div id="abc"> ..... </div>
+     </center>
+</body>
+</html>

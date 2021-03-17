@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        var counter = 5;
+        toHigh = () =>{
+            counter++;
+            document.getElementById("msg").innerText = counter;
+        }
+        toLow = () =>{
+            counter--;
+            document.getElementById("msg").innerText = counter;
+        }
+
+        // Array start here
+        var item = ["Apple", "Mobile", "Laptop", "Mango", "Milk"];
+
+        getItem = () =>{
+            var itemlist = "Available Items <br/>"; // newline innerText "\n"
+
+            for(var i=0; i<item.length; i++){
+                itemlist = itemlist + item[i] + "<br/>"; // newline  innerHTMl <br/>
+            }
+            //alert(itemlist);
+            document.getElementById("msg").innerHTML = itemlist;
+        }
+    </script>
+</head>
+<body>
+     <center>
+         <h2> Read Data from Array in javascript & Html </h2>
+         <button onclick="getItem()">Print All Item</button>
+         <p>
+             <button onclick="toHigh()"> + By 1</button>
+             <button onclick="toLow()"> - By 1</button>
+         </p>
+         <h1 id="msg">...............</h1>
+     </center>
+</body>
+</html>
