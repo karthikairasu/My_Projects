@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        var item = [
+                    {name:"Apple", price:200, qty:5},
+                    {name:"Water", price:20, qty:15},
+                    {name:"Java Book", price:200, qty:2 },
+                    {name:"Laptop", price:20000, qty:2 },
+                    {name:"Mouse", price:300, qty:2 }
+                   ];
+        getItem = () =>{
+            var data = "";
+            var total = 0;
+            for(var i=0; i<item.length; i++){
+                data = data + "<tr align='center'>";
+                data = data + "<td>" + (i+1) + "</td>";
+                data = data + "<td>" + item[i].name + "</td>";
+                data = data + "<td> Rs. " + item[i].price + "/Per Unit</td>";
+                data = data + "<td>" + item[i].qty + "</td>";
+                data = data + "<td> Rs. " + (item[i].price * item[i].qty) + "</td>";
+                data = data + "</tr>";
+                total = total + (item[i].price * item[i].qty);
+            }
+            //alert(data);
+            document.getElementById("itemlist").innerHTML = data;
+            document.getElementById("total").innerText = "Total Price :"+ total;
+        }
+        save =() =>{
+            var n = prompt ("Enter Item Name");
+            var p = prompt ("Enter Item Price");
+            var q = prompt ("Enter Item Quantity");
+
+            var newitem = {name:n, price:p, qty:q};
+            item = item.concat(newitem); // concat is new array add to old array & concat add last in data 
+            getItem(); // call to reload the list with new element
+        }
+        save2 =() =>{
+            var n = document.getElementById("itemname").value;
+            var p = document.getElementById("itemprice").value;
+            var q = document.getElementById("itemqty").value;
+
+            var newitem = {name:n, price:p, qty:q};
+            item = item.concat(newitem); // concat is new array add to old array & concat add last in data 
+            getItem(); // call to reload the list with new element
+        }
+    </script>
+</head>
+<body onload="getItem()">
+    <p align="center">
+        Name :<input type="text" id="itemname">
+        Price :<input type="text" id="itemprice">
+        Qty :<input type="text" id="itemqty">
+       <button onclick="save()"> Add New Item </button>
+       <button onclick="save2()"> Save </button>
+    </p>
+    <table align="center" cellpadding="15" width="70%">
+       <thead>
+           <tr bgcolor="orange"> 
+               <th>Sl No</th>
+               <th>Product Name</th>
+               <th>Price</th>
+               <th>Quantity</th>
+               <th>Total Price</th>
+           </tr>
+       </thead>
+       <tbody id="itemlist">
+            <tr>
+                <td colspan="5"> No Records ........</td>
+            </tr>
+        </tbody>
+       <tfoot bgcolor="pink">
+        <tr>
+            <th>Sl No</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th id="total">Total Price</th>
+        </tr>
+    </tfoot>
+    </table>
+</body>
+</html>
