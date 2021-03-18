@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        fieldset{
+            width: 400px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        .hideme{
+            display: none;
+        }
+    </style>
+    <script>
+         abc = (blockid) =>{
+            for (var i=1; i<=3; i++){
+                document.getElementById(i).style.display = "none";
+            }
+            // show only those id where user has clicked
+            document.getElementById(blockid).style.display = "block";
+         }
+    </script>
+</head>
+<body>
+    <table align="center" cellpadding="20">
+       <tr valign="top">
+           <td>
+            <p></p><button onclick="abc('1')">Bangalore</button></p>
+            <p></p><button onclick="abc('2')">Mumbai</button></p>
+            <p></p><button onclick="abc('3')">Chennai</button></p>
+           </td>
+           <td>
+            <fieldset id="1">
+                <legend>Bangalore</legend>
+                <p>This is bangalore Block</p>
+            </fieldset>
+            <fieldset id="2" class="hideme"> 
+                <legend>Mumbai</legend>
+                <p>This is Mumbai Block</p>
+            </fieldset>
+            <fieldset id="3" class="hideme">
+                <legend>Chennai</legend>
+                <p>This is Chennai Block</p>
+            </fieldset>
+           </td>
+       </tr>
+    </table>
+</body>
+</html>
