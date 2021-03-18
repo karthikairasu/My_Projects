@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+       abc = (text) =>{
+           var leftchar = 100 - text.length; 
+
+           if( (leftchar<=20) && (leftchar >10) ){
+               document.getElementById("xyz").style.color="orange";
+           }
+           if(leftchar==0){
+               document.getElementById("xyz").style.color="red";
+           }
+           
+           document.getElementById("pending").innerText = leftchar;
+           document.getElementById("message").innerText = text;
+       }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>String Input output Example</h1>
+        <textarea name="" id="" cols="40" rows="6" maxlength="100" onkeyup="abc(this.value)"></textarea>
+    
+        <p id="message"></p>
+        <p id="xyz"> 
+            <label id="pending">100 </label> - 
+             Character is left out of 100 Character
+        </p>
+    </center>
+</body>
+</html>
