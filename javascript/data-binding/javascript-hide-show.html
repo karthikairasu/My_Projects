@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        fieldset{
+            width: 400px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        .hideme{
+            display: none;
+        }
+    </style>
+    <script>
+         abc = (blockid) =>{
+            if(blockid == 1){
+                document.getElementById("2").style.display = "none";
+                document.getElementById("3").style.display = "none";
+                document.getElementById("1").style.display = "block";
+            } 
+            if(blockid == 2){
+                document.getElementById("1").style.display = "none";
+                document.getElementById("3").style.display = "none";
+                document.getElementById("2").style.display = "block";
+            } 
+            if(blockid == 3){
+                document.getElementById("1").style.display = "none";
+                document.getElementById("2").style.display = "none";
+                document.getElementById("3").style.display = "block";
+            } 
+         }
+    </script>
+</head>
+<body>
+    <p align="center">
+       <button onclick="abc('1')">Bangalore</button>
+       <button onclick="abc('2')">Mumbai</button>
+       <button onclick="abc('3')">Chennai</button>
+    </p>
+    <fieldset id="1">
+        <legend>Bangalore</legend>
+    </fieldset>
+    <fieldset id="2" class="hideme"> 
+        <legend>Mumbai</legend>
+    </fieldset>
+    <fieldset id="3" class="hideme">
+        <legend>Chennai</legend>
+    </fieldset>
+</body>
+</html>
