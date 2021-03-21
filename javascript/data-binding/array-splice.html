@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+          var item = [
+                       "Mouse", "Keyboard", "Apple", "Book",
+                       "Dress", "Laptop", "Water", "Pen"
+                     ];
+          var getProduct = function() {
+               var data = "";
+               for(var i=0; i<item.length; i++){
+                    data = data + "<tr>";
+                    data = data + "<td>" + i + "</td>";
+                    data = data + "<td>" + item[i] + "</td>";
+                    data = data + "<td> <button onclick='delitem()'>Delete</button> </td>";
+                    data = data + "</tr>";
+               }  
+               document.getElementById("itemlist").innerHTML = data;  
+          }
+          function delitem(){
+               alert("which item to delete");
+          }
+    </script>
+</head>
+<body onload="getProduct()">
+     <center>
+          <h1>Array Splice Example</h1>
+     </center>
+     <table align="center" cellpadding="15">
+        <thead>
+             <tr>
+                  <th>Index No</th>
+                  <th>Product Name</th>
+                  <th>Action</th>
+             </tr>
+        </thead>
+        <tbody id="itemlist">
+
+        </tbody>
+     </table>
+</body>
+</html>
