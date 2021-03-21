@@ -15,13 +15,17 @@
                     data = data + "<tr>";
                     data = data + "<td>" + i + "</td>";
                     data = data + "<td>" + item[i] + "</td>";
-                    data = data + "<td> <button onclick='delitem()'>Delete</button> </td>";
+                    data = data + "<td> <button onclick='delitem("+ i +")'>Delete</button> </td>";
                     data = data + "</tr>";
                }  
                document.getElementById("itemlist").innerHTML = data;  
           }
-          function delitem(){
-               alert("which item to delete");
+          function delitem(index){
+               var status = confirm("Are you Sure ?");
+               if(status==true){
+                   item.splice(index, 1); // 1 for delete, o for adding new element
+                   getProduct(); // to reload the list
+               } 
           }
     </script>
 </head>
