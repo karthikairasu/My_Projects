@@ -23,8 +23,11 @@
           function delitem(index){
                var status = confirm("Are you Sure ?");
                if(status==true){
+                   var name = item[index];
+
                    item.splice(index, 1); // 1 for delete, o for adding new element
                    getProduct(); // to reload the list
+                   document.getElementById("msg").innerText = name + " Removed !";
                } 
           }
     </script>
@@ -33,6 +36,7 @@
      <center>
           <h1>Array Splice Example</h1>
      </center>
+     <p align="center" id="msg"></p>
      <table align="center" cellpadding="15">
         <thead>
              <tr>

@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #booklist{
+            width:50%;
+        }
+        #booklist p{
+          float: left;
+          width: 25%;
+          text-align: left;
+        }
+    </style>
+    <script>
+          var books = ["Javascript", "ReactJS", "AngularJS", "Java"];
+
+          getProduct = () =>{
+              var data = "";
+              
+              for(var i=0; i<books.length; i++){
+                  data = data + "<p>";
+                  data = data + i +". ";
+                  data = data + books[i];
+                  data = data + "</p>"; 
+              }
+              document.getElementById("booklist").innerHTML = data;
+          }
+          addlan = () =>{
+              var newbook = document.getElementById("newlan").value;
+              books.push(newbook);
+              document.getElementById("newlan").innerText = "";
+              getProduct(); 
+            
+          }
+    </script>
+</head>
+<body onload="getProduct()">
+    <center>
+        <div>
+           <b> Book name :</b>  <input type="text" id="newlan">
+            <button onclick="addlan()">Save</button>
+        </div>
+        <div id="booklist">
+        </div>
+    </center>
+</body>
+</html>
