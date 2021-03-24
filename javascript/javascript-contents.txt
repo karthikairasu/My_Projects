@@ -65,7 +65,7 @@ console.log()
                 3. prompt()  - it use to ask non boolean input from user
             
             ->Events in Javascript : The Type of user intraction to user 
-            interface inevents in javascript
+            interface in events in javascript
 
                 Mouse
                     ->onclick

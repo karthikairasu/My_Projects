@@ -8,38 +8,87 @@
         fieldset{
             width: 400px;
         }
-        fieldset table tr td:nth-child(1){
-            text-align: right;
+        fieldset table tr th:nth-child(1){
             color: blue;
+            text-align: right;
         }
-        fieldset table tr td span{
+        fieldset table tr th span{
             color: red;
         }
-        table{
-            margin: 20px 0px;
+        table tr td{
+           padding: 10px 5px; 
+        }
+        .inputbox{
+          width: 100%;
+          height: 28px;
         }
     </style>
-    <script>
-
-    </script>
+    <script src="validation.js"></script>
 </head>
 <body>
     <center>
-        <h1>Form Validation in Javascript</h1>
-        <fieldset>
-            <table>
-                <tr>
-                    <td>Full Name<span>*</span></td>
-                    <td><input type="text" id="name"></td>
-                </tr>
-                <tr>
-                    <td>Age<span>*</span></td>
-                    <td><input type="text" id="name"></td>
-                </tr>
-            </table>
-            <button>Submit</button>
-            <button>Clear</button>
-        </fieldset>
+        <form action="save.py" method="POST" id="myform"> 
+            <h1>Form Validation in Javascript</h1>
+            <p id="message" align="center"></p>
+            <fieldset>
+                <table>
+                    <tr>
+                        <th>Full Name<span>*</span></th>
+                        <td>
+                            <input type="text" class="inputbox" id="fname">
+                            <i id="nameerror"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Age<span>*</span></th>
+                        <td>
+                            <input type="text" class="inputbox" id="age">
+                            <i id="ageerror"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Education<span>*</span></th>
+                        <td>
+                            <select type="text" class="inputbox" id="edu">
+                                <option value="">---Choose---</option>
+                                <option value="MCA">MCA</option>
+                                <option value="BCA">BCA</option>
+                                <option value="B.Tech">B.Tech</option>
+                            </select>
+                            <i id="eduerror"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Marks %<span>*</span></th>
+                        <td>
+                            <input type="number" class="inputbox" id="marks">
+                            <i id="markserror"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th> Gender <span>*</span></th>
+                        <td>
+                            <input type="radio" name="gender" id="male"> Male
+                            <input type="radio" name="gender" id="female"> Female
+                            <i id="gendererror"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th> Address <span>*</span></th>
+                        <td>
+                            <textarea class="inputbox" id="address"></textarea>
+                            <i id="addresserror"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <button type="button" onclick="register()">Submit</button>
+                            <button type="reset">Clear</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
     </center>
 </body>
 </html>
