@@ -47,23 +47,24 @@ register = () =>{
     }
 
     /* Gender Validation start here */
-    var gender = document.getElementById("male").value.trim();
-    if(gender==""){
-        formStatus = false;
-        document.getElementById("gender").style.border = "2px solid red";
-        document.getElementById("markserror").innerText = "Invalid Gender !";
+    var male = document.getElementById("male").checked;
+    var fmale = document.getElementById("female").checked;
+    if((male==false) && (fmale==false)){
+        document.getElementById("gendererror").innerText = "Invalid Gender !";
+        document.getElementById("gendererror").style.color = "red";
     }else{
-        document.getElementById("gender").style.border = "2px solid green";
-        document.getElementById("markserror").innerText = "";
+        document.getElementById("gendererror").innerText = "";
     }
 
     /* Address Validation start here */
-    var male = document.getElementById("male").checked == true;
-    var male = document.getElementById("male").checked == true;
+    var address = document.getElementById("address").value.trim();
     if(address==""){
         formStatus = false;
         document.getElementById("address").style.border = "2px solid red";
-        document.getElementById("addresserror").innerText = "Invalid Address !";
+        document.getElementById("addresserror").innerText = "Invalid Marks !";
+    }else{
+        document.getElementById("address").style.border = "2px solid green";
+        document.getElementById("addresserror").innerText = "";
     }
 
 
