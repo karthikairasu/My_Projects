@@ -6,6 +6,89 @@
     <title></title>
 </head>
 <body>
-    
+    <div style="width: 50%;margin: auto;">
+        <h2 align="center">Array & Object</h2>
+        <p><b>Object</b> : represent a special data type that is mutable and 
+            can be used to store a collection of data (rather than just a single value) 
+            <br> => Unordered sets of name-value pair
+        </p>
+        <pre>
+            var Merica = {
+                            Color1: "Red", 
+                            Color2: "White", 
+                            Color3: "Blue"
+                        };
+
+            const obj = {
+                name: 'Prashant Yadav',
+                age: '26',
+                gender: 'Male',
+                getDetails: function(){
+                return `${this.name} is ${this.age} years old`;
+                }
+            };
+            
+            console.log(obj.name);
+            //"Prashant Yadav"
+            
+            console.log(obj.age);
+            //"26"
+            
+            console.log(obj.getDetails());
+            //"Prashant Yadav is 26 years old"
+                         
+        </pre>
+        <p><b>Array</b> : Arrays are a special type of variable that is also mutable and 
+            can also be used to store a list of values
+            <br> => An Ordered collection of values
+        </p>
+        <pre>
+            const arr = [12, 23, 34, 45, 56, 67];
+
+            console.log(arr[0]);
+            //12
+
+            for(let i = 0; i < arr.length; i++){
+                console.log(arr[i]);
+            }              
+        </pre>
+
+        <h2 align="center">Classes</h2>
+        <p><b>Classes</b> :  ES6, Introduced JavaScript Classes, JavaScript Classes are templates for JavaScript Objects</p>
+        <pre>
+            class Car {
+                constructor(name, year) {
+                  this.name = name;
+                  this.year = year;
+                }
+              }
+        </pre>
+        <pre>
+            class Car{
+                name;
+                year;
+                constructor(name, year){
+                    this.name = name;
+                    this.year = year;
+                }
+                display(){
+                    return `Name = ${this.name}  Year = ${this.year}`;
+                }
+                age(){
+                    let date = new Date();
+                    return date.getFullYear() - this.year;
+                }
+            }
+            //let date = new Date();
+            //let year = date.getFullYear();
+            //console.log(object1.display() +" Age = "+ object1.age(year));
+
+
+            const object1 = new Car("Ford",2009);
+            const object2 = new Car("Audi", 2019);
+            console.log(object1.display() +" Age = "+ object1.age());
+            console.log(object2.display() +" Age = "+ object2.age());
+        </pre>
+    </div>
 </body>
 </html>
