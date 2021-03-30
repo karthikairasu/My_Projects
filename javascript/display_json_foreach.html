@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        table tr td, table tr th{
+            padding: 4px 6px;
+            border: 2px ridge;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2>JavaScript JSON Api Fetch 2</h2>
+        <p>forEach => using Array</p>
+        <p>forIn => using Object</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Emp Id</th>
+                    <th>Emp Name</th>
+                    <th>Emp Salary</th>
+                    <th>Emp Age</th>
+                    <th>Emp Prof</th>
+                </tr>
+            </thead>
+            <tbody id="result">
+                
+            </tbody>
+        </table>
+    </center>
+
+
+    <script>
+        let datas = 'http://dummy.restapiexample.com/api/v1/employees';
+
+        fetch(datas)
+        .then(response => response.json())
+        .then(datas =>{
+            console.log(datas.data.length);
+
+            if(datas.data.length > 0){
+
+                var temp = "";
+
+                //-----start foreach loop
+
+                datas.data.forEach((data) =>{
+                    temp += "<tr align='center'>";
+                    temp += "<td>" + data.id + "</td>";
+                    temp += "<td>" + data.employee_name + "</td>";
+                    temp += "<td>" + data.employee_salary + "</td>";
+                    temp += "<td>" + data.employee_age + "</td>";
+                    temp += "<td>" + data.profile_image + "</td>";
+                    temp += "</tr>";
+                })
+                // close foreach loop
+                document.getElementById("result").innerHTML = temp;
+            }
+        })
+
+    </script>
+    <script>
+        // ForEach => Array
+        console.log("========forEach Loop========"); 
+
+        var fruits = ["apple", "orange", "cherry"];
+
+        fruits.forEach((e) =>{   // e is call back function // foreach calling each elements
+            console.log(e);
+        })
+        fruits.forEach((e, i) =>{
+            console.log(e, i);
+        })
+
+        // ForIn loop => Object
+        console.log("========forIn Loop========");
+
+        var obj = {fruit:"Apple", year:2021, loc:"bangalore"};
+
+        for(let x in obj){  // let x is variable name, obj is collections of datatype
+            console.log(x);  // x is key name
+        }
+
+        for(let x in obj){  
+            console.log(x +" : "+ obj[x]);  // x is key name, obj[x] is value
+        }
+        // propertyIsEnumerable is there are not checking this forin loop, propertyIsEnumerable is function return
+
+        // ForIn loop => Array
+        console.log("========forIn Loop========");
+
+        for(let i of fruits){
+            console.log(i);
+        }
+        // Symbol.iterator is there are not checking this forof loop
+    </script>
+</body>
+</html>
