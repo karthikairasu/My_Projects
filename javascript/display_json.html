@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        table tr td, table tr th{
+            padding: 4px 6px;
+            border: 2px ridge;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2>JavaScript JSON Api Fetch</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+            </thead>
+            <tbody id="result">
+                
+            </tbody>
+        </table><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Emp Id</th>
+                    <th>Emp Name</th>
+                    <th>Emp Salary</th>
+                </tr>
+            </thead>
+            <tbody id="">
+                
+            </tbody>
+        </table>
+        <div id="display"></div>
+    </center>
+
+
+    <script>
+        let data = 'data.json';
+
+        fetch(data)
+        .then(response => response.json())
+        .then(data =>{
+            console.log(data.employees.length);
+            document.getElementById("display").innerHTML = data.employees[1].firstName;
+
+            var temp = "";
+            for(var i=0; i<data.employees.length; i++){
+                temp += "<tr align='center'>";
+                temp += "<td>" + data.employees[i].firstName + "</td>";
+                temp += "<td>" + data.employees[i].lastName + "</td>";
+                temp += "</tr>";
+            }
+            document.getElementById("result").innerHTML = temp;
+        })
+
+    </script>
+</body>
+</html>
