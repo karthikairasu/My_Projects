@@ -32,11 +32,16 @@
 
 
     <script>
-        const marks = [34, 54, 67, 23, 98];
+        const marks1 = [34, 54, 67, 23, 98];
 
         // map 
         // fail, pass
-        conts grade = marks.map( )
+        const grade = marks1.map(function(e) {
+            let result = e >= 45 ? "pass": "fail";
+            return result;
+        })
+
+        console.log(grade);
 
         // Reduce
         const marks = [34, 54, 67, 23, 98, 34];
