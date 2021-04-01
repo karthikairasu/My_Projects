@@ -32,7 +32,7 @@
 
 
     <script>
-        const marks1 = [34, 54, 67, 23, 98];
+        const marks1 = [34, 54, 67, 23, 98, 34];
 
         // map 
         // fail, pass
@@ -40,8 +40,17 @@
             let result = e >= 45 ? "pass": "fail";
             return result;
         })
-
         console.log(grade);
+
+        // fat arrow function
+        const grade2 = marks1.map(e => e >= 45 ? "pass": "fail");
+        console.log(grade2);
+
+        // filter
+        const pass = marks1.filter(e => e>=45) // filter check boolean value true or false, true means print in array inside value
+        // function(e) { return e >=45 }
+
+        console.log(pass);
 
         // Reduce
         const marks = [34, 54, 67, 23, 98, 34];
