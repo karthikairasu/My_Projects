@@ -196,7 +196,7 @@ a:hover {
 --------------------------------------------------------------*/
 /* CSS used here will be applied after bootstrap.css */
 body {
-  padding-top: 50px;
+  padding-top: ;
 }
 .bg-darkgray {
   background-color: #607d8b !important;
@@ -1118,8 +1118,8 @@ body {
   background: lightgoldenrodyellow;
 }
 .education .container-fluid {
-  background: url(https://karthikairasu.github.io/Ansara_training_institute/assets/images/border.png)
-    repeat-x 0 top;
+  background: url(../images/border.png)
+  repeat-x 0 top;
   padding: 6px;
   background-repeat: repeat;
   clear: both;
