@@ -2160,15 +2160,29 @@
     <script src="assets/owl.carousel/owl.carousel.min.js"></script>
     <script type="text/javascript">
       // Preloader
-      $(window).on("load", function () {
-        if ($("#preloader").length) {
-          $("#preloader")
-            .delay(100)
-            .fadeOut("slow", function () {
-              $(this).remove();
-            });
-        }
-      });
+      // $(window).on("load", function () {
+      //   if ($("#preloader").length) {
+      //     $("#preloader")
+      //       .delay(100)
+      //       .fadeOut("slow", function () {
+      //         $(this).remove();
+      //       });
+      //   }
+      // });
+
+      document.onreadystatechange = function() {
+            if (document.readyState !== "complete") {
+                document.querySelector(
+                  "body").style.visibility = "hidden";
+                document.querySelector(
+                  "#preloader").style.visibility = "visible";
+            } else {
+                document.querySelector(
+                  "#preloader").style.display = "none";
+                document.querySelector(
+                  "body").style.visibility = "visible";
+            }
+        };
       //owl carousel
     jQuery(".owl-carousel ").owlCarousel({
       autoplay: false,
