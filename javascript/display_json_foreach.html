@@ -30,6 +30,20 @@
                 
             </tbody>
         </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Emp Id</th>
+                    <th>Emp Name</th>
+                    <th>Emp Salary</th>
+                    <th>Emp Age</th>
+                    <th>Emp Prof</th>
+                </tr>
+            </thead>
+            <tbody id="result2">
+                
+            </tbody>
+        </table>
     </center>
 
 
@@ -60,6 +74,12 @@
                 document.getElementById("result").innerHTML = temp;
             }
         })
+
+fetch('http://time.jsontest.com')
+    .then(res => res.json())
+    .then((out) => {
+        console.log('Output: ', out);
+}).catch(err => console.error(err));
 
     </script>
     <script>

@@ -190,8 +190,74 @@
                 <li><strong>npm install --save styled-components</strong></li>
                 <li>Next</li>
                 <li><strong>import styled from 'styled-components'</strong></li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">React Js Router-Dom installation</h2>
+            <h3 class="py-2"></h3>
+            <ul class="px-4">
+                <li>Installing React Router-Dom</li>
+                <li>--------------------------</li>
+                <li><strong>npm install react-router-dom</strong></li>
                 <li>Next</li>
-                <li><strong></strong></li>
+                <li><strong>import {Switch, Route} from 'react-router-dom'</strong></li>
+                <li>Next</li>
+                <li>
+                  <pre>
+                     Switch
+                        Route path="/home" component={Home} 
+                        Route path="/notfoundpage" component={NotFoundPage} 
+                      Switch
+                  </pre>
+                </li>
+                <li>Next</li>
+                <li><strong>import { BrowserRouter as Router } from 'react-router-dom';</strong> index.js to import</li>
+                <li>Next</li>
+                <li>
+                  <pre>
+                    ReactDOM.render(
+                      <Router>
+                        <App />
+                      </Router>,
+                      document.getElementById('root')
+                    );
+                  </pre>
+                </li>
+                <li>Next</li>
+                <li><strong>import { Link } from 'react-router-dom';</strong> import to header.js file</li>
+                <li>Next</li>
+                <li>
+                  <pre>
+                    a tag change to Link and href change to
+                    exp:-
+                    <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                    app.js file NotFoundPage route remove path
+                  </pre>
+                </li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">React Js Jquery installation</h2>
+            <h3 class="py-2"></h3>
+            <ul class="px-4">
+                <li>Installing React Jquery</li>
+                <li>--------------------------</li>
+                <li><strong>npm install jquery</strong></li>
+                <li>Next</li>
+                <li><strong>import 'jquery/dist/jquery.slim.min.js';</strong></li>
             </ul>
           </div>
 
