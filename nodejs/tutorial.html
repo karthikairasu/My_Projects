@@ -264,6 +264,67 @@
         </div>
       </section>
 
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid pt-5 px-lg-5 px-2">
+          <div class="javascript">
+            <h2 class="py-2 text-center blue">React Js InfoProvider</h2>
+            <h3 class="py-2"></h3>
+            <ul class="px-4">
+                <li>React InfoProvider</li>
+                <li>--------------------------</li>
+                <li><strong>components folder inside context.js file creat</strong></li>
+                <li>Next</li>
+                <li><strong>const InfoContext = React.createContext();</strong>==> constant variable</li>
+                <li>Next</li>
+                <li>
+                  <strong>
+                    class InfoProvider extends Component {
+                        render() {
+                            return (
+                                <InfoContext.Provider value="Hello I am a DATA">
+                                    {this.props.children}
+                                </InfoContext.Provider>
+                            );
+                        }
+                    }
+                  </strong>==> InfoProvider component creating
+                </li>
+                <li>Next</li>
+                <li><strong>const InfoConsumer = InfoContext.Consumer; InfoConsumer</strong>==> constant variable</li>
+                <li>Next</li>
+                <li><strong>import { InfoProvider } from './components/context';</strong>==> Import InfoProvider index.js file</li>
+                <li>Next</li>
+                <li>
+                  <strong>
+                    <pre>
+                      InfoProvider
+                        Router
+                          App /
+                        /Router
+                      /InfoProvider,
+                    </pre>
+                  </strong>==> InfoProvider put outside the router
+                </li>
+                <li>Next</li>
+                <li><strong>import { InfoConsumer } from '../context';</strong>==> import Consumer to Home.js</li>
+                <li>Next</li>
+                <li>
+                  <strong>
+                      <InfoConsumer>
+                           {data =>{
+                              return <h2>{data}</h2>
+                           }}
+                      </InfoConsumer>
+                  </strong>
+                </li>
+                <li>Next</li>
+                <li><strong></strong></li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
 
       
     
