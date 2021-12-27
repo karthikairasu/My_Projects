@@ -1118,8 +1118,7 @@ body {
   background: lightgoldenrodyellow;
 }
 .education .container-fluid {
-  background: url(../images/border.png)
-  repeat-x 0 top;
+  background: url(../images/border.png) repeat-x 0 top;
   padding: 6px;
   background-repeat: repeat;
   clear: both;
@@ -1394,10 +1393,10 @@ body {
 /* =======================================
 #contact 
 ===========================================*/
-.contact svg {
+/* .contact svg {
   height: 23rem;
   margin-right: 4rem;
-}
+} */
 .contact #envelope {
   animation: float 2s ease-in-out infinite;
 }
