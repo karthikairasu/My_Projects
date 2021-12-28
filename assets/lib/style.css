@@ -1155,7 +1155,7 @@ body {
 }
 .education .main-timeline6 .timeline:after {
   width: 6px;
-  height: 80%;
+  height: 100%;
   background: #9f005d;
   left: -3px;
 }
