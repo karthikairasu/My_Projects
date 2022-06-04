@@ -118,6 +118,116 @@
                 <li>And what's very interesting here, is that we have like a custom HTML component here, is that we have like a custom HTML component here, And indeed React is all about those components. </li>
                 <li>React is all about splitting your application into small building blocks, small components, where every building block, every component, has a clear task and therefore your code stays maintainable and manageable and React, the library, will do the heavy lifting of rendering something on the screen and of combining all your code.</li>
             </ul>
+            <h2 class="py-2 text-center blue">Understanding Classes</h2>
+            <pre>
+              class Person{
+  
+                constructor(){
+                  this.name = "max";
+                }
+                
+                printMyName(){
+                  console.log(this.name);
+                }
+              }
+              
+              const person = new Person();
+              
+              person.printMyName();
+            </pre>
+            <p>
+              Now we inherit this property and this method printGender and we can use both on the person as well
+            </p>
+            <pre>
+              class Human{
+  
+                constructor(){
+                  this.gender = 'male';
+                }
+                
+                printMyGen(){
+                  console.log(this.gender);
+                }
+              }
+              
+              class Person extends Human{
+                
+                constructor(){
+                  super();
+                  this.name = "max";
+                  this.gender = "female";
+                }
+                
+                printMyName(){
+                  console.log(this.name);
+                }
+              }
+              
+              const person = new Person();
+              
+              person.printMyName();
+              person.printMyGen();
+            </pre>
+            <p>But it is extended by person so these are classes and classes are used by React to create its components. At least this is one of the two ways of creating components. just blueprints for javascript objects and are very comparable to constructor functions where inheritance is comparable to prototypes.</p>
+
+            <h2 class="py-2 text-center blue">Classes, Properties and Methods</h2>
+            <p>This is the syntax which is next generation javascript which we will actually use in this course.</p>
+            <pre>
+              class Human{
+  
+                gender = 'male';
+              
+              printMyGen = () => {
+                console.log(this.gender);
+              }
+            }
+            
+            class Person extends Human{
+              
+              
+                name = "max";
+                gender = "female";
+              
+              printMyName = () => {
+                console.log(this.name);
+              }
+            }
+            
+            const person = new Person();
+            
+            person.printMyName();
+            person.printMyGen();
+            </pre>
+            <h2 class="py-2 text-center blue">The Spread & Rest Operator</h2>
+            <p>Spread : used to split up array elements OR object properties</p>
+            <pre>
+              const newArray = [...oldArray, 1,2]
+
+              const newObject = {...oldObject, newProp:5}
+
+
+              const numbers = [1, 2, 3];
+              const newNumbers = [...numbers, 4];
+
+              console.log(newNumbers);
+
+             <span class="text-danger"> //Object Example </span>
+
+              const person = {
+                name: "Max"
+              };
+              
+              const newPerson = {
+                ...person,
+                age: 15
+              } 
+              
+              console.log(newPerson);
+            </pre>
+            <p>Reset : used to merge a list of function arguments into an array</p>
+
+            <h2 class="py-2 text-center blue">Classes, Properties and Methods</h2>
+            <h2 class="py-2 text-center blue">Classes, Properties and Methods</h2>
           </div>
 
         </div>
