@@ -1,43 +1,109 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react'
+import React from 'react';
+import '../../../../assets/style.css';
+import { Link } from 'react-router-dom';
+import {
+  // CButton,
+  CCard,
+  CCardBody,
+  CCardHeader,
+  CCol,
+  CDataTable,
+  CBadge,
+  CRow
+} from '@coreui/react'
+// import CIcon from '@coreui/icons-react'
+// import { DocsLink } from 'src/reusable'
+import usersData from '../../../users/admin/UserList'
 
+const getBadge = Action => {
+  switch (Action) {
+    case 'Submitted': return 'success'
+    case 'Inactive': return 'secondary'
+    case 'Pending': return 'warning'
+    case 'Banned': return 'danger'
+    default: return 'primary'
+  }
+};
+const fields = [
+  'No',
+  { key: 'Name', _style: { width: '10%'} },
+  { key: 'Email', _style: { width: '5%'} },
+  { key: 'Hss_Master_No', _style: { width: '5%'} },
+  { key: 'Mobile', _style: { width: '5%'} },
+  { key: 'User_type', _style: { width: '5%'} },
+  { key: 'Plant_Name', _style: { width: '5%'} },
+  { key: 'Storage_Location', _style: { width: '5%'} },
+  { key: 'Allow_Change_Order', _style: { width: '5%'} },
+  { key: 'Last_Login_Date', _style: { width: '5%'} },
+  { key: 'Created_Date', _style: { width: '5%'} },
+  { key: 'Action', _style: { width: '5%'} }]
 
-function UsersList() {
-
-  const [data, setdata] = useState([]);
-
-  const apiGet = () =>{
-    fetch('https://jsonplaceholder.typicode.com/todos')
-    .then(response => response.json())
-    .then(json => {
-      console.log(json)
-      setdata(json);
-    });
-  };
-
-  useEffect(()=>{
-   apiGet();
-  },[ ])
-
+const UsersList = () => {
   return (
-    <div className=''>
-    <div className='text-center'>
-      <h4>UsersList</h4>
-      <button onClick={apiGet}>Fetch API</button>
-    </div>
-        
-        {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
+    <>
+    <CCard className="">
+      <CCardHeader>
+            <CRow>
+               <CCol lg="4" md="6" sm="6">
+                 <div class="form-group row mb-0">
+                    <label class="col-lg-5 col-md-5 col-sm-6 col-12 px-2 col-form-label title">
+                      <b>Users List :</b>
+                      </label>
+                    <div class="col-lg-7 col-md-7 col-sm-6 col-12 pl-2 pt-1 output">
+                      <button className='btn btn-info btn-sm'>Add User</button>
+                    </div>
+                  </div>
+                </CCol>
+                <CCol lg="4"  md="6" sm="6">
+                 <div class="form-group row mb-0">
+                    <label class="col-lg-4 col-md-5 col-sm-6 col-12 px-2 col-form-label title">
+                      <b>Import User :</b>
+                      </label>
+                    <div class="col-lg-8 col-md-7 col-sm-6 col-12 pl-2 pt-1 output">
+                    <input type="file" className='form-control form-control-sm col-lg-7'/>
+                    </div>
+                  </div>
+                </CCol>
+                <CCol lg="2">
+                </CCol>
+                <CCol md="6" sm="6" lg="2 text-center-lg">
+                  <div className='form-group mb-0 py-1'>
+                    <button className='btn btn-success btn-sm'>Download Format</button>
+                  </div>
+                </CCol>
+            </CRow>
+      </CCardHeader>
+      <CCardBody>
+        <CCol lg="12">
+            
+        </CCol>
+        <CDataTable
+            items={usersData}
+            fields={fields}
+            tableFilter
+            itemsPerPageSelect
+            itemsPerPage={5}
+            hover 
+            sorter
+            pagination
+            scopedSlots = {{
+              'Action':
+                (item)=>(
+                  <td>
+                    <CBadge color={getBadge(item.Action)}>
+                      {item.Action}
+                    </CBadge>
+                  </td>
+                )
 
-        <div>
-          <ul className='list-group'>
-            {data.map(item =>
-              <li key={item.id} className="list-group-item">
-               <b> {item.userId}. {item.title}</b>
-              </li>
-              )}
-          </ul>
-        </div>
-    </div>
-    
+            }}
+            />
+      <div className='text-center py-2'>
+         {/* <Link type="submit" to="/supplier-portal/supplier-invoice/dashboard/InvoiceDetail" class="btn btn_h2o">Details page</Link> */}
+      </div>
+      </CCardBody>
+    </CCard>
+    </>
   )
 }
 
