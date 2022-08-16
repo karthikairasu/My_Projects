@@ -1,0 +1,6 @@
+npm install -g @angular/cli
+ng new my-app
+cd my-app
+ng serve --open
+npm install bootstrap jquery popper.js --save
+ng generate component dashboard
