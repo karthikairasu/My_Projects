@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Namespace Type Example</title>
+</head>
+<body>
+    <p>This example only works in Firefox 1.5+.</p>
+    <script type="text/javascript;e4x=1">
+    
+        var xml = <about:root xmlns:about="http://www.about.com/">
+                    <about:message>Hello World!</about:message>
+                  </about:root>;
+        
+        var about = xml.namespace("about");
+        alert(about.uri);
+        alert(about.prefix);
+    </script>
+</body>
+</html>

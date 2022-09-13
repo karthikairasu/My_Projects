@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="my-btn">click me</button>
+
+    <script>
+      // callback
+      /*   let button = document.getElementById("my-btn");
+
+      button.onclick = function() {  // callback doesnt handle errors
+          console.log("Clicked");
+      }  */ 
+
+      //callback pattern
+      // let button = document.getElementById("my-btn");  
+
+      // button.onclick = function () {  
+      //   console.log("Clicked - callback level1");
+
+      //   function a() {
+      //     console.log("Clicked - callback level2");
+
+      //     function b() {
+      //       console.log("Clicked - callback level3");
+
+      //       function c() {
+      //         console.log("Clicked - callback level4");
+      //       }
+      //       c();
+      //     }
+      //     b();
+      //   }
+      //   a();
+      // };
+
+      // Promise - ES6 
+
+            /*  let fs = require("fs"); //node js core module - file system
+
+      function readFile(filename) {
+          return new Promise(function(resolve, reject) {
+
+              // trigger the asynchronous operation
+              fs.readFile(filename, { encoding: "utf8" }, function(err, contents) {
+
+                  // check for errors
+                  if (err) {
+                      reject(err);
+                      return;
+                  }
+
+                  // the read succeeded
+                  resolve(contents);
+
+              });
+          });
+      }
+
+      let promise = readFile("example.txt");
+
+      // // listen for both fulfillment and rejection
+      promise.then(function(contents) {   
+          // fulfillment
+          console.log(contents);
+      }, function(err) {
+          // rejection
+          console.error(err.message);
+      });   */
+
+    </script>
+  </body>
+</html>

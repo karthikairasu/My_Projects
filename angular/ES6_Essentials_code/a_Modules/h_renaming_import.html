@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <script type="module">
+
+      // import { add } from "./g_renaming_export.js"; 
+
+      import {add as sum } from "./g_renaming_export.js";
+      console.log(typeof sum); // "function"  
+
+      console.log(sum(1, 2)); // 3    
+
+    </script>
+  </head>
+
+  <body></body>
+</html>
+
+

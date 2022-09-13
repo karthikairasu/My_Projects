@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script type="module">
+
+      import { name, setName} from "./e_exporting_quirk_bindings.js";
+
+      console.log(name); // "Nicholas"
+
+      // name = "jason"; // throws an error
+
+
+      setName("Greg");  
+
+      console.log(name); // "Greg"  
+
+      
+      setName("Greg123");  
+
+      console.log(name); // "Greg123"    
+
+
+    </script>
+  </head>
+
+  <body></body>
+</html>
