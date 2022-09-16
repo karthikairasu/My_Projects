@@ -5,22 +5,42 @@ ng serve --open
 ng serve --port 3001 --open
 npm install bootstrap jquery popper.js --save
 ng generate component dashboard
+dir
+npm cache clean --force
+data.js file write data array
+package.json - "json": "json-server data.js -p 3500"
+npm run json
 
+caniuse.com
+http protocol vs web socket(best)
+paul irish list of polyfills github
 
+design patterns addy osmani -Learning JavaScript Design Patterns
+Book by Addy Osmani
+
+The Principles of Object-Oriented JavaScript-Book by Nicholas C. Zakas 
+
+The-Problem-with-Native-JavaScript-APIs book by nicholas c. zakas pdf
+
+javascript patterns by stoyan stefanov
+
+IndexOf design pattern
 
 /=================Angular Training=================/
 Java script:
-     activation object  
-     scope chain execution 
-     execution context 
+     activation object
+     scope chain execution
+     execution context
 
      widow is global scope
 
 JavaScript has 3 types of scope:
 
-Block scope - let and const, Variables declared inside a { } block cannot be accessed from outside the block
-Function scope - Variables declared with var, let and const are quite similar when declared inside a function.
-Global scope - Variables declared Globally (outside any function) have Global Scope.
+          - Block scope - let and const, Variables declared inside a { } block cannot be accessed from  outside the block
+
+          - Function scope - Variables declared with var, let and const are quite similar when declared     inside a function.                   
+
+          - Global scope - Variables declared Globally (outside any function) have Global Scope.
 ===============================================================
  ES3- ES5 - prototypal language
 
@@ -56,7 +76,7 @@ All javascript (es3, es4, es5) is valid typescript
 * var is global
 
 Example:
- file 2.ts 
+ file 2.ts
 
 ES6 - let and const faux function
 -----------------------------------------------------------
@@ -74,7 +94,7 @@ b{
 console.log(b.x);
 --------------------------------------------------------
 closure
-       nested function 
+       nested function
 
 anonymous function
 b = function(){
@@ -110,7 +130,7 @@ ajax - new thread
 then called thenable
 
 
-polling (ever time update) and 
+polling (ever time update) and
 server push (state change to update)-state change monitor
 
 Observable - Monitor for state change ->
@@ -133,7 +153,7 @@ server
 * backendjs learn
 ------------------------------------------------------------------------
 function abc(x,y) {
-    
+
     console.log(arguments[0]);
 
 }
@@ -142,7 +162,7 @@ abc(10,20);
 Subject also known as Pusable Observables
 example3_29.js
 
-navigator.online -> current status 
+navigator.online -> current status
 
 Event stream
 Observable - state change -> pub...
@@ -153,7 +173,7 @@ Subject
 
 -----------------------------------------------------------------------------
 rxjs
-Dependency Injection 
+Dependency Injection
 
           - Spot a Dependency - when a scope consumes an entity which is not being locally declared.
           - All Dependencies are "Observable" - monitor for state changes -> pub..
@@ -161,9 +181,9 @@ Dependency Injection
           - same entity can play multiple roles - both as Dependent & Dependencies
 
 
- 
 
-          function  a(){ 
+
+          function  a(){
                var x = 100;
                return x;
           }
@@ -191,7 +211,7 @@ Dependency Injection
           }
           model();
 
-          function component(model) {  // View model 
+          function component(model) {  // View model
 
                console.log(model.x); //100
 
@@ -235,14 +255,14 @@ Dependency Injection
 
 
         * 17000 lines  of code - Misko Havery
- 
+
         * 1500 lines of code - angularjs
 
         * angularjs - angular 2 is 3 times faster to angularjs
 ----------------------------------------------------------------------------------------
-rxjs - 
+rxjs -
 zone.js -  looking for state change
- 
+
  Every ng command angular json file first load
 
      - ng serve --port 3001 --open
@@ -250,14 +270,14 @@ zone.js -  looking for state change
      - angular.json
 
      - main.ts
-         
+
          app.module.ts
-            
+
             app.component.ts
 
 angular we have injector service is build in service (<todo></todo>)
-        
-angular  - injector service -> buid in service 
+
+angular  - injector service -> buid in service
              |
            dependancy resolution
 
@@ -276,41 +296,42 @@ component:
 
 
 (app.modules.ts)import -> block script
-defer - 
+defer -
 auto import browsermodule
--------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
 
 Ng... - directives -> attributes in elements
-                               
-                         Controls the Render          Contains Micro Template ?       Bindings?
-                         of the Host element?
- 
-Attributes directives          no                            no                       No bindings (by default)
 
-                                                                                      can utilize 2 way binding with
-                                                                                      [] - property binding
-                                                                                      &
-                                                                                      () - event binding
+                         Controls the Render       Contains Micro Template ?      Bindings?
+                         of the Host element?
+
+Attributes directives          no                        no                       No bindings (by default)
+
+                                                                                  can utilize 2 way binding with
+                                                                                   [] - property binding
+                                                                                   &
+                                                                                   () - event binding
 
        &
 
-Structural directives           yes                          yes                      property binding(by default)
+Structural directives           yes                       yes                      property binding
+                                                                                   (by default)
 
 
 
 precise syntax for Structural directives - *
 
---------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Dom is static
 Directives is dynamic
 
 * elementRef
 
 *ngFor -
-          index 
-          first 
-          last 
-          odd 
+          index
+          first
+          last
+          odd
           even
 
 data update layers--
@@ -332,3 +353,190 @@ ngModel is the exclusive directive which can assist a form control:
      - validation
 
 #todoText - # elementRef -> angular entity
+=============================================================================================================
+Ecom - Project
+
+npm install
+
+ng serve --port 3001 --open
+
+npm run json
+
+npm clear chache
+
+Root and Feature
+
+   - Root component should not directly deal with model and template
+
+   - internal and external component to root template anti-pattern
+
+   - SRP - root module -> load root component
+
+   - SRP - root component -> load feature component
+
+   1. Store component eg: store -> deals categories of products 
+
+   2. cart detail -> list of products
+
+   3. checkout ->to deal with form validation
+
+Root Vs Feature
+
+  - Component Intercommunication - angular services / injectables
+
+  - Routing
+
+  - Form Validation
+
+  - Model & store - arhitecture
+
+  - Dependency Injections
+  
+
+model - only services
+
+       - structure
+       - Validation
+       - association
+       - data(static or dynamic)
+       - data repository(CRUD methods) 
+
+
+store - non services - feature component
+
+       - store.component.ts            
+
+       - store.component.ts 
+
+app is root module and model, store is feature modules
+
+process -> services  -> feature component -> app module
+
+* dependancy injection refer
+
+Fake Rest ApI -
+
+    .js or .Json
+        
+     
+when dependency check model module dependent 
+
+function abc(){
+     this.x=100;  // privillage 
+}
+
+a = new abc();
+
+singleton
+
+a= new Object();
+
+b= new Object();
+
+Object.prototype.abc=function(){
+
+}
+a.
+
+*product.repository.ts refer process
+======================================================================================
+template ->store.component -> product.repository methods -> static.datasource
+
+* ? - is nullable operator in typescript
+
+$event - angular Variable 
+
+map - is looping methods
+
+Injectable(dependent) -> Staticdatasource (Dependency) -> model.module.ts
+
+static data only use from operator
+
+store module only -> feature template declaration
+model module only -> service handling
+
+Routing mechanism - switching between feature components based on user events & BrowserURL state.
+
+part 1 - Hashbang - user events which modifies a state in the BrowserURL
+
+    non Angular - <a href="#sent">click here</a>
+
+    Angular :
+
+           - template navigate -> routerLink="/store"
+
+           - non-template      -> this.router.navigateByUrl("/cart");
+
+part 2 - Implicit - BrowserURL state is an implicit Observable/Event Stream - managed RXJS
+
+         state change -> publish.....
+
+part 3 - RouterStateTree -
+       
+        Subscribes to the state being published by the browserURL and serves a feature component accordingly.
+
+
+        RouterModule.forRoot([{
+          path:'',
+          component: ''
+        }])
+
+
+part 4 - Routing Placeholder - <router-outlet> </router-outlet>
+
+        it serves the feature component provided by  the RouterStateTree
+
+Non first navigate 
+
+
+route guard - angular version 6
+
+     canActivate - 
+
+
+-------------------------------------------------------------------------------
+products.model.ts                                            order.model.ts
+
+     localhost:3500/products                                 localhost:3500/orders
+
+     rest.datasource.ts (structure)                          rest.datasource.ts
+
+     product.repository.ts (structure)                       order.repository.ts
+
+     store.component.ts (structure)                          checkout.component.ts
+
+     store.component.html                                    checkout.component.html
+
+* never call ajax template, component, repository
+* structure - flow above things
+* component - any component load constructor first
+
+Angular - Validation - novalidate is disable dom default validation
+        
+        validators[required, minlength, maxlength, pattern] - validators array
+
+        validators.compose[Limit]
+
+3 validation Classes
+
+       - valid -generic
+
+       - invalid -generic
+
+       - errors - specific
+
+     either to a Form control or a Form group
+
+     ngModel - who can help a form control
+
+          - state changes
+
+               &
+
+          - Validation
+
+* form-control validation for user (error nodification) and form-group validation for server
+
+#name = "ngModel"                                            #form = "ngform"
+    
+* All directive is views
