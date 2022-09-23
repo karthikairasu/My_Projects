@@ -10,6 +10,9 @@ npm cache clean --force
 data.js file write data array
 package.json - "json": "json-server data.js -p 3500"
 npm run json
+node sever - 
+ng add @angular/pwa -
+ng build --prod
 
 caniuse.com
 http protocol vs web socket(best)
@@ -41,7 +44,7 @@ JavaScript has 3 types of scope:
           - Function scope - Variables declared with var, let and const are quite similar when declared     inside a function.                   
 
           - Global scope - Variables declared Globally (outside any function) have Global Scope.
-===============================================================
+===============================================================================================
  ES3- ES5 - prototypal language
 
  ES6 - class, modules, arrow function, spread, rest etc, promises -Classes instead of prototypes .modules
@@ -62,7 +65,7 @@ JavaScript has 3 types of scope:
 * antipattern is worest practice
 * faux function
 * shared script arhitecture
-------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 dependencies - bootstrap
 
          npm install bootstrap
@@ -79,7 +82,7 @@ Example:
  file 2.ts
 
 ES6 - let and const faux function
------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 curly brackets as a constructor for javascript
 
 function a(){
@@ -92,7 +95,7 @@ b{
     this.x=100;
 }
 console.log(b.x);
---------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 closure
        nested function
 
@@ -103,7 +106,7 @@ b = function(){
 b(); b knows anonymous function
 
 nested function is called closure
------------------------------------------------
+-----------------------------------------------------------------------------------------------
 SSA - shared script arhitect
 
 var adam:{}
@@ -115,7 +118,7 @@ varun.x="hello world"
 console.log()
 
 export and import done
------------------------------------------------
+-----------------------------------------------------------------------------------------------
 single thread - javascript
 code cruncing
 event handling
@@ -139,7 +142,7 @@ Observable - Monitor for state change ->
 
      subscriber
 
---------------------------------------------
+-----------------------------------------------------------------------------------------------
 server
 
      service -Observable / dependency
@@ -151,7 +154,7 @@ server
 * tightly coupled
 * reactive program unpredictable data (server data)
 * backendjs learn
-------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 function abc(x,y) {
 
     console.log(arguments[0]);
@@ -171,7 +174,7 @@ Hot & Cold Observables
 Pub - Sub pattern
 Subject
 
------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 rxjs
 Dependency Injection
 
@@ -200,7 +203,7 @@ Dependency Injection
                console.log(b.y); //200
           }
           c();
-      --------------------------------------------------
+-----------------------------------------------------------------------------------------------
           Server
 
           function  model(){  // service
@@ -234,7 +237,7 @@ Dependency Injection
           * component- child
           * parent to child - data flow
           * child to parent - event flow or Inverse data flow
-=======================================================================================
+===============================================================================================
      Angular - large scale apps
 
         - SPA's - Single page applications
@@ -249,7 +252,7 @@ Dependency Injection
 
         - enterprise based applications - large scale apps
 
-     React - samll - medium
+     React - small - medium
 
      Vue Js - small
 
@@ -259,7 +262,7 @@ Dependency Injection
         * 1500 lines of code - angularjs
 
         * angularjs - angular 2 is 3 times faster to angularjs
-----------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
 rxjs -
 zone.js -  looking for state change
 
@@ -298,7 +301,7 @@ component:
 (app.modules.ts)import -> block script
 defer -
 auto import browsermodule
-----------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 
 Ng... - directives -> attributes in elements
 
@@ -321,7 +324,7 @@ Structural directives           yes                       yes                   
 
 precise syntax for Structural directives - *
 
----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 Dom is static
 Directives is dynamic
 
@@ -353,7 +356,7 @@ ngModel is the exclusive directive which can assist a form control:
      - validation
 
 #todoText - # elementRef -> angular entity
-=============================================================================================================
+===============================================================================================
 Ecom - Project
 
 npm install
@@ -439,7 +442,7 @@ Object.prototype.abc=function(){
 a.
 
 *product.repository.ts refer process
-======================================================================================
+===============================================================================================
 template ->store.component -> product.repository methods -> static.datasource
 
 * ? - is nullable operator in typescript
@@ -494,7 +497,7 @@ route guard - angular version 6
      canActivate - 
 
 
--------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------
 products.model.ts                                            order.model.ts
 
      localhost:3500/products                                 localhost:3500/orders
@@ -540,3 +543,93 @@ Angular - Validation - novalidate is disable dom default validation
 #name = "ngModel"                                            #form = "ngform"
     
 * All directive is views
+
+===============================================================================================
+Augury
+
+Lazy loading of Angular Modules - on demand
+
+sub routing features - 
+
+Tested our Observables
+
+component intercommunication vs BrowserURL Params
+
+
+                           BrowserURL -      
+
+                                               RouterTree - mode=edit & id=1      
+
+
+          routerLink                                       
+
+  
+productTable                                                    ProductEditer
+
+
+uncertain things only make to Observable, otherwise static structure (for ex: product structure)
+
+* PWO - Progressive Web application 
+
+* npm install @angular/pwa
+  
+  web
+
+  native app
+
+    - web + Progress features
+
+    - offile dectection
+
+
+- service workers api - html5 api
+
+- .ts -> .js -ng build --prod 
+
+-----------------------------------------------------------------------------------------------
+
+x = new Rx.Subject(); // onNext(), onCompleted(); Pushables Observables
+
+x.onNext('hello'); state change -> pub...
+
+x.subscribe((a)=>console.log(a));
+
+* 842kb size only in js file
+
+File Server - accept request, resopnse / error - server.js
+
+-----------------------------------------------------------------------------------------------
+
+middleware                                                          node
+                                                                      |
+express - middleware                                                Connect (middle)
+                                                                      |
+connect - middleware - supported by node.                           Express(middle)
+
+express is to  node..js what jquery is to javascript
+
+ ----------------------------------------------------------------------------------------------
+ Error Handling
+ ----------------------------------------------------------------------------------------------
+ local component
+
+
+ local service
+
+
+ global service = http integration
+
+
+ * httpclients handle all errors for ajax calling
+ * if you use catchError and use throwerror confirm use
+
+app.module.ts
+
+             -  providers: [
+               {
+                    provide: HTTP_INTERCEPTORS,
+                    useClass: HttpInterceptorService,
+                    multi: true,
+               },
+               ],
+===============================================================================================
