@@ -11,7 +11,7 @@ data.js file write data array
 package.json - "json": "json-server data.js -p 3500"
 npm run json
 node sever - 
-ng add @angular/pwa -
+ng add @angular/pwa - service-worker package along with setting up the necessary support files.
 ng build --prod
 
 caniuse.com
@@ -28,6 +28,10 @@ The-Problem-with-Native-JavaScript-APIs book by nicholas c. zakas pdf
 javascript patterns by stoyan stefanov
 
 IndexOf design pattern
+
+https://github.com/johnpapa/angular-styleguide - angular style guide
+
+egghead
 
 /=================Angular Training=================/
 Java script:
@@ -633,3 +637,49 @@ app.module.ts
                },
                ],
 ===============================================================================================
+Validation
+
+
+                                              Model      Component       View
+
+build in validation criteria                   yes
+
+Error notification                             yes
+
+custom validation criteria                     yes
+
+Error Handling                                 yes
+
+
+validate [required, min-length, max-length, pattern]
+
+--------------------------------------------------------------------------------------------------
+component directive
+
+      component = Directive + Template
+
+custom directive
+
+
+[] property binding -> input
+
+() event binding -> output
+
+example:
+
+     <input [ngModel] = 'x'>
+          
+          ngOnChanges(); - look for the changes      
+          |
+          ngOnInit(); - passes that value -initialization
+          |
+          ngOnChanges(); - look for futher 
+          
+    EventEmitter - publish the records
+
+* elementRef -> only for web (not working hybird) to HostListener
+* own directive paModel two way binding only- is light weight and ngModel two way process validation, two way binding 
+
+
+* AOT angular 5 + version
+mukesh.trainings@gmail.com
