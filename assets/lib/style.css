@@ -196,7 +196,7 @@ a:hover {
 --------------------------------------------------------------*/
 /* CSS used here will be applied after bootstrap.css */
 body {
-  padding-top: ;
+  padding-top: 0;
 }
 .bg-darkgray {
   background-color: #607d8b !important;
@@ -728,7 +728,7 @@ body {
 
 /* SKILL 5 */
 .skill5 {
-  width: 65%;
+  width: 80%;
 }
 
 .skill5 .skill-count5 {
@@ -737,7 +737,7 @@ body {
 
 /* SKILL 6 */
 .skill6 {
-  width: 50%;
+  width: 70%;
 }
 
 .skill6 .skill-count6 {
