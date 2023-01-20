@@ -1445,10 +1445,10 @@ body {
     opacity: 1;
   }
 }
-.contact {
-}
+/* .contact {
+} */
 .contact form {
-  min-width: 25rem;
+  min-width: 15rem;
 }
 .contact form .title {
   font-family: "Pacifico", cursive;
