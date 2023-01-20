@@ -39,7 +39,7 @@ Java script:
      scope chain execution
      execution context
 
-     widow is global scope
+     window is global scope
 
 JavaScript has 3 types of scope:
 
