@@ -275,7 +275,7 @@
         <div class="container-fluid mt-5 pt-5 px-lg-5 px-2">
           <div class="javascript">
 	    <h5 class="py-2">Call, Apply, and Bind</h5>
-            <ol class="px-4">
+            <ul class="px-4">
               <li>Call</li>
 	      <li>With the call() method, you can write a method that can be used on different objects.</li>
               <pre> 
@@ -373,13 +373,46 @@
 			let fullName = person.fullName.bind(member);
 			console.log(fullName());  
 		    </pre>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+      <!-- ====================== close ======================== -->
+      <section id="javascript_main" class="javascript_main">
+        <div class="container-fluid mt-5 pt-5 px-lg-5 px-2">
+          <div class="javascript">
+	    <h5 class="py-2">Closure</h5>
+            <ol class="px-4">
+              <li>A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). 
+		      In other words, a closure gives you access to an outer function's scope from an inner function.</li>
+              <pre> 
+	      const outer = () =>{
+		  var a =10;
+		  const inner = () =>{
+		    return a; 
+		  }
+		  return inner();
+		} 
+		var res = outer();  
+		console.log(res); 
+	      ==================================
+	        const outer = () =>{
+		  var a =10;
+		  const inner = () =>{
+		    return a; 
+		  }
+		  return inner;
+		} 
+		var res = outer();  
+		console.log(res()); 
+              </pre>
             </ol>
           </div>
 
         </div>
       </section>
       <!-- ====================== close ======================== -->
-	    
       <section id="javascript_main" class="javascript_main">
         <div class="container-fluid mt-5 pt-5 px-lg-5 px-2">
           <div class="javascript">
