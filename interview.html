@@ -1297,10 +1297,41 @@
             </p>
         </div>
         <!---------Javascript Answer-->
-        <h6 class="font-weight-bold">1. What is Hoisting ?</h6>
-        <p class="pl-5"><strong>Hoisting </strong>is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
-        </p>
-      </div>
+        <div class="col-md-12">
+          <h6 class="font-weight-bold">1. What is Hoisting ?</h6>
+          <div class="pl-5"><strong>Hoisting </strong>is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+            <p class="mb-0 pl-3 pt-1">
+              <b class="text-success">Example:</b>
+              <pre class="mb-0">
+                x = 5;
+                console.log(x);
+                var x;
+              
+              * var declarations are hoisted and initialized with undefined.
+              * let and const declarations are hoisted but not initialized (they exist in the temporal dead zone).
+              </pre>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <h6 class="font-weight-bold">2. What is Closure ?</h6>
+          <div class="pl-5">A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function.
+            <p class="mb-0 pl-3 pt-1">
+              <b class="text-success">Example:</b>
+              <pre class="mb-0">
+                function buildGreeting() {
+                  let message = "Hello";
+                  function greetUser() {
+                    console.log(message);
+                  }
+                  return greetUser;
+                }
+                let hello = buildGreeting();
+                hello();
+              </pre>
+            </p>
+          </div>
+        </div>
     </section>
     <!-- ====================== close ======================== -->
   </main>
