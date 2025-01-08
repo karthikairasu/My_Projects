@@ -1373,11 +1373,25 @@
         </div>
         <div class="col-md-12">
           <h6 class="font-weight-bold">4. Javascript currying ?</h6>
-          <div class="pl-5">
+          <div class="pl-5">Currying is a functional programming technique in JavaScript (and other languages) where a function is transformed into a sequence of functions, each taking a single argument. Currying helps you avoid passing the same variable multiple times, and it helps you create a higher order function.
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
               <pre class="mb-0">
-                
+                // A curried function for adding three numbers
+                function add(x) {
+                    return function(y) {
+                        return function(z) {
+                            return x + y + z;
+                        };
+                    };
+                }
+
+                // Using the curried function
+                const addFive = add(5);          // Fix the first argument
+                const addFiveAndThree = addFive(3); // Fix the second argument
+                const result = addFiveAndThree(2); // Now we fix the last argument
+
+                console.log(result); // Output: 10 (5 + 3 + 2)
               </pre>
             </p>
           </div>
