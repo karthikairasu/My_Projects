@@ -1328,6 +1328,56 @@
                 }
                 let hello = buildGreeting();
                 hello();
+
+              * https://blog.hubspot.com/website/javascript-closure
+              </pre>
+            </p>
+            <b>IIFE and Closures:</b>
+
+            <pre class="mb-0">
+              for (var id = 1; id <= 3; id++) {
+                // Using an immediately-invoked function expression (IIFE) to create a new scope for each iteration.
+                // This helps avoid the closure issue with setTimeout.
+                (function (id) {
+                  setTimeout(function () {
+                    console.log('seconds: ' + id);
+                  }, id * 1000);
+                })(id);
+              }
+            </pre>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <h6 class="font-weight-bold">3. Higher Order Function ?</h6>
+          <div class="pl-5">A higher-order function is a function that either takes one or more functions as arguments or returns a function as its result.
+            <p class="mb-0 pl-3 pt-1">
+              <b class="text-success">Example:</b>
+              <pre class="mb-0">
+                // A higher-order function that takes a function as an argument
+                function applyOperation(arr, operation) {
+                    return arr.map(operation);
+                }
+
+                // A simple function to double a number
+                function double(x) {
+                    return x * 2;
+                }
+
+                // Using the higher-order function
+                const numbers = [1, 2, 3, 4];
+                const doubled = applyOperation(numbers, double);
+                console.log(doubled); 
+              </pre>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <h6 class="font-weight-bold">4. Javascript currying ?</h6>
+          <div class="pl-5">
+            <p class="mb-0 pl-3 pt-1">
+              <b class="text-success">Example:</b>
+              <pre class="mb-0">
+                
               </pre>
             </p>
           </div>
