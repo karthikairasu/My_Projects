@@ -1397,7 +1397,7 @@
           </div>
         </div>
         <div class="col-md-12">
-          <h6 class="font-weight-bold">5. What are object prototypes? ?</h6>
+          <h6 class="font-weight-bold">5. What are object prototypes ?</h6>
           <div class="pl-5">Every object in JavaScript has a built-in property, which is called its prototype. which is a reference to another object. This is used to establish a chain of objects from which the object can inherit properties and methods. This chain is known as the prototype chain.
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
@@ -1412,6 +1412,37 @@
                 
                 const person1 = new Person("Alice");
                 person1.greet();
+              </pre>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <h6 class="font-weight-bold">5. What are callbacks ?</h6>
+          <div class="pl-5">A callback is a function passed as an argument to another function. This technique allows a function to call another function.
+            <p class="mb-0 pl-3 pt-1">
+              <b class="text-success">Example:</b>
+              <pre class="mb-0">
+                //Asynchronous
+                console.log("Start");
+
+                setTimeout(function() {
+                  console.log("This is a callback function.");
+                }, 1000);  // Executes after 1 second (asynchronous)
+
+                console.log("End");
+
+                // Synchronous
+                function myDisplayer(some) {
+                  console.log(some);
+                }
+                
+                function myFirst() {
+                  myDisplayer("Hello");
+                }
+                
+                function mySecond() {
+                  myDisplayer("Goodbye");
+                }
               </pre>
             </p>
           </div>
