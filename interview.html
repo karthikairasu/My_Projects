@@ -1396,6 +1396,26 @@
             </p>
           </div>
         </div>
+        <div class="col-md-12">
+          <h6 class="font-weight-bold">5. What are object prototypes? ?</h6>
+          <div class="pl-5">Every object in JavaScript has a built-in property, which is called its prototype. which is a reference to another object. This is used to establish a chain of objects from which the object can inherit properties and methods. This chain is known as the prototype chain.
+            <p class="mb-0 pl-3 pt-1">
+              <b class="text-success">Example:</b>
+              <pre class="mb-0">
+                function Person(name) {
+                  this.name = name;
+                }
+                
+                Person.prototype.greet = function() {
+                  console.log(`Hello, my name is ${this.name}`);
+                };
+                
+                const person1 = new Person("Alice");
+                person1.greet();
+              </pre>
+            </p>
+          </div>
+        </div>
     </section>
     <!-- ====================== close ======================== -->
   </main>
