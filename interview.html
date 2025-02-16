@@ -596,11 +596,10 @@
     </section>
     <!-- ====================== close ======================== -->
 
-
     <section id="javascript_main" class="javascript_main">
       <div class="container-fluid mt-5 pt-5 px-lg-5 px-2">
         <div class="javascript">
-          <h5 class="py-2">Call, Apply, and Bind</h5>
+          <h5 class="py-2">16.Call, Apply, and Bind</h5>
           <ul class="px-4">
             <li>Call</li>
             <li>
@@ -621,28 +620,6 @@
 
                 var personres = person.fullName.call(person1, "Oslo", "Norway");
                 console.log(personres);  
-              </pre>
-            <pre>
-              function Company(name, age){
-                this.name = name;
-                this.age = age;
-              }
-
-              function Student1(name, age){
-                Company.call(this, name, age);
-                this.sec = "A";
-              }
-
-              function Student2(name, age){
-                Company.call(this, name, age); 
-                this.sec = "B";
-              }
-
-              var res1 = new Student1("siva", 25);
-              console.log(res1.name, res1.age, res1.sec);  
-
-              var res1 = new Student2("logi", 28);
-              console.log(res1.name, res1.age, res1.sec); 
               </pre>
             <li>Apply</li>
             <li>
@@ -665,32 +642,9 @@
                 var personres = person.fullName.apply(person1, ["Oslo", "Norway"]);
                 console.log(personres);  
               </pre>
-            <pre>
-                function Company(name, age){
-                  this.name = name;
-                  this.age = age;
-                }
-
-                function Student1(name, age){
-                  Company.apply(this, name, age);
-                  this.sec = "A";
-                }
-
-                function Student2(name, age){
-                  Company.apply(this, name, age); 
-                  this.sec = "B";
-                }
-
-                var res1 = new Student1(["siva", 25]); 
-                console.log(res1.name, res1.age, res1.sec);  
-
-                var res1 = new Student2(["logi", 28]); 
-                console.log(res1.name, res1.age, res1.sec); 
-              </pre>
             <li>Bind</li>
             <li>
-              With the bind() method, an object can borrow a method from
-              another object
+              With the bind() method, an object can borrow a method from another object
             </li>
             <pre>
                 const person = {
@@ -715,55 +669,9 @@
     </section>
     <!-- ====================== close ======================== -->
     <section id="javascript_main" class="javascript_main">
-      <div class="container-fluid mt-5 pt-5 px-lg-5 px-2">
+      <div class="container-fluid mt-0 pt-1 px-lg-5 px-2">
         <div class="javascript">
-          <h5 class="py-2">Closure</h5>
-          <ol class="px-4">
-            <li>
-              A closure is the combination of a function bundled together
-              (enclosed) with references to its surrounding state (the lexical
-              environment). In other words, a closure gives you access to an
-              outer function's scope from an inner function.
-            </li>
-            <pre>
-                const outer = () =>{
-                  var a =10;
-                  const inner = () =>{
-                    return a; 
-                  }
-                  return inner();
-                } 
-                var res = outer();  
-                console.log(res); 
-                ==================================
-                const outer = () =>{
-                  var a =10;
-                  const inner = () =>{
-                    return a; 
-                  }
-                  return inner;
-                } 
-                var res = outer();  
-                console.log(res()); 
-                ==================================
-                function make(){
-                  var a =10;
-                  function inner(){
-                    console.log(a);  
-                  }
-                  return inner();
-                }
-                make();
-              </pre>
-          </ol>
-        </div>
-      </div>
-    </section>
-    <!-- ====================== close ======================== -->
-    <section id="javascript_main" class="javascript_main">
-      <div class="container-fluid mt-5 pt-5 px-lg-5 px-2">
-        <div class="javascript">
-          <h5 class="py-2">Repeated String Print</h5>
+          <h5 class="py-2">17. Repeated String Print</h5>
           <ol class="px-4">
             <li>
             </li>
@@ -794,59 +702,182 @@
     </section>
     <!-- ====================== close ======================== -->
     <section id="javascript_main" class="javascript_main">
-      <div class="container-fluid mt-5 pt-5 px-lg-5 px-2">
+      <div class="container-fluid mt-0 pt-0 px-lg-5 px-2">
         <div class="javascript">
-          <h5 class="py-2"></h5>
-          <ol class="px-4">
-            <li> React Redux ==
-              The way Redux works is simple. There is a central store that holds the entire state of the application.
-              Each component can access the stored state without having to send down props from one component to
-              another.</li>
-            <pre></pre>
-          </ol>
+          ==================== Javascript Interview Questions==========================
+          <p><b> await async </b></p>
+          <p><b> javascript object clone </b></p>
+          <p><b> JS Modules </b></p>
+          <p><b> Difference Between CSS and SCSS </b></p>
+          <p><b> seo </b></p>
+          <p><b> web storages </b></p>
+          <p><b> preprocessor in css </b></p>
+          <p><b> sematic elements </b></p>
+          <p><b> array object </b></p>
+          <p><b> localStorage.setItem("lastname", "ramesh") </b></p>
+          <p><b> array method </b></p>
+          <p><b> splice </b></p>
+          <p><b> data grid </b></p>
+          <p><b> array sort() </b></p>
+          <p><b> find duplicates </b></p>
+          <p><b> oops concepts </b></p>
+          <p><b> map(), filter(), reduce() </b></p>
+          <p><b> JavaScript is Synchronous </b></p>
+          <p><b> JavaScript is a Synchronous, blocking, single-threaded language. </b></p>
+          <p><b> spread operator </b></p>
+          <p><b> es 6 feature </b></p>
+          <p><b> namespace </b></p>
+          <p><b> movie list by year wise javascript await api use to </b></p>
+          <p><b> add remove edit function call object </b></p>
+          <p><b> let str = "hello"; l count print the string </b></p>
+          <p><b> armstrong javascript </b></p>
+          <p><b> function updates </b></p>
+          <p><b> dom </b></p>
+          <p><b> event bubbling </b></p>
+          <p><b> javascript IFFE </b></p>
+          <p><b> Javascript Prototype </b></p>
+          <p><b> Javascript throttling and debouncing </b></p>
+          <p><b> Javascript currying </b></p>
+          <p><b> Reconciliation </b></p>
         </div>
       </div>
     </section>
     <!-- ====================== close ======================== -->
-
     <section id="javascript_main" class="javascript_main">
-      <div class="container-fluid mt-5 pt-5 px-lg-5 px-2">
+      <div class="container-fluid mt-0 pt-0 px-lg-5 px-2">
+        <div class="javascript">
+        ==================== React Interview Questions==========================
+         <ol class="ml-0">
+          <li>react default stateless or statefull</li>
+          <li>data passing function component multiple ways</li>
+          <li>data passing class component multiple ways</li>
+          <li>data passing function to class component</li>
+          <li>service call data passing</li>
+          <li>data passing event emitter</li>
+          <li>request and resopnse by</li>
+          <li>function component</li>
+          <li>class component</li>
+         </ol>
+
+        <p><b> JSX</b></p>
+        <p><b> Bable</b></p>
+        <p><b> WebPack</b></p>
+        <p><b> writing unit test cases using Jasmine</b></p>
+        <p><b> react sdlc</b></p>
+        <p><b> react api service call</b></p>
+        <p><b> LifeCycle, HOC, State, Context, ReactDOM, Render, Hydrate, Memo, DOM API & Virtual DOM, Hooks, SFC,
+            React Redux</b></p>
+        <p><b> react lifecycle hooks in functional components</b></p>
+        <p><b> use effect implementation </b></p>
+        <p><b> how to react api fatch table display 10 records pagination which parameters to display</b></p>
+        <p><b> redux</b></p>
+        <p><b> webpack</b></p>
+        <p><b> useReducer</b></p>
+        <p><b> useMemo</b></p>
+        <p><b> Good understanding of ReactJS workflows like Flux , Redux</b></p>
+        <p><b> Must be familiar with Unit Test Framework Jest, Enzyme, React Testing Library</b></p>
+        <p><b> Familiarity with common frontend development tools like NPM, Babel, Webpack etc.</b></p>
+        <p><b> Must be familiar with RESTful API/GrapQL</b></p>
+        <p><b> class components and function components</b></p>
+        <p><b> useEffect and useState</b></p>
+        <p><b> lazyload</b></p>
+        <p><b> fetch use to api</b></p>
+        <p><b> explain role and responsibility in current project</b></p>
+        <p><b> hooks and props </b></p>
+        <p><b> props drilling</b></p>
+        <p><b> previend rendering</b></p>
+        <p><b> rendering</b></p>
+        <p><b> debugging boundries</b></p>
+        <p><b> higher order components</b></p>
+        <p><b> routering</b></p>
+        <p><b> higher order one to another components</b></p>
+        <p><b> how to communicate another components</b></p>
+        <p><b> callback methods</b></p>
+        <p><b> multitelant password</b></p>
+        <p><b> useState explain project</b></p>
+        <p><b> what is hooks explain </b></p>
+        <p><b> dom types react</b></p>
+        <p><b> server side rendering</b></p>
+        <p><b> how to avoid unwanted rendering</b></p>
+        <p><b> useReducer example program</b></p>
+        <p><b> counter react</b></p>
+        <p><b> class components add value state</b></p>
+        <p><b> error boundries in react</b></p>
+        <p><b> react and angular differents</b></p>
+        <p><b> react sdlc function class update</b></p>
+        <p><b>How to parent component to update child component state in react</b></p>
+        <p><b>how to send at the time multiple http request in react</b></p>
+        <p><b>reuseable component with example</b></p>
+        <p><b>useRef and createRef</b></p>
+        <p><b>lazyload technical explain</b></p>
+        <p><b>fragments in react</b></p>
+        <p><b>useEffect fetching memory leakage how to prevent</b></p>
+        <p><b>Event Delegation?</b></p>
+        <p><b>createAsyncThunk</b></p>
+        <p><b>forwardRef</b></p>
+        <p><b>useImperativehandle</b></p>
+        <p><b>async & defer?</b></p>
+        </div>
+      </div>
+    </section>
+    <!-- ====================== close ======================== -->
+    <section id="javascript_main" class="javascript_main">
+      <div class="container-fluid mt-0 pt-0 px-lg-5 px-2">
+        <div class="javascript">
+          <p><b>====================React Basic requirements==========================</b></p>
+          <p><b class="text-success"><u>ES6 JS:</u></b></p>
+          <p><b>Variables</b></p>
+          <p><b>Arrow Functions</b></p>
+          <p><b>Array Methods</b> => map(), filter(), and reduce()</p>
+          <p><b>Destructuring</b></p>
+          <p><b>Modules</b></p>
+          <p><b>Ternary</b></p>
+          <p><b>Rest and Spread Operators</b></p>
+          <p><b>Promises - Async and await</b></p>
+          <p><b>Class</b></p>
+          <p><b class="text-success"><u>React Fundamentals :</u></b></p>
+          <p><b>JSX</b></p>
+          <p><b>State and Props</b></p>
+          <p><b>Components</b></p>
+          <p><b>Conditional Rendering</b></p>
+          <p><b>API requests</b></p>
+          <p><b>CRUD</b></p>
+          <p><b>Error Handling</b></p>
+          <p><b class="text-success"><u>React Hooks :</u></b></p>
+          <p><b>useCallback</b></p>
+          <p><b>useContext</b></p>
+          <p><b>useEffect</b></p>
+          <p><b>useReducer</b></p>
+          <p><b>useState</b></p>
+          <p><b>useDebugValue</b></p>
+          <p><b>useId</b></p>
+          <p><b>useImperativeHandle</b></p>
+          <p><b>useInsertionEffect</b></p>
+          <p><b>useMemo</b></p>
+          <p><b>useDeferredValue</b></p>
+          <p><b>useRef</b></p>
+          <p><b>useSyncExternalStore</b></p>
+          <p><b>useTransition</b></p>
+          <p><b class="text-success"><u>Custom Hooks</u></b></p>
+          <p><b class="text-danger"><u>Routing</u> - React Router</b></p>
+          <p><b class="text-info"><u>State Management</u> - 1.Redux - 2.Context API</b></p>
+          <p><b class="text-success"><u>UI Styling :</u></b></p>
+          <p><b>React Bootstrap</b></p>
+          <p><b>Material UI</b></p>
+          <p><b>Chakra UI etc</b></p>
+          <p><b>Sass</b></p>
+          <p><b>Tailwind CSS</b></p>
+          <p><b>Bulma etc</b></p>
+          <p><b class="text-success"><u>Progressive Web Application</u></b></p>
+        </div>
+      </div>
+    </section>
+    <!-- ====================== close ======================== -->
+    <section id="javascript_main" class="javascript_main">
+      <div class="container-fluid mt-0 pt-0 px-lg-5 px-2">
         <div class="javascript">
           <h5 class="py-2">React.js Developer Responsibilities</h5>
           <ol class="px-4">
-            <li>Translating designs and wireframes into high-quality code.</li>
-
-            <li>Developing new user-facing features using React.js.</li>
-
-            <li>Building reusable components and front-end libraries for future use.</li>
-
-            <li>Optimizing components for maximum performance across a vast array of web-capable devices and browsers.
-            </li>
-            <li>
-              Meeting with the development team to discuss user interface
-              ideas and applications.
-            </li>
-            <li>Reviewing application requirements and interface designs.</li>
-            <li>Identifying web-based user interactions.</li>
-            <li>
-              Developing and implementing highly responsive user interface
-              components using react concepts.
-            </li>
-            <li>
-              Writing application interface codes using JavaScript following
-              react.js workflows.
-            </li>
-            <li>
-              Troubleshooting interface software and debugging application
-              codes.
-            </li>
-            <li>
-              Developing and implementing front-end architecture to support
-              user interface concepts.
-            </li>
-            <li>Monitoring and improving front-end performance.</li>
-            <li>Documenting application changes and developing updates.</li>
-            <pre></pre>
             <div class="pb-1">
               <span class="title">1. UI Development</span>
               <ul class="react-res-list">
@@ -965,7 +996,7 @@
 
             <div class="py-2"></div>
 
-            <h5><strong>Roles and Responsibilities :-</strong></h5>
+            <h5 class="mb-3">Current Project Roles and Responsibilities :-</h5>
             <h6 class="subtitle"><strong>Platform Development:</strong></h6>
             <p class="ml-2">Design, develop, test, and maintain the E-signage platform, a solution for displaying multimedia content on digital screens across diverse settings such as retail stores, corporate buildings, public spaces, and transportation hubs.</p>
             
@@ -996,310 +1027,18 @@
             <h6 class="subtitle"><strong>Description :</strong></h6>
             <p class="ml-2">The E-signage platform is designed for managing and deploying multimedia content across digital screens. It supports various settings such as retail environments, corporate offices, public spaces, and transportation hubs. The application allows for easy content deployment to multiple screens simultaneously. The development involves using React JS for component-based architecture, Redux for state management, and Webpack for efficient module bundling. The role requires proficiency in JavaScript, Jest for testing, and familiarity with front-end development tools like Babel and NPM.</p>
 
-            <p class="ml-2">This refined description outlines your responsibilities and the technologies you work with, highlighting your role in developing and maintaining the E-signage platform.</p>
-
           </ol>
         </div>
       </div>
     </section>
+    <hr>
     <!-- ====================== close ======================== -->
-
     <section id="javascript_main" class="javascript_main">
-      <div class="container-fluid mt-5 pt-5 px-lg-5 px-2">
-        <div class="javascript">
-          <h5 class="py-2">Javascript Question</h5>
-          <p><b>* call(), bind(), apply() </b></p>
-          <p><b>* await async </b></p>
-          <p><b>* Scopes Closures</b></p>
-          <p><b>* How event loop works in the browser</b></p>
-          <p><b>* function, arrow function and function expression differents between</b></p>
-          <p><b>* a = {a:3}, a.b = 3;</b></p>
-          <p><b>* javascript object clone</b></p>
-          <p><b>* javascript promise</b></p>
-          <p><b>* ES6</b></p>
-          <p><b>* JS Modules</b></p>
-          <p><b>* SCSS/CSS</b></p>
-          <p><b>* TypeScript</b></p>
-          <p><b>* seo</b></p>
-          <p><b>* web storages</b></p>
-          <p><b>* promise</b></p>
-          <p><b>* es6 - let constant var</b></p>
-          <p><b>* preprocessor in css</b></p>
-          <p><b>* sematic elements</b></p>
-          <p><b>* array object</b></p>
-          <p><b>* localStorage.setItem("lastname", "ramesh")</b></p>
-          <p><b>* array method</b></p>
-          <p><b>* splice</b></p>
-          <p><b>* data grid </b></p>
-          <p><b>* array sort()</b></p>
-          <p><b>* find duplicates</b></p>
-          <p><b>* normal function and arrow function</b></p>
-          <p><b>* oops concepts</b></p>
-          <p><b>* map(), Fillter(), reduce()</b></p>
-          <p><b>* JavaScript is Synchronous</b></p>
-          <p><b>* JavaScript is a synchronous, blocking, single-threaded language.</b></p>
-          <p><b>* spread operator</b></p>
-          <p><b>* hoisting</b></p>
-          <p><b>* es 6 feature</b></p>
-          <p><b>* currying</b></p>
-          <p><b>* event loop</b></p>
-          <p><b>* namespace</b></p>
-          <p><b>* javascript typescript</b></p>
-          <p><b>* movie list by year wise javascript await api use to</b></p>
-          <p><b>* add remove edit function call object </b></p>
-          <p><b>* let str = "hello"; l count print the string</b></p>
-          <p><b>* armstrong javascript</b></p>
-          <p><b>* function updates</b></p>
-          <p><b>* dom</b></p>
-          <p><b>* event bubbling</b></p>
-          <p><b></b></p>
-          <p><b>RealDOM - It is a tree representation of HTML elements. </b></p>
-          <p><b>Virtual DOM - React maintains two virtual DOMs every time. The first one contains the updated virtual
-              DOM, and the other is a pre-updated version of the updated virtual DOM, The updated virtual DOM tree is
-              compared with the pre-updated, if any changes finds the possible updated in realDOM</b></p>
-          <p><b></b></p>
-          <pre>
-              html doctype
-
-              html sementic elements and html5 tag 
-
-              block and inline element
-
-              css flex and grid
-
-              position 
-
-              float 
-
-              javascript iffe
-
-              event loop
-
-              arrow function use 
-
-              function component 
-
-              react default stateless or statefull
-
-              test library 
-
-              agile 
-
-              wireframe
-
-              IT latest trending tech
-
-              why tcs and you can breif about tcs
-
-            ================================================================
-            
-              data passing function component multiple ways
-
-              data passing class component multiple ways
-
-              data passing function to class component
-
-              service call data passing
-
-              data passing event emitter
-
-              request and resopnse by
-
-              function component
-
-              class component
-            </pre>
-          <p><b>* </b></p>
-          <p><b>* current project chellanges</b></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====================== close ======================== -->
-
-    <section id="javascript_main" class="javascript_main">
-      <div class="container-fluid mt-5 pt-5 px-lg-5 px-2">
-        <div class="javascript">
-          <h5 class="py-2">React Question</h5>
-          <p><b>o JSX</b></p>
-          <p><b>o Bable</b></p>
-          <p><b>o WebPack</b></p>
-          <p><b>o writing unit test cases using Jasmine</b></p>
-          <p><b>o react sdlc</b></p>
-          <p><b>o react api service call</b></p>
-          <p><b>o LifeCycle, HOC, State, Context, ReactDOM, Render, Hydrate, Memo, DOM API & Virtual DOM, Hooks, SFC,
-              React Redux</b></p>
-          <p><b>o react lifecycle hooks in functional components</b></p>
-          <p><b>o use effect implementation </b></p>
-          <p><b>o how to react api fatch table display 10 records pagination which parameters to display</b></p>
-          <p><b>o redux</b></p>
-          <p><b>o webpack</b></p>
-          <p><b>o useReducer</b></p>
-          <p><b>o useMemo</b></p>
-          <p><b>o Good understanding of ReactJS workflows like Flux , Redux</b></p>
-          <p><b>o Must be familiar with Unit Test Framework Jest, Enzyme, React Testing Library</b></p>
-          <p><b>o Familiarity with common frontend development tools like NPM, Babel, Webpack etc.</b></p>
-          <p><b>o Must be familiar with RESTful API/GrapQL</b></p>
-          <p><b>o class components and function components</b></p>
-          <p><b>o useEffect and useState</b></p>
-          <p><b>o lazyload</b></p>
-          <p><b>o fetch use to api</b></p>
-          <p><b>o explain role and responsibility in current project</b></p>
-          <p><b>o hooks and props </b></p>
-          <p><b>o props drilling</b></p>
-          <p><b>o previend rendering</b></p>
-          <p><b>o rendering</b></p>
-          <p><b>o debugging boundries</b></p>
-          <p><b>o higher order components</b></p>
-          <p><b>o routering</b></p>
-          <p><b>o higer order</b></p>
-          <p><b>o higher order one to another components</b></p>
-          <p><b>o how to communicate another components</b></p>
-          <p><b>o callback methods</b></p>
-          <p><b>o multitelant password</b></p>
-          <p><b>o useState explain project</b></p>
-          <p><b>o what is hooks explain </b></p>
-          <p><b>o dom types react</b></p>
-          <p><b>o server side rendering</b></p>
-          <p><b>o how to avoid unwanted rendering</b></p>
-          <p><b>o useReducer example program</b></p>
-          <p><b>o counter react</b></p>
-          <p><b>o class components add value state</b></p>
-          <p><b>o error boundries in react</b></p>
-          <p><b>o react and angular differents</b></p>
-          <p><b>o react sdlc function class update</b></p>
-          <p><b>====================React Basic requirements==========================</b></p>
-          <p><b class="text-success"><u>ES6 JS:</u></b></p>
-          <p><b>Variables</b></p>
-          <p><b>Arrow Functions</b></p>
-          <p><b>Array Methods</b> => map(), filter(), and reduce()</p>
-          <p><b>Destructuring</b></p>
-          <p><b>Modules</b></p>
-          <p><b>Ternary</b></p>
-          <p><b>Rest and Spread Operators</b></p>
-          <p><b>Promises - Async and await</b></p>
-          <p><b>Class</b></p>
-          <p><b class="text-success"><u>React Fundamentals :</u></b></p>
-          <p><b>JSX</b></p>
-          <p><b>State and Props</b></p>
-          <p><b>Components</b></p>
-          <p><b>Conditional Rendering</b></p>
-          <p><b>API requests</b></p>
-          <p><b>CRUD</b></p>
-          <p><b>Error Handling</b></p>
-          <p><b class="text-success"><u>React Hooks :</u></b></p>
-          <p><b>useCallback</b></p>
-          <p><b>useContext</b></p>
-          <p><b>useEffect</b></p>
-          <p><b>useReducer</b></p>
-          <p><b>useState</b></p>
-          <p><b>useDebugValue</b></p>
-          <p><b>useId</b></p>
-          <p><b>useImperativeHandle</b></p>
-          <p><b>useInsertionEffect</b></p>
-          <p><b>useMemo</b></p>
-          <p><b>useDeferredValue</b></p>
-          <p><b>useRef</b></p>
-          <p><b>useSyncExternalStore</b></p>
-          <p><b>useTransition</b></p>
-          <p><b class="text-success"><u>Custom Hooks</u></b></p>
-          <p><b class="text-danger"><u>Routing</u> - React Router</b></p>
-          <p><b class="text-info"><u>State Management</u> - 1.Redux - 2.Context API</b></p>
-          <p><b class="text-success"><u>UI Styling :</u></b></p>
-          <p><b>React Bootstrap</b></p>
-          <p><b>Material UI</b></p>
-          <p><b>Chakra UI etc</b></p>
-          <p><b>Sass</b></p>
-          <p><b>Tailwind CSS</b></p>
-          <p><b>Bulma etc</b></p>
-          <p><b class="text-success"><u>Progressive Web Application</u></b></p>
-        </div>
-      </div>
-      <div class="container-fluid mt-5 pt-5 px-lg-5 px-2">
-        <div class="javascript">
-          <h4>Interview Questions</h4>
-          <p><b>Javascript Prototype</b></p>
-          <p><b>How to parent component to update child component state in react</b></p>
-          <p><b>how to send at the time multiple http request in react</b></p>
-          <p><b>reuseable component with example</b></p>
-          <p><b>higer order components</b></p>
-          <p><b>useRef and createRef</b></p>
-          <p><b>lazyload technical explain</b></p>
-          <p><b>fragments in react</b></p>
-          <p><b>useEffect fetching memory leakage how to prevent</b></p>
-          <p><b></b></p>
-          <p><b></b></p>
-          <p><b>Event Delegation?</b></p>
-          <p><b>createAsyncThunk</b></p>
-          <p><b>forwardRef</b></p>
-          <p><b>useImperativehandle</b></p>
-          <p><b>async & defer?</b></p>
-          <p><b>const data = [{ id: 1, parentId: null, name: "Root" },    
-            { id: 2, parentId: 1, name: "Folder A" },     
-              { id: 4, parentId: 2, name: "File 1" },    
-              { id: 5, parentId: 2, name: "File 2" },
-            
-            { id: 3, parentId: 1, name: "Folder B" },
-              { id: 6, parentId: 3, name: "File 3" }];</b></p>
-              
-          <p><b>Javascript throttling and debouncing</b></p>
-          <p><b>Javascript currying</b></p>
-          <p><b>Reconciliation</b></p>
-          <p>debouncing and throttling
-
-            Basic Questions
-            
-            1. Can you explain what React is and its primary purpose?
-            2. How do components work in React, and what are the different types?
-            3. What is JSX, and why is it used in React?
-            4. How do state and props differ in React, and what are their use cases?
-            5. What are React hooks, and why were they introduced?
-            
-            Intermediate Questions:
-            
-            1. What is the concept of the Virtual DOM, and how does React use it?
-            2. How does the useEffect hook work, and when would you use it?
-            3. What are the best practices for handling form data in React?
-            4. Can you explain what higher-order components (HOCs) are and give an example of when to use them?
-            5. How does React handle events differently from vanilla JavaScript?
-            
-            Advanced Questions:
-            
-            1. What is the Context API in React, and how do you use it?
-            2. What is the purpose of React.memo, and how does it enhance performance?
-            3. Can you describe the reconciliation process in React?
-            4. What techniques can you use to optimize the performance of a React application?
-            5. Why is it important to use unique keys in a list in React, and what problems can arise if you don't?</p>
-            <p>
-              React Question while Learning:
-
-                1. Html file react cdn lib used page auto reload there?
-                2. Basic JSX example Without return how to render in Ui?
-                3. If you wanted to use a React component instead, then you would typically use a return statement inside a class or function?
-                4. What are the packages installed in create-react-app?
-
-                    1.react, react-dom, react-scripts, and web-vitals.
-                    2.Development Dependencies:
-                        Babel (through react-scripts):
-                        Used to transpile modern JavaScript (including JSX) into code that works in current browsers.
-
-                        Webpack (through react-scripts):
-                        A module bundler that bundles JavaScript, CSS, and other assets.
-
-                        ESLint (through react-scripts):
-                        A linter that checks for syntax errors and ensures code quality.
-
-                        Jest (through react-scripts):
-                        A testing framework for running tests in React projects.
-
-                5. react repo url - https://github.com/Asabeneh/30-Days-Of-React
-                6. react interview - https://github.com/sudheerj/reactjs-interview-questions
-            </p>
-        </div>
+      <div class="container-fluid mt-0 pt-0 px-lg-5 px-2">
         <!---------Javascript Answer-->
         <div class="col-md-12">
           <h6 class="font-weight-bold">1. What is Hoisting ?</h6>
-          <div class="pl-5"><strong>Hoisting </strong>is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+          <div class="pl-5"><strong>Hoisting </strong>is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function)before code execution.
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
               <pre class="mb-0">
@@ -1459,7 +1198,7 @@
         </div>
         <div class="col-md-12">
           <h6 class="font-weight-bold">8. What is memoization ?</h6>
-          <div class="pl-5">Memoization is a form of caching where the return value of a function is cached based on its parameters. If the parameter of that function is not changed, the cached version of the function is returned.
+          <div class="pl-5">Memoization is a technique used to optimize algorithms by storing the results of expensive function calls and returning the cached result when the same inputs occur again.
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
               <pre class="mb-0">
@@ -1518,6 +1257,20 @@
           </div>
         </div>
         <div class="col-md-12">
+          <h6 class="font-weight-bold">13. JavaScript Promises ?</h6>
+          <div class="pl-5">
+            <ul>
+              <li>A Promise is an Object that links Producing code and Consuming code, "Producing code" is code that can take some time, "Consuming code" is code that must wait for the result</li>
+            </ul>
+            <p class="mb-0 pl-3 pt-1">
+              <b class="text-success">Example:</b>
+              <pre class="mb-0">
+              </pre>
+              https://plainenglish.io/blog/6-interview-questions-that-combine-promise-and-settimeout-34c430fc297e
+            </p>
+          </div>
+        </div>
+        <div class="col-md-12">
           <h6 class="font-weight-bold">13. Normal Function and Arrow Function ?</h6>
           <div class="pl-5">
             <p class="mb-0 pl-3 pt-1">
@@ -1548,6 +1301,26 @@
           </div>
         </div>
         </div>
+    </section>
+    <!-- ====================== close ======================== -->
+    <section id="javascript_main" class="javascript_main">
+      <div class="container-fluid mt-5 pt-5 px-lg-5 px-2">
+        <div class="javascript">
+          <h5 class="py-2"></h5>
+          <ol class="px-4">
+            <li> React Redux ==
+              The way Redux works is simple. There is a central store that holds the entire state of the application.
+              Each component can access the stored state without having to send down props from one component to
+              another.</li>
+            <pre></pre>
+          </ol>
+          <p><b>RealDOM - It is a tree representation of HTML elements. </b></p>
+          <p><b>Virtual DOM - React maintains two virtual DOMs every time. The first one contains the updated virtual
+              DOM, and the other is a pre-updated version of the updated virtual DOM, The updated virtual DOM tree is
+              compared with the pre-updated, if any changes finds the possible updated in realDOM</b></p>
+          <p><b></b></p>
+        </div>
+      </div>
     </section>
     <!-- ====================== close ======================== -->
   </main>
