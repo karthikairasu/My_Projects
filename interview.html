@@ -702,6 +702,35 @@
     </section>
     <!-- ====================== close ======================== -->
     <section id="javascript_main" class="javascript_main">
+      <div class="container-fluid mt-0 pt-1 px-lg-5 px-2">
+        <div class="javascript">
+          <h5 class="py-2">18. Repeated word count</h5>
+          <ol class="px-4">
+            <li>
+            </li>
+            <pre>
+              let str ='Known for delivering clean, maintainable code in an agile environment known';
+      
+              str = str.toLowerCase().split(' '); // Convert to lowercase for case-insensitive match
+              
+              let wordMap = {};
+              
+              for (let i = 0; i < str.length; i++) {
+                const word = str[i];
+                if (wordMap[word]) {
+                  wordMap[word]++;
+                } else {
+                  wordMap[word] = 1;
+                }
+              }
+              console.log(wordMap) 
+              </pre>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- ====================== close ======================== -->
+    <section id="javascript_main" class="javascript_main">
       <div class="container-fluid mt-0 pt-0 px-lg-5 px-2">
         <div class="javascript">
           ==================== Javascript Interview Questions==========================
