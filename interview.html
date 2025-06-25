@@ -723,8 +723,29 @@
                   wordMap[word] = 1;
                 }
               }
+              <!-- for(let word of wordMap){
+                wordMap[word] = (wordMap[word] || 0) + 1;
+              } -->
               console.log(wordMap) 
               </pre>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- ====================== close ======================== -->
+    <section id="javascript_main" class="javascript_main">
+      <div class="container-fluid mt-0 pt-1 px-lg-5 px-2">
+        <div class="javascript">
+          <h5 class="py-2">19. First letter Capital in words</h5>
+          <ol class="px-4">
+            <pre>
+              let str = "hell0 world first capital";
+              str = str.split(" ");
+
+              let res = str.map((item) => item.charAt(0).toUpperCase() + item.slice(1))
+
+              console.log(res.join(" "))
+            </pre>
           </ol>
         </div>
       </div>
