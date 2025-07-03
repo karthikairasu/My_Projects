@@ -752,6 +752,69 @@
     </section>
     <!-- ====================== close ======================== -->
     <section id="javascript_main" class="javascript_main">
+      <div class="container-fluid mt-0 pt-1 px-lg-5 px-2">
+        <div class="javascript">
+          <h5 class="py-2">20. Anagrams found</h5>
+          <ol class="px-4">
+            <pre>
+              function isAnagram(str1, str2) {
+                if (str1.length !== str2.length) return false;
+              
+                const count = {};
+              
+                for (let char of str1) {
+                  count[char] = (count[char] || 0) + 1;
+                }
+              
+                for (let char of str2) {
+                  if (!count[char]) {
+                    return false;
+                  } else {
+                    count[char]--;
+                  }
+                }
+              
+                return true;
+              }
+              
+              // Test
+              let string1 = 'army';
+              let string2 = 'mary';
+              
+              if (isAnagram(string1, string2)) {
+                console.log('anagrams');
+              } else {
+                console.log('Not anagrams');
+              }
+            </pre>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- ====================== close ======================== -->
+    <section id="javascript_main" class="javascript_main">
+      <div class="container-fluid mt-0 pt-1 px-lg-5 px-2">
+        <div class="javascript">
+          <h5 class="py-2">21. Missing numbers</h5>
+          <ol class="px-4">
+            <pre>
+              let arr = [1, 2, 4, 5];
+              let missing = [];
+
+              for (let i = 0; i < arr.length - 1; i++) {
+                for (let j = arr[i] + 1; j < arr[i + 1]; j++) {
+                  missing.push(j);
+                }
+              }
+
+              console.log(missing); // Output: [3]
+            </pre>
+          </ol>
+        </div>
+      </div>
+    </section>
+    <!-- ====================== close ======================== -->
+    <section id="javascript_main" class="javascript_main">
       <div class="container-fluid mt-0 pt-0 px-lg-5 px-2">
         <div class="javascript">
           ==================== Javascript Interview Questions==========================

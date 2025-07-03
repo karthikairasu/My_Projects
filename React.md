@@ -21,3 +21,5 @@
 
                 5. react repo url - https://github.com/Asabeneh/30-Days-Of-React
                 6. react interview - https://github.com/sudheerj/reactjs-interview-questions
+                7. https://github.com/Saran-pariyar/100_Days_Of_Frontend_Interview_Questions
+                8. https://github.com/alfa155518/modern-JavaScript-React-interview-questions-
