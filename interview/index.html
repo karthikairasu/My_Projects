@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0 shrink-to-fit=no, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Interview</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <meta name="theme-color" content="#0B5E97" />
+    <link rel="icon" type="image/png" href="../assets/images/kk.png" sizes="194x194" />
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Play|Merienda|Titillium+Web|Cinzel|Roboto|Ibarra+Real+Nova|Abel|Kufam|Ubuntu&display=swap"
+        rel="stylesheet" />
+
+    <link href="../assets/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Style files -->
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- owl carousel Style files -->
+    <link href="../assets/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <!-- Aos Style files -->
+    <link href="../assets/aos/aos.css" rel="stylesheet" />
+    <link href="../assets/animate.css/animate.min.css" rel="stylesheet" />
+    <!-- venobox Style files -->
+    <link href="../assets/venobox/venobox.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../assets/lib/style.css" />
+    <link rel="manifest" href="../assets/lib/manifest.json" />
+    <style>
+        #pdf-render {
+            border: 1px solid #ccc;
+            width: 100%;
+            max-height: 90vh;
+        }
+
+        #controls {
+            margin-top: 10px;
+        }
+
+        .pdf-list-item {
+            cursor: pointer;
+            color: #007bff;
+        }
+
+        .pdf-list-item:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <!-- PDF List -->
+            <div class="col-md-3 mb-3">
+                <h5>Available PDFs</h5>
+                <ul class="list-group">
+                    <li class="list-group-item pdf-list-item" data-pdf="./Frontend-interview-questions.pdf">Frontend
+                        Interview Questions</li>
+                    <li class="list-group-item pdf-list-item" data-pdf="./Interview-Questions.pdf">
+                        Interview-Questions</li>
+                    <li class="list-group-item pdf-list-item" data-pdf="./Learn-this-before-react-start.pdf">Learn-this-before-react-start</li>
+                </ul>
+            </div>
+
+            <!-- PDF Viewer -->
+            <div class="col-md-9">
+                <h5 id="pdf-title">PDF Viewer</h5>
+                <canvas id="pdf-render"></canvas>
+                <div id="controls" class="mt-2">
+                    <button id="prev" class="btn btn-secondary btn-sm">Previous</button>
+                    <button id="next" class="btn btn-secondary btn-sm">Next</button>
+                    Page: <span id="page-num">1</span> / <span id="page-count">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="preloader"></div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="../assets/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="../assets/MDB-free/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- aos script files -->
+    <script src="../assets/aos/aos.js"></script>
+    <!-- venobox script files -->
+    <script src="../assets/venobox/venobox.min.js"></script>
+    <!-- owl carousel script files -->
+    <script src="../assets/owl.carousel/owl.carousel.min.js"></script>
+
+    <script type="text/javascript">
+        // Preloader
+        $(window).on("load", function () {
+            if ($("#preloader").length) {
+                $("#preloader")
+                    .delay(100)
+                    .fadeOut("slow", function () {
+                        $(this).remove();
+                    });
+            }
+        });
+        //Init AOS
+        function aos_init() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
+        }
+        $(window).on("load", function () {
+            aos_init();
+        });
+    </script>
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+    <script>
+        let pdfDoc = null,
+            pageNum = 1,
+            canvas = $('#pdf-render')[0],
+            ctx = canvas.getContext('2d');
+
+        function renderPage(num) {
+            pdfDoc.getPage(num).then(function (page) {
+                const viewport = page.getViewport({ scale: 1.5 });
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+                page.render(renderContext);
+                $('#page-num').text(pageNum);
+            });
+        }
+
+        function loadPdf(pdfUrl, title = '') {
+            pdfjsLib.getDocument(pdfUrl).promise.then(function (pdfDoc_) {
+                pdfDoc = pdfDoc_;
+                pageNum = 1;
+                $('#page-count').text(pdfDoc.numPages);
+                renderPage(pageNum);
+                $('#pdf-title').text(title || 'PDF Viewer');
+            }).catch(err => {
+                alert('Failed to load PDF: ' + err.message);
+            });
+        }
+
+        // Initial PDF
+        loadPdf('./Frontend-interview-questions.pdf', 'Frontend Interview Questions');
+
+        $('#prev').on('click', function () {
+            if (pageNum <= 1) return;
+            pageNum--;
+            renderPage(pageNum);
+        });
+
+        $('#next').on('click', function () {
+            if (pageNum >= pdfDoc.numPages) return;
+            pageNum++;
+            renderPage(pageNum);
+        });
+
+        $('.pdf-list-item').on('click', function () {
+            const pdfPath = $(this).data('pdf');
+            const title = $(this).text();
+            loadPdf(pdfPath, title);
+        });
+    </script>
+</body>
+
+</html>
