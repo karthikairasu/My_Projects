@@ -1672,3 +1672,16 @@ ul {
   font-size: 14px;
   color: #878787;
 }
+pre {
+  background-color: #f5f7fa;   /* Light gray-blue background */
+  border-left: 4px solid #007bff; /* Blue accent bar */
+  padding: 15px 20px;
+  margin: 15px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-x: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-family: 'Fira Code', 'Courier New', Consolas, monospace;
+  color: #2e2e2e;
+}
