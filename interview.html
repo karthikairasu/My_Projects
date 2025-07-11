@@ -1500,21 +1500,13 @@
                 }, 1000);  // Executes after 1 second (asynchronous)
 
                 console.log("End");
-
-                // Synchronous
-                function myDisplayer(some) {
-                  console.log(some);
-                }
-                
-                function myFirst() {
-                  myDisplayer("Hello");
-                }
-                
-                function mySecond() {
-                  myDisplayer("Goodbye");
-                }
               </pre>
             </p>
+            <ul class="pl-4 py-2">
+              <b>Callback Hell in JavaScript?</b>
+              <li>Callback Hell refers to a situation where you have many nested callback functions, making your code: Hard to read 😵
+                , Hard to maintain 🔧, Prone to errors 🐞</li>
+            </ul>
           </div>
         </div>
         <div class="col-md-12">
@@ -1554,21 +1546,49 @@
         </div>
         <div class="col-md-12">
           <h6 class="font-weight-bold">10. What is Web Storage in JavaScript ?</h6>
-          <div class="pl-5">The Web Storage is one of the great features of HTML5. With the Web Storage feature, web applications can locally store data within the browser on the client side. It stores data in the form of key/value pair on the browser. Web Storage sometimes also known as DOM storage.
+          <div class="pl-5">Web Storage is a way for web applications to store data locally within the user's browser. It's part of the Web Storage API and provides a simpler and more secure way than cookies to store data on the client side. It stores data in the form of key/value pair on the browser.
+            <ul class="pl-4 py-2">
+              <li><b class="text-primary">Local Storage</b>: Stores data with no expiration time.</li>
+              <li>Data persists even after the browser is closed and reopened.</li>
+            </ul>
+            <ul class="pl-4 py-2">
+              <li><b class="text-primary">Session Storage</b>: Stores data for the duration of the page session.</li>
+              <li>Data is cleared when the page session ends (when the tab or browser is closed).</li>
+            </ul>
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
-              Local Storage: Local Storages uses Windows.localStaorage object which stores data and available for every page. But data persist even if the browser is closed and reopened (Stores data with no Expiration).
-              Session Storage: Session Storage uses Windows.sessionStorage object which stores data for one session and data will be lost if the window or browser tab will be closed.
               <pre class="mb-0">
+                // Save data
+                localStorage.setItem('username', 'Alice');
+                sessionStorage.setItem('token', 'abc123');
+
+                // Retrieve data
+                const user = localStorage.getItem('username'); // "Alice"
+                const token = sessionStorage.getItem('token'); // "abc123"
+
+                // Remove data
+                localStorage.removeItem('username');
+                sessionStorage.removeItem('token');
+
+                // Clear all data
+                localStorage.clear();
+                sessionStorage.clear();
               </pre>
             </p>
           </div>
         </div>
         <div class="col-md-12">
           <h6 class="font-weight-bold">11. Javascript Throttling and Debouncing ?</h6>
-          <div class="pl-5">Throttling and debouncing are techniques used to control the rate at which a function is invoked, particularly in scenarios where frequent events (like user interactions) can lead to excessive calls and potentially impact performance. 
-            Throttling - Throttling limits the number of times a function is executed over a certain time period. It ensures that the function is called at a controlled, steady rate, regardless of how frequently the event triggering the function occurs.
-            Debouncing - Debouncing is a technique that delays the execution of a function until a certain amount of time has passed since the last event's occurrence. It's useful when you want the function to be called after a period of inactivity, and it prevents rapid consecutive calls.
+          <div class="pl-5">
+            <ul class="pl-4 py-2">
+              <li><b class="text-primary">Throttling</b>: Throttling ensures a function is called at most once every specified interval. It limits the rate at which a function can fire.</li>
+              <li>Useful when you want to guarantee regular updates but avoid overwhelming the system (e.g., on scroll or resize events).</li>
+            </ul>
+
+            <ul class="pl-4 py-2">
+              <li><b class="text-primary">Debouncing</b>: Debouncing ensures a function is called only after a certain period of inactivity.</li>
+              <li>The function waits until events stop firing for the specified delay, then runs once. Useful for things like search input validation, where you want to wait until the user stops typing before firing the function.</li>
+            </ul>
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
               <pre class="mb-0">
@@ -1578,11 +1598,23 @@
         </div>
         <div class="col-md-12">
           <h6 class="font-weight-bold">12. Event Bubbling and Event Capturing ?</h6>
-          <div class="pl-5">Event bubbling is the default event propagation behavior. In event bubbling, when an event occurs on an element, it first triggers the event handler on the target element (the element the event was originally triggered on), then it propagates up the DOM tree to the parent elements, and so on, until it reaches the root of the document.
-            Event capturing is the opposite of event bubbling. In event capturing, the event starts from the root of the document (or the highest level of the DOM) and then propagates downward through the DOM tree, reaching the target element last.
+          <div class="pl-5">
+            <ul class="pl-4 py-2">
+              <li><b class="text-primary">Capturing</b>: Event starts at the root and trickles down to the target element.</li>
+              <li><b class="text-primary">Bubbling</b>: Event starts at the target element and bubbles up to parents.</li>
+            </ul>
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
               <pre class="mb-0">
+                document.querySelector("form").addEventListener("submit", function(e) {
+                  e.preventDefault(); // Stops the page from reloading
+                  alert("Form submitted!");
+                });
+
+                document.querySelector(".box").addEventListener("click", function(e) {
+                  e.stopPropagation(); // Stops the click from reaching the container
+                  alert("Box clicked!");
+                });
               </pre>
             </p>
           </div>
@@ -1592,10 +1624,16 @@
           <div class="pl-5">
             <ul>
               <li>A Promise is an Object that links Producing code and Consuming code, "Producing code" is code that can take some time, "Consuming code" is code that must wait for the result</li>
+              <li>A Promise is a JavaScript object that represents the eventual completion (or failure) of an asynchronous operation.</li>
             </ul>
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
               <pre class="mb-0">
+                Pending: Initial state, neither fulfilled nor rejected.
+
+                Fulfilled: The operation completed successfully.
+
+                Rejected: The operation failed.
               </pre>
               https://plainenglish.io/blog/6-interview-questions-that-combine-promise-and-settimeout-34c430fc297e
             </p>
@@ -1604,9 +1642,33 @@
         <div class="col-md-12">
           <h6 class="font-weight-bold">13. Normal Function and Arrow Function ?</h6>
           <div class="pl-5">
+            Arrow Function:
+            <ul class="pl-4 py-2">
+              <li>Syntax: shorter and concise</li>
+              <li>Does not have its own this (inherits from surrounding scope)</li>
+              <li>Cannot be used as constructors (new keyword not allowed)</li>
+              <li>No arguments object</li>
+            </ul>
+            Normal Function:
+            <ul class="pl-4 py-2">
+              <li>Syntax: traditional, more verbose</li>
+              <li>Has its own this depending on how called</li>
+              <li>Can be used as constructors (new allowed)</li>
+              <li>Has arguments object</li>
+            </ul>
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
               <pre class="mb-0">
+                function normalFunc() {
+                  console.log(arguments);
+                }
+                
+                const arrowFunc = () => {
+                  console.log(arguments);
+                };
+                
+                normalFunc(1, 2, 3);  // Output: [1, 2, 3]
+                arrowFunc(4, 5, 6);   // ReferenceError: arguments is not defined
               </pre>
             </p>
           </div>
@@ -1614,6 +1676,15 @@
         <div class="col-md-12">
           <h6 class="font-weight-bold">14. Oops Concepts in JavaScript ?</h6>
           <div class="pl-5">
+            <i><b class="fs-14 text-primary">What is OOPs ? </b></i>
+              - OOPs is a way of writing programs using objects — real-world things like car, person, dog, etc. It helps make your code organized, reusable, and easy to understand.
+              <ul class="pl-4 fs-14 py-2">
+                  <li>Class = Blueprint or Design</li>
+                  <li>Object = Real item</li>
+                  <li>Encapsulation = Keeping data safe inside a class</li>
+                  <li>Inheritance = Child class gets things from parent class</li>
+                  <li>Polymorphism = Same function, different results</li>
+              </ul>
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
               <pre class="mb-0">
@@ -1624,9 +1695,36 @@
         <div class="col-md-12">
           <h6 class="font-weight-bold">15. Map(), Filter(), and Reduce() ?</h6>
           <div class="pl-5">
+            <ul class="pl-4 py-2">
+              <li><b class="text-primary">map()</b>: Transforms each element of an array and returns a new array of the same length.</li>
+              <li><b class="text-primary">filter()</b>: Keeps only elements that pass a test (return true), returns a new array.</li>
+              <li><b class="text-primary">reduce()</b>: Reduces the array to a single value by applying a function cumulatively.</li>
+            </ul>
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
               <pre class="mb-0">
+                array.map((element, index, array) => {
+                  return transformedElement;
+                });
+                const numbers = [1, 2, 3];
+                const doubled = numbers.map(num => num * 2);
+                console.log(doubled); // [2, 4, 6]
+
+                array.filter((element, index, array) => {
+                  return condition; // true to keep, false to skip
+                });
+                const numbers = [1, 2, 3, 4, 5];
+                const evens = numbers.filter(num => num % 2 === 0);
+                console.log(evens); // [2, 4]
+
+                array.reduce((total, currentValue, index, array) => {
+                  return total;
+                }, initialValue);
+
+                const numbers = [1, 2, 3, 4];
+                const sum = numbers.reduce((total, num) => total + num, 0);
+                console.log(sum); // 10
+
               </pre>
             </p>
           </div>
@@ -1646,9 +1744,16 @@
             <pre></pre>
           </ol>
           <p><b>RealDOM - It is a tree representation of HTML elements. </b></p>
-          <p><b>Virtual DOM - React maintains two virtual DOMs every time. The first one contains the updated virtual
-              DOM, and the other is a pre-updated version of the updated virtual DOM, The updated virtual DOM tree is
-              compared with the pre-updated, if any changes finds the possible updated in realDOM</b></p>
+          <p><b>Virtual DOM -</b> 
+            <ul class="pl-4 py-2">
+            <li>The Virtual DOM is a lightweight in-memory (a JavaScript object) representation of the real DOM that React uses to efficiently update the UI.</li>
+    
+            <li>When the app’s state changes, React creates a new Virtual DOM tree, compares it with the previous one (this process is called "diffing"), finds the minimal changes, and then updates only those parts in the real DOM.(Diffing Algorithm)</li>
+          
+            <li>This reduces expensive DOM operations and boosts performance. </li>
+             
+            <li>React keeps only one Virtual DOM tree for the whole app at any time. After updating the real DOM, React replaces the old Virtual DOM tree with the new one.</li>
+          </ul></p>
           <p><b></b></p>
         </div>
       </div>
