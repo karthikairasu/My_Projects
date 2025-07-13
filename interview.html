@@ -1728,6 +1728,97 @@
             </p>
           </div>
         </div>
+        <div class="col-md-12">
+          <h6 class="font-weight-bold">16. Shallow copy and Deep copy ?</h6>
+          <div class="pl-5">
+            <ul class="pl-4 py-2">
+              <li><b class="text-primary">Shallow</b>: A shallow copy duplicates the top-level properties of an object or array, but nested objects/arrays are still referenced.</li>
+              <li><b class="text-primary">Deep</b>: A deep copy creates a completely independent copy of the original object or array, including all nested levels.</li>
+            </ul>
+            <p class="mb-0 pl-3 pt-1">
+              <b class="text-success">Example:</b>
+              <pre class="mb-0">
+                Shallow Copy - Object.assign or {...}, [...arr] or slice()
+
+                Deep Copy - structuredClone() (best), JSON (cautious)
+              </pre>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <h6 class="font-weight-bold">17. What is a Polyfill in JavaScript?</h6>
+          <div class="pl-5">
+            A polyfill is code that adds missing JavaScript features in older browsers.
+            <ul class="pl-4 py-2">
+              <li><b class="text-primary">Polyfill for map()</b>: </li>
+            </ul>
+            <p class="mb-0 pl-3 pt-1">
+              <pre class="mb-0">
+                //Creating custom Map
+                Array.prototype.myMap= function(callback){
+                    let temp=[];
+                    for(let i=0;i < this.length;i++)
+                    {
+                        temp.push(callback(this[i],i,this));
+                    }
+                    return temp;
+                };
+                //Performing map method through custom made map called myMap
+                const nums=[1,2,3,4];
+                const multiply=nums.myMap((x)=>{
+                    return x*2;
+                })
+                console.log(multiply);
+              </pre>
+            </p>
+            <ul class="pl-4 py-2">
+              <li><b class="text-primary">Polyfill for filter()</b>: </li>
+            </ul>
+            <p class="mb-0 pl-3 pt-1">
+              <pre class="mb-0">
+                //Creating custom filter
+                Array.prototype.myFilter=function(callback){
+                    let temp=[];
+                    for(let i=0;i < this.length;i++)
+                    {
+                        if(callback(this[i],i,this))
+                            temp.push(this[i]);
+                    }
+                    return temp;
+                }
+                //Performing filter method through custom made filter called myFilter
+                const nums=[1,2,3,4];
+                const FilterOdd=nums.myFilter((x)=>{
+                  return x%2;
+                })
+                console.log(FilterOdd);
+              </pre>
+            </p>
+            <ul class="pl-4 py-2">
+              <li><b class="text-primary">Polyfill for reduce()</b>: </li>
+            </ul>
+            <p class="mb-0 pl-3 pt-1">
+              <pre class="mb-0">
+                //Creating custom reduce
+                Array.prototype.myReduce=function(callback,initial_value){
+                    var acc=initial_value;
+                    for(let i=0;i < this.length;i++)
+                    {
+                        acc=acc?callback(acc,this[i],i,this):this[i];
+                    }
+                    return acc;
+
+                }
+                //Performing reduce method through custom made reduce called myReduce
+                const nums=[1,2,3,4];
+                const sum=nums.myReduce((acc,curr,i,nums)=>{
+                  return acc+curr;
+                },0);
+                console.log(sum)
+              </pre>
+            </p>
+          </div>
+        </div>
         </div>
     </section>
     <!-- ====================== close ======================== -->
