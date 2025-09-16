@@ -39,8 +39,12 @@
     <style>
         #pdf-render {
             border: 1px solid #ccc;
-            width: 100%;
             max-height: 90vh;
+            aspect-ratio: 1 / 1.414;  /* width / height ratio */
+            width: auto;              /* width adjusts based on height */
+            max-width: 100%;          /* don't exceed container width */
+            margin: 0 auto;           /* center horizontally */
+            display: block;
         }
 
         #controls {
@@ -55,6 +59,11 @@
         .pdf-list-item:hover {
             text-decoration: underline;
         }
+        #react-material-list {
+            max-height: calc(90vh - 40px);     /* Adjust height as a portion of screen */
+            overflow-y: auto;      /* Enable vertical scroll */
+            padding-right: 5px;    /* Optional: prevents scrollbar overlap */
+        }
     </style>
 </head>
 
@@ -65,15 +74,9 @@
             <!-- PDF List -->
             <div class="col-md-3 mb-3">
                 <h5>Available PDFs</h5>
-                <ul class="list-group">
-                    <li class="list-group-item pdf-list-item" data-pdf="./Frontend-interview-questions.pdf">Frontend
-                        Interview Questions</li>
-                    <li class="list-group-item pdf-list-item" data-pdf="./Interview-Questions.pdf">
-                        Interview-Questions</li>
-                    <li class="list-group-item pdf-list-item" data-pdf="./Learn-this-before-react-start.pdf">Learn-this-before-react-start</li>
-                    <li class="list-group-item pdf-list-item" data-pdf="./𝐑𝐞𝐚𝐜𝐭-𝟐𝟎𝟐𝟓-𝐂𝐡𝐞𝐚𝐭𝐬𝐡𝐞𝐞𝐭.pdf">𝐑𝐞𝐚𝐜𝐭-𝟐𝟎𝟐𝟓-𝐂𝐡𝐞𝐚𝐭𝐬𝐡𝐞𝐞𝐭</li>
-                    <li class="list-group-item pdf-list-item" data-pdf="./50-Projects-for-React-&-the-Static-Web.pdf">50-Projects-for-React-&-the-Static-Web</li>      
+                <ul class="list-group" id="react-material-list">
                 </ul>
+                <span id="count"></span>
             </div>
 
             <!-- PDF Viewer -->
@@ -91,6 +94,8 @@
 
     <div id="preloader"></div>
 
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <!-- jQuery -->
     <script type="text/javascript" src="../assets/jquery/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
@@ -126,10 +131,72 @@
             aos_init();
         });
     </script>
-    <!-- PDF.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
     <script>
+        let listData = [
+                        "Frontend-interview-questions.pdf",
+                        "Interview-Questions.pdf",
+                        "Learn-this-before-react-start.pdf",
+                        "React-2025-CheatSheet.pdf",
+                        "50-Projects-for-React-&-the-Static-Web.pdf",
+                        "10-Essential-JavaScript-Objects-Interview-Questions.pdf",
+                        "Advanced-React-19.pdf",
+                        "NodeJS.pdf",
+                        "Nodejs-10-key-terms.pdf",
+                        "React-19-features.pdf",
+                        "React-Design-Patterns.pdf",
+                        "React-Hooks-explained.pdf",
+                        "React-interview-guide.pdf",
+                        "React-Interview-Questions-&-Answers.pdf",
+                        "React-Journey-in-Just-20-Days.pdf",
+                        "React-js-cheat-sheet-tutorial.pdf",
+                        "ReactJs-interview-Question.pdf",
+                        "React-Optimization-Techniques.pdf",
+                        "Rich-Dad-Poor-Dad-eBook-Eng.pdf",
+                        "Rich-Dad-Poor-Dad-Tamil-By-Robert-T-Kiyosaki-Nagalakshmi-Shanmugham.pdf",
+                        "Top-50-ReactJs-Interview-Questions.pdf",
+                        "The-Principles-of-Object-Oriented-JavaScript.pdf",
+                        "Syllabus-MERN-full-stack.pdf",
+                        "TailwindCSS-Cheat-Sheet.pdf",
+                        "Reactjs-Ebook-Beginner-to-expert-content.pdf",
+                        "Reactjs-debugg.pdf",
+                        "Top-70-Reactjs-Interview-Questions.pdf",
+                        "Reactjs-Hooks-list.pdf",
+                        "Reactjs-Hooks-list-2.pdf",
+                        "Top-20-React-questions.pdf",
+                        "React-Interview-Questions.pdf",
+                        "React-Interview-tips.pdf",
+                        "React-Interview-Guides.pdf",
+                        "Complete-React.pdf",
+                        "React-Advanced-Concepts.pdf",
+                        "100-React-Interview-Questions.pdf",
+                        "Must-Have-Resource.pdf",
+                        "JWT.pdf",
+                        "Async-Await-JavaScript.pdf",
+                        "JS-ES6-Features .pdf",
+                        "JS-DSA-Questions.pdf",
+                        "JavaScript-Performance-Tips.pdf",
+                        "JavaScript-Technical-Interview.pdf",
+                        "Functional-Programming-with-ES6.pdf",
+                        "Frontend-Development-Roadmap.pdf",
+                        "Front-end-Libraries.pdf",
+                        "CSS-Interview-Questions.pdf",
+                        "Arrays-Methods-In-javascript.pdf",
+                        "30-days-of-react-ebook-fullstackio.pdf",
+                        "Book-AEX-Aug-Eng-2024.pdf",
+                        "Book-AEX-Dec-Eng-2024.pdf",
+                        "Book-AEX-Oct-Eng-2024.pdf"
+                        ]
+        let ascOrder = listData.sort((a, b)=> a.localeCompare(b));
+        $('#count').text(ascOrder.length)
+        ascOrder.forEach(function(item) {
+            const name = item.replace('.pdf', '');
+            const listItem = `
+                <li class="list-group-item pdf-list-item" data-pdf="./${item}">
+                    ${name}
+                </li>`;
+            $('#react-material-list').append(listItem);
+        });
         let pdfDoc = null,
             pageNum = 1,
             canvas = $('#pdf-render')[0],
