@@ -947,6 +947,47 @@
                 </pre>
               </ol>
             </div>
+            <div class="col-sm-6">
+              <ol class="px-0 pl-3">
+                <li class="fs-14">
+                  const input = { a: 1, b: { c: 2, d: { e: 3, f: { g: 4, }, }, }, h: 5, };</li>
+                <pre>
+                  const flatten = (input) => {
+                    var result = {};
+                    // return Object.entries(input)
+                    for (let key in input) {
+                     // console.log(key, input[key]);
+                     if (typeof input[key] === 'object') {
+                       result = {...result, ...flatten(input[key])};
+                        console.log(input[key]);
+                      } else {
+                        result[key] = input[key];
+                      }
+                    }
+                    return result;
+                  };
+
+                  console.log(flatten(input));
+                  
+                </pre>
+              </ol>
+            </div>
+            <div class="col-sm-6">
+              <ol class="px-0 pl-3">
+                <li class="fs-14">
+                  const input = ["2", "3", ["4", "6"], "5"]</li>
+                <pre>
+
+                  function flattenAr(arr) { 
+                    return arr.reduce((acc, val) => {
+                     console.log(val)
+                      return acc.concat(Array.isArray(val) ? flattenAr(val) : val) 
+                    },[])
+                  }
+                  console.log(flattenAr(input));
+                </pre>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
