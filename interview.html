@@ -1525,6 +1525,135 @@
                 person1.greet();
               </pre>
             </p>
+        
+            <p class="mb-0 pl-3 pt-3">
+              <b class="text-success">Use Case:</b>
+              <ul>
+                <li><b>Memory Efficiency:</b> Instead of defining methods inside the constructor for every object, define them on the prototype so all instances share the same method.</li>
+                <li><b>Example:</b> In a car rental app, you can create thousands of <code>Car</code> objects, but define common methods like <code>start()</code> and <code>stop()</code> on the prototype to save memory.</li>
+              </ul>
+              <pre class="mb-0">
+                function Car(model) {
+                  this.model = model;
+                }
+        
+                Car.prototype.start = function() {
+                  console.log(`${this.model} started`);
+                };
+        
+                const car1 = new Car("Tesla");
+                const car2 = new Car("BMW");
+        
+                car1.start(); // Tesla started
+                car2.start(); // BMW started
+              </pre>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <h6 class="font-weight-bold">5.1 What is inheritance in JavaScript?</h6>
+          <div class="pl-5">
+            Inheritance in JavaScript allows one object to access properties and methods of another object through the prototype chain. This helps in code reuse and maintainability. It can be implemented using constructor functions with <code>Object.create()</code> or ES6 <code>class</code> syntax.
+            
+            <p class="mb-0 pl-3 pt-1">
+              <b class="text-success">Example using Constructor Functions:</b>
+              <pre class="mb-0">
+                function Person(name) {
+                  this.name = name;
+                }
+        
+                Person.prototype.greet = function() {
+                  console.log(`Hello, my name is ${this.name}`);
+                };
+        
+                function Employee(name, role) {
+                  Person.call(this, name); // Inherit properties
+                  this.role = role;
+                }
+        
+                // Inherit methods
+                Employee.prototype = Object.create(Person.prototype);
+                Employee.prototype.constructor = Employee;
+        
+                Employee.prototype.work = function() {
+                  console.log(`${this.name} works as ${this.role}`);
+                };
+        
+                const emp = new Employee("Alice", "Developer");
+                emp.greet(); // Hello, my name is Alice
+                emp.work();  // Alice works as Developer
+              </pre>
+            </p>
+        
+            <p class="mb-0 pl-3 pt-3">
+              <b class="text-success">Example using ES6 Classes:</b>
+              <pre class="mb-0">
+                class Person {
+                  constructor(name) {
+                    this.name = name;
+                  }
+                  greet() {
+                    console.log(`Hello, my name is ${this.name}`);
+                  }
+                }
+        
+                class Employee extends Person {
+                  constructor(name, role) {
+                    super(name); // Call parent constructor
+                    this.role = role;
+                  }
+                  work() {
+                    console.log(`${this.name} works as ${this.role}`);
+                  }
+                }
+        
+                const emp = new Employee("Alice", "Developer");
+                emp.greet(); // Hello, my name is Alice
+                emp.work();  // Alice works as Developer
+              </pre>
+            </p>
+            <p class="mb-0 pl-3 pt-3">
+                <b class="text-success">Use Case:</b>
+                <ul>
+                  <li><b>User Management System:</b> 
+                    <ul>
+                      <li><code>User</code> constructor with common methods like login/logout.</li>
+                      <li><code>Admin</code> inherits from <code>User</code> and adds manageUsers().</li>
+                      <li><code>Customer</code> inherits from <code>User</code> and adds placeOrder().</li>
+                    </ul>
+                  </li>
+                </ul>
+                <pre class="mb-0">
+                  function User(name) {
+                    this.name = name;
+                  }
+          
+                  User.prototype.login = function() {
+                    console.log(`${this.name} logged in`);
+                  };
+          
+                  function Admin(name) {
+                    User.call(this, name);
+                  }
+          
+                  Admin.prototype = Object.create(User.prototype);
+                  Admin.prototype.constructor = Admin;
+          
+                  Admin.prototype.manageUsers = function() {
+                    console.log(`${this.name} is managing users`);
+                  };
+          
+                  const admin = new Admin("John");
+                  admin.login();        // John logged in
+                  admin.manageUsers();  // John is managing users
+                </pre>
+            </p>
+            <p class="mb-0 pl-3 pt-3">
+              <b class="text-success">Prototype Chain Visualization:</b>
+              <pre class="mb-0">
+                emp → Employee.prototype → Person.prototype → Object.prototype → null
+              </pre>
+            </p>
           </div>
         </div>
         <div class="col-md-12">
