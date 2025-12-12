@@ -1513,40 +1513,32 @@
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
               <pre class="mb-0">
-                function Person(name) {
+                function Product(name, price) {
                   this.name = name;
+                  this.price = price;
                 }
-                
-                Person.prototype.greet = function() {
-                  console.log(`Hello, my name is ${this.name}`);
+                Product.prototype.getDiscount = function() {
+                  return this.price * 0.10;  // 10% discount
                 };
-                
-                const person1 = new Person("Alice");
-                person1.greet();
+                Product.prototype.getFinalPrice = function() {
+                  return this.price - this.getDiscount();
+                };
+                const laptop = new Product("Laptop", 80000, "Electronics");
+                const shoes = new Product("Shoes", 2000, "Fashion");
+                console.log(laptop.getFinalPrice());
+                console.log(shoes.getFinalPrice());
               </pre>
             </p>
-        
+       
             <p class="mb-0 pl-3 pt-3">
-              <b class="text-success">Use Case:</b>
+              <b class="text-success">Use Case:Scenario</b>
+              In a large e-commerce project, you create Product objects.
+              Instead of placing methods (like getDiscount(), getFinalPrice()) inside every product instance, you put them inside Product.prototype.
+              ✔️ saves memory
+              ✔️ improves performance
               <ul>
-                <li><b>Memory Efficiency:</b> Instead of defining methods inside the constructor for every object, define them on the prototype so all instances share the same method.</li>
-                <li><b>Example:</b> In a car rental app, you can create thousands of <code>Car</code> objects, but define common methods like <code>start()</code> and <code>stop()</code> on the prototype to save memory.</li>
+                <li><b>Example:</b> In a Product  app, you can create thousands of <code>Product </code> objects, but define common methods like <code>getDiscount()</code> and <code>getFinalPrice()</code> on the prototype to save memory.</li>
               </ul>
-              <pre class="mb-0">
-                function Car(model) {
-                  this.model = model;
-                }
-        
-                Car.prototype.start = function() {
-                  console.log(`${this.model} started`);
-                };
-        
-                const car1 = new Car("Tesla");
-                const car2 = new Car("BMW");
-        
-                car1.start(); // Tesla started
-                car2.start(); // BMW started
-              </pre>
             </p>
           </div>
         </div>
@@ -1554,99 +1546,75 @@
           <h6 class="font-weight-bold">5.1 What is inheritance in JavaScript?</h6>
           <div class="pl-5">
             Inheritance in JavaScript allows one object to access properties and methods of another object through the prototype chain. This helps in code reuse and maintainability. It can be implemented using constructor functions with <code>Object.create()</code> or ES6 <code>class</code> syntax.
-            
+           
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example using Constructor Functions:</b>
+              <ul>
+                <li><b>Scenario: E-Commerce Project</b> You have:</li>
+                <li>A Product (parent)</li>
+                <li>A ClothingProduct (child)</li>
+                <li>A ElectronicsProduct (child)</li>
+              </ul>
               <pre class="mb-0">
-                function Person(name) {
+                <b class="text-primary">Parent Constructor</b>
+                function Product(name, price) {
                   this.name = name;
+                  this.price = price;
                 }
-        
-                Person.prototype.greet = function() {
-                  console.log(`Hello, my name is ${this.name}`);
+                Product.prototype.getDiscount = function() {
+                  return this.price * 0.10;  // 10% discount
                 };
-        
-                function Employee(name, role) {
-                  Person.call(this, name); // Inherit properties
-                  this.role = role;
+
+
+                <b class="text-primary">Child: Electronics Product</b>
+                function ElectronicsProduct(name, price, warranty) {
+                  Product.call(this, name, price); // inherit properties
+                  this.warranty = warranty;
                 }
-        
-                // Inherit methods
-                Employee.prototype = Object.create(Person.prototype);
-                Employee.prototype.constructor = Employee;
-        
-                Employee.prototype.work = function() {
-                  console.log(`${this.name} works as ${this.role}`);
+
+
+                ElectronicsProduct.prototype = Object.create(Product.prototype);
+                Admin.prototype.constructor = Admin;
+
+
+                ElectronicsProduct.prototype.getWarranty = function() {
+                  return this.warranty + " years";
                 };
-        
-                const emp = new Employee("Alice", "Developer");
-                emp.greet(); // Hello, my name is Alice
-                emp.work();  // Alice works as Developer
+
+
+                const laptop = new ElectronicsProduct("Laptop", 80000, 2);
+                console.log(laptop.getDiscount());  // inherits from Product
+                console.log(laptop.getWarranty());  // child method
               </pre>
             </p>
-        
+       
             <p class="mb-0 pl-3 pt-3">
               <b class="text-success">Example using ES6 Classes:</b>
               <pre class="mb-0">
-                class Person {
-                  constructor(name) {
+                class Product {
+                  constructor(name, price) {
                     this.name = name;
+                    this.price = price;
                   }
-                  greet() {
-                    console.log(`Hello, my name is ${this.name}`);
-                  }
-                }
-        
-                class Employee extends Person {
-                  constructor(name, role) {
-                    super(name); // Call parent constructor
-                    this.role = role;
-                  }
-                  work() {
-                    console.log(`${this.name} works as ${this.role}`);
+                  getDiscount() {
+                    return this.price * 0.10;
                   }
                 }
-        
-                const emp = new Employee("Alice", "Developer");
-                emp.greet(); // Hello, my name is Alice
-                emp.work();  // Alice works as Developer
+       
+                class ElectronicsProduct extends Product {
+                  constructor(name, price, warranty) {
+                    super(name, price); // Call parent constructor
+                    this.warranty = warranty;
+                  }
+                  getWarranty() {
+                    return this.warranty * 0.10;
+                  }
+                }
+       
+                const laptop = new ElectronicsProduct("Laptop", 80000, 2);
+                laptop.getDiscount();
+                laptop.getWarranty();  
               </pre>
-            </p>
-            <p class="mb-0 pl-3 pt-3">
-                <b class="text-success">Use Case:</b>
-                <ul>
-                  <li><b>User Management System:</b> 
-                    <ul>
-                      <li><code>User</code> constructor with common methods like login/logout.</li>
-                      <li><code>Admin</code> inherits from <code>User</code> and adds manageUsers().</li>
-                      <li><code>Customer</code> inherits from <code>User</code> and adds placeOrder().</li>
-                    </ul>
-                  </li>
-                </ul>
-                <pre class="mb-0">
-                  function User(name) {
-                    this.name = name;
-                  }
-          
-                  User.prototype.login = function() {
-                    console.log(`${this.name} logged in`);
-                  };
-          
-                  function Admin(name) {
-                    User.call(this, name);
-                  }
-          
-                  Admin.prototype = Object.create(User.prototype);
-                  Admin.prototype.constructor = Admin;
-          
-                  Admin.prototype.manageUsers = function() {
-                    console.log(`${this.name} is managing users`);
-                  };
-          
-                  const admin = new Admin("John");
-                  admin.login();        // John logged in
-                  admin.manageUsers();  // John is managing users
-                </pre>
             </p>
             <p class="mb-0 pl-3 pt-3">
               <b class="text-success">Prototype Chain Visualization:</b>
