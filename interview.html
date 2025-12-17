@@ -1722,6 +1722,26 @@
               <li><b class="text-primary">Throttling</b>: Throttling ensures a function is called at most once every specified interval. It limits the rate at which a function can fire.</li>
               <li>Useful when you want to guarantee regular updates but avoid overwhelming the system (e.g., on scroll or resize events).</li>
             </ul>
+            <p class="mb-0 pl-3 pt-1">
+              <b class="text-success">Example:</b>
+              <pre class="mb-0">
+              import { useEffect } from "react";
+import throttle from "lodash/throttle";
+function ScrollTracker() {
+    useEffect(() => {
+        const handleScroll = throttle(() => {
+            console.log(window.scrollY);
+        }, 500);
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            handleScroll.cancel();
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+    return <div style={{ height: "2000px" }}>Scroll down</div>;
+}
+export default ScrollTracker;
+              </pre>
 
             <ul class="pl-4 py-2">
               <li><b class="text-primary">Debouncing</b>: Debouncing ensures a function is called only after a certain period of inactivity.</li>
@@ -1730,6 +1750,24 @@
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
               <pre class="mb-0">
+                import { useState, useEffect } from "react";
+function Search() {
+    const [query, setQuery] = useState("");
+    const [debouncedQuery, setDebouncedQuery] = useState(query);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setDebouncedQuery(query);
+        }, 500);
+        return () => clearTimeout(timer);
+    }, [query]);
+    useEffect(() => {
+        if (debouncedQuery) {
+            console.log("API call for:", debouncedQuery);
+        }
+    }, [debouncedQuery]);
+    return <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search..." />;
+}
+                
               </pre>
             </p>
           </div>
@@ -2052,3 +2090,4 @@
 </body>
 
 </html>
+
