@@ -1523,8 +1523,8 @@
                 Product.prototype.getFinalPrice = function() {
                   return this.price - this.getDiscount();
                 };
-                const laptop = new Product("Laptop", 80000, "Electronics");
-                const shoes = new Product("Shoes", 2000, "Fashion");
+                const laptop = new Product("Laptop", 80000);
+                const shoes = new Product("Shoes", 2000);
                 console.log(laptop.getFinalPrice());
                 console.log(shoes.getFinalPrice());
               </pre>
@@ -1575,7 +1575,7 @@
 
 
                 ElectronicsProduct.prototype = Object.create(Product.prototype);
-                Admin.prototype.constructor = Admin;
+                ElectronicsProduct.prototype.constructor = ElectronicsProduct;
 
 
                 ElectronicsProduct.prototype.getWarranty = function() {
@@ -2107,5 +2107,6 @@
 </body>
 
 </html>
+
 
 
