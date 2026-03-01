@@ -1678,6 +1678,23 @@
                   console.log('Async operation');
                 }, 2000);
                 console.log('End');
+
+                React: Event Looping
+
+                ├─ Synchronous handler
+                │   ├─ Click start
+                │   ├─ setText (queued) ← will run AFTER microtasks
+                │   └─ Click end
+                │
+                ├─ Microtask queue
+                │   └─ Promise resolved
+                │
+                ├─ React render
+                │   └─ Render: Updated
+                │
+                └─ Macrotask queue (after 10s)
+                    └─ Timeout 10s finished
+
               </pre>
             </p>
           </div>
