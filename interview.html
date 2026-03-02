@@ -1705,10 +1705,17 @@
             <ul class="pl-4 py-2">
               <li><b class="text-primary">Local Storage</b>: Stores data with no expiration time.</li>
               <li>Data persists even after the browser is closed and reopened.</li>
+              <li>Use case: User preferences (theme: dark/light), Language selection, Non-sensitive caching of UI data</li>
             </ul>
             <ul class="pl-4 py-2">
               <li><b class="text-primary">Session Storage</b>: Stores data for the duration of the page session.</li>
               <li>Data is cleared when the page session ends (when the tab or browser is closed).</li>
+              <li>Use case: Multi-step forms (checkout steps), Temporary filters in search pages, Tab-specific data that should not persist</li>
+            </ul>
+            <ul class="pl-4 py-2">
+              <li><b class="text-primary">Cookies</b>: Small data stored in browser, sent automatically to server with each request.</li>
+              <li>Persistence: Can have custom expiry.</li>
+              <li>Use case: Authentication (session ID), Remember-me login, Tracking & personalization (language, recommendations)</li>
             </ul>
             <p class="mb-0 pl-3 pt-1">
               <b class="text-success">Example:</b>
