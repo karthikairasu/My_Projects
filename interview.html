@@ -1747,7 +1747,32 @@
               <li>Useful when you want to guarantee regular updates but avoid overwhelming the system (e.g., on scroll or resize events).</li>
             </ul>
             <p class="mb-0 pl-3 pt-1">
-              <b class="text-success">Example:</b>
+              <b  class="text-success"
+                  title="function throttle(fn, delay) {
+                  let shouldWait = false;
+
+                  return function (...args) {
+                    if (shouldWait) return;
+
+                    fn.apply(this, args);
+
+                    shouldWait = true;
+
+                    setTimeout(() => {
+                      shouldWait = false;
+                    }, delay);
+                  };
+                }
+
+                function updateScrollPosition() {
+                  console.log(window.scrollY);
+                }
+
+                const throttledScroll = throttle(updateScrollPosition, 1000);
+
+                window.addEventListener('scroll', throttledScroll);"
+                >Example:</b>
+  
               <pre class="mb-0">
               import { useEffect } from "react";
               import throttle from "lodash/throttle";
@@ -1772,7 +1797,30 @@
               <li>The function waits until events stop firing for the specified delay, then runs once. Useful for things like search input validation, where you want to wait until the user stops typing before firing the function.</li>
             </ul>
             <p class="mb-0 pl-3 pt-1">
-              <b class="text-success">Example:</b>
+              <b  class="text-success"
+                  title="function debounce(fn, delay) {
+                  let timer = null;
+
+                  return function (...str) {
+                    clearTimeout(timer);
+
+                    timer = setTimeout(() => {
+                      fn.apply(this, str);
+                    }, delay);
+                  };
+                }
+
+                function debounceAPICall(search) {
+                  console.log('typing', search);
+                }
+
+                const debouncedSearch = debounce(debounceAPICall, 1000);
+
+                document.getElementById('search').addEventListener('input', (e) => {
+                  debouncedSearch(e.target.value);
+                });"
+                >Example:</b>
+              
               <pre class="mb-0">
                 import { useState, useEffect } from "react";
                 function Search() {
